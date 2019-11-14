@@ -1,10 +1,15 @@
 [viewBag]
+
+[staticMenu topNavigation]
+code = "top-navigation"
 ==
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link" href="/">Test 1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/test2">Test 2</a>
-  </li>
-</ul>
+<div class="container-fluid">
+  <nav class="navbar navbar-expand navbar-light body-bg d-flex justify-content-end py-3">
+    <ul class="navbar-nav">
+      {% partial 'staticMenu/items' items=topNavigation.menuItems %}
+      <li class="nav-item">
+        <bs4-icon color="primary" src="{{ '/assets/iconset/icon_menu.svg' | theme }}" size="32" direction="up"></bs4-icon>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,81 @@
+items:
+    -
+        title: Zentrum
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: zentrum
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Hypnose
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: hypnose
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Nonverbale Hypnose'
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: nonverbale-hypnose
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Yager-Therapie
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: yager-therapie
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Anwendungsgebiete
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: anwendungsgebiete
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'weitere Leistungen'
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: weitere-leistungen
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakt
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: kontakt
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: top-navigation

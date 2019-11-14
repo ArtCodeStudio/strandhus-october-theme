@@ -12,8 +12,11 @@
 
 // component style overwrites
 
-// templates
-// @import 'templates/index';
+// Layout
+@import 'layout/index';
+
+// partials
+@import './partials/index';
 
 // components
 @import '../ts/components/index';

@@ -1,0 +1,10 @@
+#layout-top {
+  .navbar {
+    .nav-item {
+      @extend .d-flex;
+      @extend .align-items-center;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+}

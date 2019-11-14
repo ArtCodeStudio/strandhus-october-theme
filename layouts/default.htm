@@ -1,3 +1,6 @@
+[staticPage]
+useContent = 1
+default = 0
 ==
 <!DOCTYPE html>
 <html lang="de">
@@ -13,11 +16,18 @@
 
     <body >
         <div id="main-container">
-            <div id="layout-top">{% partial 'layout-top' %}</div>
-            <div id="main" rv-view="{'listenAllLinks': true, 'datasetToModel': true}">
-                <div {% partial 'router-dataset' %}>{% page %}</div>
+            <div id="layout-top">
+                {% partial 'layout-top' %}
             </div>
-            <div id="layout-bottom">{% partial 'layout-bottom' %}</div>
+            <div id="main" rv-view="{'listenAllLinks': true, 'datasetToModel': true}">
+                <div class="container" {% partial 'router-dataset' %}>
+                    {% page %}
+                    {% component 'staticPage' %}
+                </div>
+            </div>
+            <div id="layout-bottom">
+                {% partial 'layout-bottom' %}
+            </div>
         </div>
         
         {#% framework %#}
