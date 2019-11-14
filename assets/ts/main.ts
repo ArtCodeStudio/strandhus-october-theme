@@ -5,6 +5,7 @@ import {
 } from '@ribajs/core';
 import routerModule from '@ribajs/router';
 
+// import * as CustomBinders from './binders';
 // import * as CustomComponents from './components';
 
 export class Main {
@@ -16,10 +17,10 @@ export class Main {
     this.riba.module.regist(routerModule);
 
     // Regist custom components
-    this.riba.module.regist({
-      // components: CustomComponents,
-      // binders: {...customBinders},
-    });
+    // this.riba.module.regist({
+    //   components: CustomComponents,
+    //   binders: CustomBinders,
+    // });
 
     this.riba.bind(document.body, window.model);
   }
