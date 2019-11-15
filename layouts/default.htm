@@ -20,7 +20,7 @@ default = 0
                 {% partial 'layout-top' %}
             </div>
             <div id="main" rv-view="{'listenAllLinks': true, 'datasetToModel': true}">
-                <div class="container" {% partial 'router-dataset' %}>
+                <div {% partial 'router-dataset' %}>
                     {% page %}
                     {% component 'staticPage' %}
                 </div>

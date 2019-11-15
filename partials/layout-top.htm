@@ -4,12 +4,13 @@
 code = "top-navigation"
 ==
 <div class="container-fluid">
-  <nav class="navbar navbar-expand navbar-light body-bg d-flex justify-content-end py-3">
+  <hpn-navbar class="navbar navbar-expand navbar-light body-bg d-flex justify-content-end py-3" collapse-selector=".dropdown-menu">
     <ul class="navbar-nav">
       {% partial 'staticMenu/items' items=topNavigation.menuItems %}
-      <li class="nav-item">
-        <bs4-icon color="primary" src="{{ '/assets/iconset/icon_menu.svg' | theme }}" size="32" direction="up"></bs4-icon>
+      <li class="nav-item" rv-on-click="toggle">
+        <bs4-icon color="primary" src="{{ '/assets/iconset/icon_menu.svg' | theme }}" size="32" rv-show="isCollapsed"></bs4-icon>
+        <bs4-icon color="primary" src="{{ '/assets/iconset/icon_close.svg' | theme }}" size="32" rv-hide="isCollapsed"></bs4-icon>
       </li>
     </ul>
-  </nav>
+  </hpn-navbar>
 </div>

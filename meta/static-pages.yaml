@@ -4,6 +4,12 @@ static-pages:
     hypnose: {  }
     nonverbale-hypnose: {  }
     yager-therapie: {  }
-    anwendungsgebiete: {  }
+    anwendungsgebiete:
+        hypnose-faq: {  }
     weitere-leistungen: {  }
     kontakt: {  }
+    hypnose-hypnotherapie: {  }
+    hypnose-nonverbal: {  }
+    hypnose-mit-kindern: {  }
+    hypnose-im-urlaub: {  }
+    hypnose-honorar: {  }
