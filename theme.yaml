@@ -10,195 +10,195 @@ form:
       bs4_grayscale_colors:
         label: Grayscale Colors 
         type: section
-        tab: Bootstrap 4
+        tab: Colors
       bs4_white:
         type: colorpicker
         label: white
         default: "#fff"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: white
       bs4_gray_100:
         type: colorpicker
         label: gray-100
         default: "#f8f9fa"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-100
       bs4_gray_200:
         type: colorpicker
         label: gray-200
         default: "#e9ecef"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-200
       bs4_gray_300:
         type: colorpicker
         label: gray-300
         default: "#dee2e6"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-300
       bs4_gray_400:
         type: colorpicker
         label: gray-400
         default: "#ced4da"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-400
       bs4_gray_500:
         type: colorpicker
         label: gray-500
         default: "#adb5bd"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-500
       bs4_gray_600:
         type: colorpicker
         label: gray-600
         default: "#6c757d"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-600
       bs4_gray_700:
         type: colorpicker
         label: gray-700
         default: "#495057"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-700
       bs4_gray_800:
         type: colorpicker
         label: gray-800
         default: "#343a40"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-800
       bs4_gray_900:
         type: colorpicker
         label: gray-900
         default: "#212529"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: gray-900
       bs4_black:
         type: colorpicker
         label: black
         default: "#000"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: black
       # General colors
       bs4_general_colors:
         label: General Colors 
         type: section
-        tab: Bootstrap 4
+        tab: Colors
       bs4_red:
         type: colorpicker
         label: red
         default: "#d9534f"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: red
       bs4_orange:
         type: colorpicker
         label: orange
         default: "#f0ad4e"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: orange
       bs4_yellow:
         type: colorpicker
         label: yellow
         default: "#ffd500"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: yellow
       bs4_green:
         type: colorpicker
         label: green
         default: "#5cb85c"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: green
       bs4_blue:
         type: colorpicker
         label: blue
         default: "#0275d8"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: blue
       bs4_teal:
         type: colorpicker
         label: teal
         default: "#5bc0de"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: teal
       bs4_pink:
         type: colorpicker
         label: pink
         default: "#ff5b77"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: pink
       bs4_purple:
         type: colorpicker
         label: purple
         default: "#613d7c"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: purple
       # Brand colors
       bs4_brand_colors:
         label: Brand Colors 
         type: section
-        tab: Bootstrap 4
+        tab: Colors
       bs4_primary:
         type: text
         label: primary
         default: $blue
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: primary
       bs4_secondary:
         type: text
         label: secondary
         default: $gray-600
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: secondary
       bs4_success:
         type: text
         label: success
         default: $green
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: success
       bs4_info:
         type: text
         label: info
         default: $cyan
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: info
       bs4_warning:
         type: text
         label: warning
         default: $yellow
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: warning
       bs4_danger:
         type: text
         label: danger
         default: $red
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: danger
       bs4_light:
         type: text
         label: light
         default: $gray-100
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: light
       bs4_dark:
         type: text
         label: dark
         default: $gray-800
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: dark
       # Body colors
       bs4_body_colors:
         label: Body Colors 
         type: section
-        tab: Bootstrap 4
+        tab: Colors
       bs4_body_color:
         type: colorpicker
         label: body-color
         default: "#212529"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: body-color
       bs4_body_bg:
         type: colorpicker
         label: body-bg
         default: "#FCF6F5"
-        tab: Bootstrap 4
+        tab: Colors
         assetVar: body-bg
       # Layout Top
       partial_top_logo:

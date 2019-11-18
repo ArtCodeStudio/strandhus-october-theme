@@ -82,8 +82,10 @@ items:
                 title: Anwendungsgebiete
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -93,8 +95,10 @@ items:
                 title: 'Häufige Frage'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: hypnose-faq
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -152,6 +156,18 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: Angst
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-angst
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: 'weitere Leistungen'
         nesting: '0'

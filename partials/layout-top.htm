@@ -3,14 +3,12 @@
 [staticMenu topNavigation]
 code = "top-navigation"
 ==
-<div class="container-fluid">
-  <hpn-navbar class="navbar navbar-expand navbar-light body-bg d-flex justify-content-end py-3" collapse-selector=".dropdown-menu">
-    <ul class="navbar-nav">
-      {% partial 'staticMenu/items' items=topNavigation.menuItems %}
-      <li class="nav-item" rv-on-click="toggle">
-        <bs4-icon color="primary" src="{{ '/assets/iconset/icon_menu.svg' | theme }}" size="32" rv-show="isCollapsed"></bs4-icon>
-        <bs4-icon color="primary" src="{{ '/assets/iconset/icon_close.svg' | theme }}" size="32" rv-hide="isCollapsed"></bs4-icon>
-      </li>
-    </ul>
-  </hpn-navbar>
-</div>
+<hpn-navbar class="navbar navbar-expand navbar-light bg-white fixed-top" collapse-selector=".nav-item-level-2-wrapper">
+  <nav class="nav flex-row justify-content-end bg-white">
+    {% partial 'staticMenu/items' items=topNavigation.menuItems %}
+    <div class="nav-item flex-column" rv-on-click="toggle">
+      <bs4-icon color="primary" src="{{ '/assets/iconset/icon_menu.svg' | theme }}" size="32" rv-show="isCollapsed"></bs4-icon>
+      <bs4-icon color="primary" src="{{ '/assets/iconset/icon_close.svg' | theme }}" size="32" rv-hide="isCollapsed"></bs4-icon>
+    </div>
+  </nav>
+</hpn-navbar>
