@@ -34,18 +34,23 @@ export class HpnNavbarComponent extends Bs4NavbarComponent {
   public onItemClick(context?: Binder<any>, event?: Event) {
     if (event) {
       const target = event.target as HTMLAnchorElement | null;
+      if (!target) {
+        return console.warn('Target not found!');
+      }
+      const parent = target.parentNode as HTMLElement;
       if (target && this.pjax) {
         event.preventDefault();
         let url = target.href;
         if (Utils.isAbsoluteUrl(url) && Utils.isInternalUrl(url)) {
           url = target.pathname + target.search;
         }
-        console.debug('go to', url);
-        this.pjax.goTo(url);
-        // if (!this.scope.isCollapsed) {
-        //   this.show();
-        //   console.debug('show');
-        // }
+
+        // If we already on this url just toggle the menu
+        if (parent.classList.contains('active')) {
+          this.toggle();
+        } else {
+          this.pjax.goTo(url);
+        }
       }
     }
   }

@@ -1,0 +1,6 @@
+.partial-application-areas-items {
+  // WORKAROUND
+  &:nth-child(2) {
+    display: none;
+  }
+}

@@ -161,8 +161,252 @@ items:
                 title: Angst
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-angst
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Allergie
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-Allergie
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Asthma
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-asthma
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Burn-out
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-burn-out
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Chronische Schmerzen'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-chronische-schmerzen
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Depression
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-depression
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Gewichtsreduktion
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-gewichtsreduktion
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Hautreaktionen
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: yager-therapie-hautreaktionen
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Hypnotisches Magenband'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-hypnotisches-magenband
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Innere Unruhe'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-innere-unruhe
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Magen-Darmbeschwerden
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-magen-darmbeschwerden
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Phobie
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-phobie
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Persönliche Weiterentwicklung'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-personliche-weiterentwicklung
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Persönliche Weiterentwicklung'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-psychosomatische-beschwerden
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Rauchentwöhnung
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-rauchentwohnung
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Sexuelle Funktionsstörung'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-sexuelle-funktionsstorung
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Stress
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-stress
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Schlafstörung
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-schlafstorung
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Selbstwertproblem
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-selbstwertproblem
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Spannungkopfschmerz
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-spannungkopfschmerz
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Unerwünschte Verhaltensweisen'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-unerwunschte-verhaltensweisen
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Verarbeitung belastender, traumatischer Erfahrungen'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-verarbeitung-belastender-traumatischer-erfahrungen
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Zwänge
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anwendungsgebiete-zwange
                 replace: '0'
                 viewBag:
                     isHidden: '0'

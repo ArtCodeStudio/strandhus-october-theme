@@ -206,16 +206,32 @@ form:
         mode: image
         label: Logo
         tab: Layout Top
-      # Layout Bottom
-      partial_layout_bottom_row_1:
+      # General
+      general_address:
         type: richeditor
-        label: Row 1
-        tab: Layout Bottom
-      partial_layout_bottom_row_2:
+        label: Address
+        tab: General
+      general_opening_hours:
         type: richeditor
-        label: Row 2
-        tab: Layout Bottom
-      partial_layout_bottom_row_3:
-        type: richeditor
-        label: Row 3
-        tab: Layout Bottom
+        label: Opening hours
+        tab: General
+      # Application areas
+      application_areas_nav_item:
+        tab: Application areas
+        titleFrom: items
+        type: repeater
+        form:
+          fields:
+            image:
+              label: Image
+              type: mediafinder
+              mode: image
+              span: left
+            title:
+              label: Title
+              type: text
+              span: right
+            url:
+              label: Url
+              type: text
+              span: right

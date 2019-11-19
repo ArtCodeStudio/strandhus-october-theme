@@ -3,8 +3,11 @@
 [staticMenu topNavigation]
 code = "top-navigation"
 ==
-<hpn-navbar class="navbar navbar-expand navbar-light bg-white fixed-top" collapse-selector=".nav-item-level-2-wrapper">
-  <nav class="nav flex-row justify-content-end bg-white">
+<hpn-navbar class="navbar navbar-expand navbar-light fixed-top collapsed" collapse-selector=".nav-item-level-2-wrapper">
+  <a class="navbar-brand p-2" href="/">
+    <bs4-icon src="{{ 'assets/images/hypnosezentrum-cuxhaven-logo.svg' | theme }}"></bs4-icon>
+  </a>
+  <nav class="nav flex-row justify-content-end">
     {% partial 'staticMenu/items' items=topNavigation.menuItems %}
     <div class="nav-item flex-column" rv-on-click="toggle">
       <bs4-icon color="primary" src="{{ '/assets/iconset/icon_menu.svg' | theme }}" size="32" rv-show="isCollapsed"></bs4-icon>

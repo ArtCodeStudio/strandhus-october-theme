@@ -1,6 +1,15 @@
 hpn-navbar.navbar {
   display: block;
   padding: 0;
+  &:not(.collapsed) {
+    .nav {
+      background-color: $white;
+    }
+  }
+  .navbar-brand {
+    position: absolute;
+    max-width: 200px;
+  }
   .nav {
     padding: 1rem;
     .nav-item {

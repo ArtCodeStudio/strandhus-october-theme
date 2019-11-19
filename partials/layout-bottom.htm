@@ -1,19 +1,56 @@
 [viewBag]
+
+[staticMenu footer]
+code = "footer"
 ==
 <div class="container">
   <div class="row">
-    <div class="col">
-      {{ this.theme.partial_layout_bottom_row_1 | raw}}
+    <div class="col-12 col-md pt-5">
+      {{ this.theme.general_address | raw}}
     </div>
-    <div class="col">
-      {{ this.theme.partial_layout_bottom_row_2 | raw}}
-      row 2
+    <div class="d-none d-md-flex col-auto">
+      <div class="division"></div>
     </div>
-    <div class="col">
-      {{ this.theme.partial_layout_bottom_row_3 | raw}}
-      row 3
+    <div class="col-12 col-md pt-5">
+      {{ this.theme.general_opening_hours | raw}}
+    </div>
+    <div class="d-none d-md-flex col-auto division-image">
+      <img class="" src="{{ 'assets/images/hypnosezentrum-cuxhaven-footer-division.svg' | theme }}" alt="hypnosezentrum cuxhaven footer division">
+    </div>
+    <div class="col-12 col-md pt-5">
+      {% partial 'staticMenu/items' items=footer.menuItems %}
     </div>
   </div>
-  
+  <div class="row text-center footer-icons">
+    <div class="col-12 col-md pt-5">
+      <a class="row" href="/">
+        <bs4-icon class="col-12" color="primary" src="{{ '/assets/images/hypnosezentrum-cuxhaven-footer-staendiger-austausch.svg' | theme }}" size="32"></bs4-icon>
+        <span class="col-12 py-3 text-primary">Ständiger Austausch mit Kollegen</span>
+      </a>
+    </div>
+    <div class="col-12 col-md pt-5">
+      <a class="row" href="/">
+        <bs4-icon class="col-12" color="primary" src="{{ '/assets/images/hypnosezentrum-cuxhaven-footer-ursachenorientierte-therapie.svg' | theme }}" size="32"></bs4-icon>
+        <span class="col-12 py-3 text-primary">Ursachenorientierte Therapie</span>
+      </a>
+    </div>
+    <div class="col-12 col-md pt-5">
+      <a class="row" href="/">
+        <bs4-icon class="col-12" color="primary" src="{{ '/assets/images/hypnosezentrum-cuxhaven-footer-hoher-qualitaetsstandard.svg' | theme }}" size="32"></bs4-icon>
+        <span class="col-12 py-3 text-primary">Hoher Qualitätsstandard</span>
+      </a>
+    </div>
+    <div class="col-12 col-md pt-5">
+      <a class="row" href="/">
+        <bs4-icon class="col-12" color="primary" src="{{ '/assets/images/hypnosezentrum-cuxhaven-footer-regelmäßge-fortbildungen.svg' | theme }}" size="32"></bs4-icon>
+        <span class="col-12 py-3 text-primary">Regelmäßige Fortbildungen</span>
+      </a>
+    </div>
+    <div class="col-12 col-md pt-5">
+      <a class="row" href="/">
+        <bs4-icon class="col-12" color="primary" src="{{ '/assets/images/hypnosezentrum-cuxhaven-footer-supervision.svg' | theme }}" size="32"></bs4-icon>
+        <span class="col-12 py-3 text-primary">Supervision</span>
+      </a>
+    </div>
+  </div>
 </div>
-

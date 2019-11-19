@@ -1,0 +1,68 @@
+items:
+    -
+        title: Info
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: info
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Partner
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: partner
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Impressum
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: impressum
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Datenschutz
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: datenschutz
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: FAQ
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: hypnose-faq
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: AGB
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: agb
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: footer

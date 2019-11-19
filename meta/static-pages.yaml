@@ -1,16 +1,43 @@
 static-pages:
     index: {  }
     zentrum: {  }
-    hypnose: {  }
-    nonverbale-hypnose: {  }
+    hypnose:
+        hypnose-honorar: {  }
+        hypnose-hypnotherapie: {  }
+        hypnose-mit-kindern: {  }
+        nonverbale-hypnose: {  }
+        hypnose-im-urlaub: {  }
+        hypnose-nonverbal: {  }
     yager-therapie: {  }
     anwendungsgebiete:
-        hypnose-faq: {  }
+        anwendungsgebiete-angst: {  }
+        anwendungsgebiete-Allergie: {  }
+        anwendungsgebiete-asthma: {  }
+        anwendungsgebiete-burn-out: {  }
+        anwendungsgebiete-chronische-schmerzen: {  }
+        anwendungsgebiete-depression: {  }
+        anwendungsgebiete-gewichtsreduktion: {  }
+        yager-therapie-hautreaktionen: {  }
+        anwendungsgebiete-hypnotisches-magenband: {  }
+        anwendungsgebiete-innere-unruhe: {  }
+        anwendungsgebiete-magen-darmbeschwerden: {  }
+        anwendungsgebiete-phobie: {  }
+        anwendungsgebiete-personliche-weiterentwicklung: {  }
+        anwendungsgebiete-psychosomatische-beschwerden: {  }
+        anwendungsgebiete-rauchentwohnung: {  }
+        anwendungsgebiete-sexuelle-funktionsstorung: {  }
+        anwendungsgebiete-stress: {  }
+        anwendungsgebiete-schlafstorung: {  }
+        anwendungsgebiete-selbstwertproblem: {  }
+        anwendungsgebiete-spannungkopfschmerz: {  }
+        anwendungsgebiete-unerwunschte-verhaltensweisen: {  }
+        anwendungsgebiete-verarbeitung-belastender-traumatischer-erfahrungen: {  }
+        anwendungsgebiete-zwange: {  }
     weitere-leistungen: {  }
+    hypnose-faq: {  }
     kontakt: {  }
-    hypnose-hypnotherapie: {  }
-    hypnose-nonverbal: {  }
-    hypnose-mit-kindern: {  }
-    hypnose-im-urlaub: {  }
-    hypnose-honorar: {  }
-    anwendungsgebiete-angst: {  }
+    info: {  }
+    partner: {  }
+    impressum: {  }
+    datenschutz: {  }
+    agb: {  }

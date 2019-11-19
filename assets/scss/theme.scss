@@ -1,4 +1,6 @@
 @import 'charset';
+// Custom mixins
+@import 'mixins/index';
 @import 'custom-variables';
 @import 'variables';
 @import 'bootstrap';
@@ -9,6 +11,7 @@
 // vendors
 
 // bootstrap overwrites
+@import 'images';
 
 // component style overwrites
 

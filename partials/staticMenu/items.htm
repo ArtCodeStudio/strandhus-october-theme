@@ -15,7 +15,7 @@
                 </a>
             {% endif %}
             {% if item.items %}
-                <div class="nav-item-level-2-wrapper py-3">
+                <div class="nav-item-level-2-wrapper py-3 collapsed">
                     {% for item in item.items %}
                         {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
                         <div rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}}">
