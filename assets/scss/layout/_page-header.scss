@@ -1,0 +1,21 @@
+.page-header-container {
+  .page-header-col {
+    min-height: 80vh;
+    h1 {
+      @extend .display-1;
+      max-width: 700px;
+      small {
+        font-size: 2rem;
+        font-weight: $font-weight-bold;
+      }
+    }
+    p {
+      @extend .lead;
+      max-width: 800px;
+    }
+  }
+}
+
+.page-header-teaser {
+
+}

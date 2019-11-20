@@ -2,13 +2,11 @@ static-pages:
     index: {  }
     zentrum: {  }
     hypnose:
-        hypnose-honorar: {  }
         hypnose-hypnotherapie: {  }
         hypnose-mit-kindern: {  }
         nonverbale-hypnose: {  }
         hypnose-im-urlaub: {  }
-        hypnose-nonverbal: {  }
-    yager-therapie: {  }
+        hypnose-honorar: {  }
     anwendungsgebiete:
         anwendungsgebiete-angst: {  }
         anwendungsgebiete-Allergie: {  }
@@ -33,7 +31,10 @@ static-pages:
         anwendungsgebiete-unerwunschte-verhaltensweisen: {  }
         anwendungsgebiete-verarbeitung-belastender-traumatischer-erfahrungen: {  }
         anwendungsgebiete-zwange: {  }
-    weitere-leistungen: {  }
+    weitere-leistungen:
+        weitere-leistungen-yager-therapie: {  }
+        weitere-leistungen-psychosomatische-energetik: {  }
+        weitere-leistungen-kinesiologischer-muskeltest: {  }
     hypnose-faq: {  }
     kontakt: {  }
     info: {  }

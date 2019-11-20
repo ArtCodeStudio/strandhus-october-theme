@@ -136,15 +136,15 @@ form:
         type: section
         tab: Colors
       bs4_primary:
-        type: text
+        type: colorpicker
         label: primary
-        default: $blue
+        default: "#D81F59"
         tab: Colors
         assetVar: primary
       bs4_secondary:
-        type: text
+        type: colorpicker
         label: secondary
-        default: $gray-600
+        default: "#C49499"
         tab: Colors
         assetVar: secondary
       bs4_success:
@@ -191,9 +191,15 @@ form:
       bs4_body_color:
         type: colorpicker
         label: body-color
-        default: "#212529"
+        default: "#9B666B"
         tab: Colors
         assetVar: body-color
+      title_color:
+        type: colorpicker
+        label: title-color
+        default: "#C79499"
+        tab: Colors
+        assetVar: title-color
       bs4_body_bg:
         type: colorpicker
         label: body-bg

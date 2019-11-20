@@ -1,0 +1,11 @@
+description = "Displays the Open Graph Image as a Header Teaser Image"
+
+[viewBag]
+snippetCode = "page-header-og-image"
+snippetName = "Page Header OG Image"
+==
+{% if seoTag.og_image %}
+    <div class="content-box ratio-16-9">
+        <img class="content" src="{{ (seoTag.og_image|media)|app }}" alt="{ meta_title }}">
+    </div>
+{% endif %}

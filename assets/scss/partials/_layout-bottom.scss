@@ -1,6 +1,5 @@
 #layout-bottom {
   padding-top: 100px;
-  color: $secondary;
 
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcf6f5+0,d5c1c3+100 */
   background: linear-gradient(to bottom, $body-bg 0%,rgba(213,193,195,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -10,11 +9,12 @@
     height: 100%;
   }
   .division-image {
-    img {
+    bs4-icon, bs4-icon svg {
       height: 100%;
       max-height: 100%;
+      min-height: 300px;
       width: auto;
-      min-width: 100px;
+      // min-width: 100px;
     }
   }
   .footer-icons {

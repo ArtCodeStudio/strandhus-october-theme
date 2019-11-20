@@ -1,6 +1,8 @@
 [staticPage]
 useContent = 1
 default = 0
+
+[seoTags]
 ==
 <!DOCTYPE html>
 <html lang="de">
@@ -10,6 +12,8 @@ default = 0
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
     <title>{{ this.page.title }}</title>
+    
+    {% component 'seoTags' %}
 
     {% styles %}
     <link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">
@@ -22,14 +26,21 @@ default = 0
             </div>
             <div id="main" rv-view="{'listenAllLinks': true, 'datasetToModel': true}">
                 <div {% partial 'router-dataset' %}>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-auto header-col mx-auto">
-                                {% placeholder header title="Header" %}
+                    {% if placeholder('headerTeaser') %}
+                    <div class="page-header-teaser">
+                        {% placeholder headerTeaser title="Header Teaser" %}
+                    </div>
+                    {% endif %}
+                    {% if placeholder('header') %}
+                        <div class="container page-header-container">
+                            <div class="row">
+                                <div class="col-auto page-header-col mx-auto d-flex justify-content-end flex-column align-items-start">
+                                    {% placeholder header title="Header Title" %}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {% page %}
+                    {% endif %}
+                    {# {% page %} #}
                     {% component 'staticPage' %}
                 </div>
             </div>

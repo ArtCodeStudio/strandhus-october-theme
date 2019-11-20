@@ -134,10 +134,8 @@ items:
         title: Yager-Therapie
         nesting: '0'
         type: static-page
-        url: ''
         code: ''
-        reference: yager-therapie
-        cmsPage: ''
+        reference: weitere-leistungen-yager-therapie
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -174,8 +172,10 @@ items:
                 title: Allergie
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-Allergie
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -185,8 +185,10 @@ items:
                 title: Asthma
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-asthma
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -196,8 +198,10 @@ items:
                 title: Burn-out
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-burn-out
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -207,8 +211,10 @@ items:
                 title: 'Chronische Schmerzen'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-chronische-schmerzen
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -218,8 +224,10 @@ items:
                 title: Depression
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-depression
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -229,8 +237,10 @@ items:
                 title: Gewichtsreduktion
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-gewichtsreduktion
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -240,8 +250,10 @@ items:
                 title: Hautreaktionen
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: yager-therapie-hautreaktionen
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -251,8 +263,10 @@ items:
                 title: 'Hypnotisches Magenband'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-hypnotisches-magenband
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -262,8 +276,10 @@ items:
                 title: 'Innere Unruhe'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-innere-unruhe
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -273,8 +289,10 @@ items:
                 title: Magen-Darmbeschwerden
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-magen-darmbeschwerden
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -284,8 +302,10 @@ items:
                 title: Phobie
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-phobie
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -295,19 +315,23 @@ items:
                 title: 'Persönliche Weiterentwicklung'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-personliche-weiterentwicklung
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Persönliche Weiterentwicklung'
+                title: 'Psychosomatische Beschwerden'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-psychosomatische-beschwerden
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -317,8 +341,10 @@ items:
                 title: Rauchentwöhnung
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-rauchentwohnung
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -328,8 +354,10 @@ items:
                 title: 'Sexuelle Funktionsstörung'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-sexuelle-funktionsstorung
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -339,8 +367,10 @@ items:
                 title: Stress
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-stress
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -350,8 +380,10 @@ items:
                 title: Schlafstörung
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-schlafstorung
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -361,8 +393,10 @@ items:
                 title: Selbstwertproblem
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-selbstwertproblem
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -372,8 +406,10 @@ items:
                 title: Spannungkopfschmerz
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-spannungkopfschmerz
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -383,8 +419,10 @@ items:
                 title: 'Unerwünschte Verhaltensweisen'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-unerwunschte-verhaltensweisen
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -394,8 +432,10 @@ items:
                 title: 'Verarbeitung belastender, traumatischer Erfahrungen'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-verarbeitung-belastender-traumatischer-erfahrungen
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -405,8 +445,10 @@ items:
                 title: Zwänge
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-zwange
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
