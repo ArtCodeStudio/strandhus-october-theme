@@ -1,0 +1,59 @@
+description = "Editable content"
+
+[viewBag]
+snippetCode = "editable-content"
+snippetName = "Editable content"
+snippetProperties[filename][title] = "Content Filename"
+snippetProperties[filename][type] = "string"
+snippetProperties[filename][default] = ""
+snippetProperties[filename][options][] = ""
+snippetProperties[maxWidth][title] = "Max width"
+snippetProperties[maxWidth][type] = "string"
+snippetProperties[maxWidth][default] = "100%"
+snippetProperties[maxWidth][options][] = ""
+snippetProperties[marginTop][title] = "Margin Top"
+snippetProperties[marginTop][type] = "dropdown"
+snippetProperties[marginTop][default] = 1
+snippetProperties[marginTop][options][] = 0
+snippetProperties[marginTop][options][] = 1
+snippetProperties[marginTop][options][] = 2
+snippetProperties[marginTop][options][] = 3
+snippetProperties[marginTop][options][] = 4
+snippetProperties[marginTop][options][] = 5
+snippetProperties[marginBottom][title] = "Margin Bottom"
+snippetProperties[marginBottom][type] = "dropdown"
+snippetProperties[marginBottom][default] = 1
+snippetProperties[marginBottom][options][] = 0
+snippetProperties[marginBottom][options][] = 1
+snippetProperties[marginBottom][options][] = 2
+snippetProperties[marginBottom][options][] = 3
+snippetProperties[marginBottom][options][] = 4
+snippetProperties[marginBottom][options][] = 5
+snippetProperties[paddingTop][title] = "Padding Top"
+snippetProperties[paddingTop][type] = "dropdown"
+snippetProperties[paddingTop][default] = 0
+snippetProperties[paddingTop][options][] = 0
+snippetProperties[paddingTop][options][] = 1
+snippetProperties[paddingTop][options][] = 2
+snippetProperties[paddingTop][options][] = 3
+snippetProperties[paddingTop][options][] = 4
+snippetProperties[paddingTop][options][] = 5
+snippetProperties[paddingBottom][title] = "Padding Bottom"
+snippetProperties[paddingBottom][type] = "dropdown"
+snippetProperties[paddingBottom][default] = 0
+snippetProperties[paddingBottom][options][] = 0
+snippetProperties[paddingBottom][options][] = 1
+snippetProperties[paddingBottom][options][] = 2
+snippetProperties[paddingBottom][options][] = 3
+snippetProperties[paddingBottom][options][] = 4
+snippetProperties[paddingBottom][options][] = 5
+
+[contenteditor]
+==
+<div class="container partial-editable-content mt-{{ marginTop }} mb-{{ marginBottom }}">
+  <div class="row">
+    <div class="col" style="max-width: {{ maxWidth }};">
+      {% component 'contenteditor' file=filename %}
+    </div>
+  </div>
+</div>

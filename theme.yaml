@@ -147,6 +147,12 @@ form:
         default: "#C49499"
         tab: Colors
         assetVar: secondary
+      tertiary:
+        type: colorpicker
+        label: tertiary
+        default: "#D5C1C3"
+        tab: Colors
+        assetVar: tertiary
       bs4_success:
         type: text
         label: success
@@ -237,7 +243,23 @@ form:
               label: Title
               type: text
               span: right
-            url:
-              label: Url
+            page:
+              label: Page
               type: text
+              span: right
+      # Personal reports
+      personal_reports:
+        tab: Personal reports
+        titleFrom: report
+        prompt: Add new report
+        type: repeater
+        form:
+          fields:
+            title:
+              label: Title
+              type: text
+              span: left
+            quote:
+              label: Quote
+              type: textarea
               span: right

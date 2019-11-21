@@ -32,12 +32,8 @@ default = 0
                     </div>
                     {% endif %}
                     {% if placeholder('header') %}
-                        <div class="container page-header-container">
-                            <div class="row">
-                                <div class="col-auto page-header-col mx-auto d-flex justify-content-end flex-column align-items-start">
-                                    {% placeholder header title="Header Title" %}
-                                </div>
-                            </div>
+                        <div class="page-header-container d-flex justify-content-end flex-column align-items-start">
+                            {% placeholder header title="Header Title" %}
                         </div>
                     {% endif %}
                     {# {% page %} #}

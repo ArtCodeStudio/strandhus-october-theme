@@ -4,7 +4,7 @@
     {% if not item.viewBag.isHidden %}
         {#{item | json_encode()}#}
         {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
-        <div rv-parent-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-1 flex-column {{titleClass}} {{ item.viewBag.cssClass }} {{ str_studly(item.title) | lower  }}">
+        <div rv-parent-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-1 flex-column {{titleClass}} {{ item.viewBag.cssClass }} {{ str_studly(item.title) | lower  }} {% if item.items %}nav-item-level-1-with-childs{% endif %}">
             {% if item.code == 'no-link' %}
                 <span class="nav-link">
                     {{ item.title }}
@@ -18,7 +18,7 @@
                 <div class="nav-item-level-2-wrapper py-3 collapsed">
                     {% for item in item.items %}
                         {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
-                        <div rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}}">
+                        <div rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}} {% if item.items %}nav-item-level-2-with-childs{% endif %}">
                             {% if not item.viewBag.isHidden %}
                                 <a rv-on-click="onItemClick" class="nav-link " href="{{ item.url }}">{{ item.title }}</a>
                             {% endif %}

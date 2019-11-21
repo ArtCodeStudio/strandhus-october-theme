@@ -21,14 +21,14 @@ export class HpnNavbarComponent extends Bs4NavbarComponent {
     show: this.show,
     hide: this.hide,
     onItemClick: this.onItemClick,
+    onItemHover: this.onItemHover,
     isCollapsed: true,
-    collapseSelector: '.navbar-collapse',
+    collapseSelector: '.nav-item-level-2-wrapper',
   };
 
   constructor(element?: HTMLElement) {
     super(element);
     console.debug('constructor', this);
-    this.init(HpnNavbarComponent.observedAttributes);
   }
 
   public onItemClick(context?: Binder<any>, event?: Event) {
@@ -44,20 +44,45 @@ export class HpnNavbarComponent extends Bs4NavbarComponent {
         if (Utils.isAbsoluteUrl(url) && Utils.isInternalUrl(url)) {
           url = target.pathname + target.search;
         }
-
-        // If we already on this url just toggle the menu
+        // And go to page
         if (parent.classList.contains('active')) {
           this.toggle();
+          return;
+        }
+
+        // If this element has childs toggle the menu
+        if (parent.classList.contains('nav-item-level-1-with-childs')) {
+          this.show();
         } else {
-          this.pjax.goTo(url);
+          this.hide();
+        }
+
+        this.pjax.goTo(url);
+      }
+    }
+  }
+
+  public onItemHover(context?: Binder<any>, event?: Event) {
+    if (event) {
+      const target = event.target as HTMLAnchorElement | null;
+      if (!target) {
+        return console.warn('Target not found!');
+      }
+      const parent = target.parentNode as HTMLElement;
+      if (target && this.pjax) {
+        event.preventDefault();
+        // If this element has childs toggle the menu
+        if (parent.classList.contains('nav-item-level-1-with-childs')) {
+          this.toggle();
         }
       }
     }
   }
 
-  // public toggle(context?: Binder<any>, event?: Event) {
-  //   super.toggle(context, event);
-  // }
+  public toggle(context?: Binder<any>, event?: Event) {
+    super.toggle(context, event);
+    console.debug('toggle');
+  }
 
   // public show(context?: Binder<any>, event?: Event) {
   //   super.show(context, event);
@@ -78,10 +103,22 @@ export class HpnNavbarComponent extends Bs4NavbarComponent {
   //   return super.beforeBind();
   // }
 
+  protected onNewPageReady() {
+    // if (this.collapseService) {
+    //   this.collapseService.hide();
+    // }
+  }
+
   protected async afterBind() {
     super.afterBind();
     this.pjax = Pjax.getInstance('main');
     return;
+  }
+
+  protected connectedCallback() {
+    super.connectedCallback();
+    // this.init(HpnNavbarComponent.observedAttributes);
+    console.debug('connectedCallback', this);
   }
 
   // protected requiredAttributes() {
@@ -110,20 +147,26 @@ export class HpnNavbarComponent extends Bs4NavbarComponent {
     let highest = 0;
     if (this.collapse) {
       this.collapse.forEach((collapse) => {
+        console.debug('(collapse as HTMLElement).clientHeight', (collapse as HTMLElement).clientHeight);
         highest = (collapse as HTMLElement).clientHeight > highest ? (collapse as HTMLElement).clientHeight : highest;
       });
     }
+    console.debug('highest', highest);
     return highest;
   }
 
   protected setMenuHeight() {
     const nav = this.el.querySelector('.nav');
-    (nav as HTMLElement).style.height = 'auto';
     if (this.scope.isCollapsed) {
+      (nav as HTMLElement).style.height = 'auto';
       return;
     }
-    const addHeight = this.getHighestCollapseElementHeight();
-    const height = (nav as HTMLElement).clientHeight + addHeight;
-    (nav as HTMLElement).style.height = height + 'px';
+    setTimeout(() => {
+      const addHeight = this.getHighestCollapseElementHeight();
+      // const height = (nav as HTMLElement).clientHeight + addHeight;
+      const height = 72 + addHeight;
+      (nav as HTMLElement).style.height = height + 'px';
+    }, 0);
+
   }
 }

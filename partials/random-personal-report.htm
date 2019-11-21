@@ -1,0 +1,18 @@
+[viewBag]
+snippetCode = "random-personal-report"
+snippetName = "Random personal report"
+==
+<div class="container random-personal-report personal-report text-center" rv-assign-show-index="{{ this.theme.personal_reports | length }} | minus 1 | random">
+  <div class="row">
+    {% for report in this.theme.personal_reports  %}
+      <div class="col-auto mx-auto" rv-show="showIndex | eq {{ loop.index0 }}">
+        <p class="title mb-4">{{ report.title }}</p>
+        <p class="quote mb-4">„{{ report.quote }}“</p>
+      </div>
+    {% endfor %}
+    <div class="col-12 mt-5">
+      <a class="btn btn-primary" href="{{ 'erfahrungsberichte' | staticPage }}">Weitere Erfahrungsberichte lesen</a>
+    </div>
+  </div>
+</div>
+  

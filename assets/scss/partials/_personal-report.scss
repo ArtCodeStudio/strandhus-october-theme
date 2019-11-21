@@ -1,0 +1,18 @@
+$report-bg: $tertiary;
+
+.personal-report {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  .quote {
+    display: inline;
+    background-color: $report-bg;
+    padding: 5px;
+    line-height: 2.5;
+    // Style for background with spacing on start and end of each new text line
+    // see https://css-tricks.com/multi-line-padded-text/
+    box-shadow: 10px 0 0 $report-bg, -10px 0 0 $report-bg;
+  }
+  .col-auto {
+    max-width: 800px;
+  }
+}

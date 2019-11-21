@@ -134,8 +134,10 @@ items:
         title: Yager-Therapie
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: weitere-leistungen-yager-therapie
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -172,10 +174,8 @@ items:
                 title: Allergie
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
-                reference: anwendungsgebiete-Allergie
-                cmsPage: ''
+                reference: anwendungsgebiete-allergie
                 replace: '0'
                 viewBag:
                     isHidden: '0'

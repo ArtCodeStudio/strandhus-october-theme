@@ -9,7 +9,7 @@ static-pages:
         hypnose-honorar: {  }
     anwendungsgebiete:
         anwendungsgebiete-angst: {  }
-        anwendungsgebiete-Allergie: {  }
+        anwendungsgebiete-allergie: {  }
         anwendungsgebiete-asthma: {  }
         anwendungsgebiete-burn-out: {  }
         anwendungsgebiete-chronische-schmerzen: {  }
@@ -42,3 +42,4 @@ static-pages:
     impressum: {  }
     datenschutz: {  }
     agb: {  }
+    erfahrungsberichte: {  }
