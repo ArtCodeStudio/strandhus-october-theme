@@ -1,12 +1,13 @@
 static-pages:
     index: {  }
-    zentrum: {  }
+    zentrum:
+        zentrum-honorar: {  }
+        zentrum-sabine-berndt-bartel: {  }
+        zentrum-standort: {  }
     hypnose:
         hypnose-hypnotherapie: {  }
         hypnose-mit-kindern: {  }
-        nonverbale-hypnose: {  }
         hypnose-im-urlaub: {  }
-        hypnose-honorar: {  }
     anwendungsgebiete:
         anwendungsgebiete-angst: {  }
         anwendungsgebiete-allergie: {  }
@@ -32,14 +33,17 @@ static-pages:
         anwendungsgebiete-verarbeitung-belastender-traumatischer-erfahrungen: {  }
         anwendungsgebiete-zwange: {  }
     weitere-leistungen:
-        weitere-leistungen-yager-therapie: {  }
         weitere-leistungen-psychosomatische-energetik: {  }
         weitere-leistungen-kinesiologischer-muskeltest: {  }
     hypnose-faq: {  }
-    kontakt: {  }
+    kontakt:
+        kontakt-anfahrt: {  }
+        kontakt-fragebogen: {  }
     info: {  }
     partner: {  }
     impressum: {  }
     datenschutz: {  }
     agb: {  }
     erfahrungsberichte: {  }
+    nonverbale-hypnose: {  }
+    yager-terapie: {  }

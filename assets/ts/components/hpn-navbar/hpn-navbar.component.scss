@@ -1,21 +1,41 @@
 hpn-navbar.navbar {
   display: block;
   padding: 0;
+  .nav {
+    transition: $transition-base;
+  }
+  &.collapsed {
+    .nav {
+      background-color: rgba($body-bg, 0.7);
+      backdrop-filter: blur(10px);
+    }
+  }
   &:not(.collapsed) {
     .nav {
-      background-color: $white;
+      // background-color: rgba($white, 0.7);
+      background-color: rgba($body-bg, 0.7);
+      backdrop-filter: blur(10px);
     }
   }
   .navbar-brand {
     position: absolute;
     max-width: 200px;
+    z-index: $zindex-fixed + 101;
+    white-space: initial;
+    .navbar-brand-text {
+      display: block;
+      font-size: $font-size-base;
+      padding-left: 26px;
+      line-height: 1.2;
+      font-weight: $font-weight-bold;
+    }
   }
   .nav {
     padding: 1rem;
     .nav-item {
       display: flex;
       @extend .align-items-center;
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-normal;
       &.active {
         > .nav-link {
           color: $link-hover-color;
@@ -24,17 +44,47 @@ hpn-navbar.navbar {
       &.nav-item-level-1 {
         position: relative;
         .nav-item-level-2-wrapper {
+          transition: $transition-base;
           position: absolute;
-          display: none;
-          top: 60px;
+          // display: none;
+          display: block;
+          visibility: hidden;
+          opacity: 0;
+          pointer-events: none;
+          top: 25px;
           left: 0;
-          width: 200px;
+          min-width: 200px;
           z-index: $zindex-fixed;
-        }
+          &.nav-item-level-2-wrapper-alphabetically {
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: $zindex-fixed;
+          }
+        } 
+
+        // Show active item (not for the hover version)
         &.active {
           .nav-item-level-2-wrapper {
             &.show {
-              display: block;
+              &:not(.hide-on-hover) {
+                // display: block;
+                visibility: visible;
+                opacity: 1;
+                pointer-events: all;
+              }
+            }
+          }
+        }
+        .nav-item-level-2-wrapper {
+          &.show-on-hover {
+            &:not(.hide-on-hover) {
+              // display: block;
+              visibility: visible;
+              opacity: 1;
+              pointer-events: all;
             }
           }
         }

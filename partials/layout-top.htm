@@ -4,16 +4,20 @@
 code = "top-navigation"
 ==
 <hpn-navbar class="navbar navbar-expand navbar-light fixed-top collapsed">
-  <a class="navbar-brand p-2" href="/">
-    <bs4-icon src="{{ 'assets/images/hypnosezentrum-cuxhaven-logo.svg' | theme }}"></bs4-icon>
-  </a>
-  <nav class="nav flex-row justify-content-end">
-    <div class="d-none d-lg-flex flex-row">
-      {% partial 'staticMenu/items' items=topNavigation.menuItems %}
-    </div>
-    <div class="nav-item flex-column" rv-on-click="toggle">
-      <bs4-icon color="primary" src="{{ '/assets/iconset/icon_menu.svg' | theme }}" size="32" rv-show="isCollapsed"></bs4-icon>
-      <bs4-icon color="primary" src="{{ '/assets/iconset/icon_close.svg' | theme }}" size="32" rv-hide="isCollapsed"></bs4-icon>
-    </div>
-  </nav>
+  <div class="navbar-wrapper" rv-on-mouseenter="onNavbarHover" rv-on-mouseleave="onNavbarLeave">
+    <a class="navbar-brand p-2" href="/" rv-on-click="onItemClick" rv-on-mouseover="onItemHover">
+      <bs4-icon src="{{ 'assets/images/hypnosezentrum-cuxhaven-logo-symbol.svg' | theme }}" size="60"></bs4-icon>
+      <div class="navbar-brand-text text-primary">Fachzentrum für ursachenorientierte Hypnose</div>
+    </a>
+    <nav class="nav flex-row justify-content-end">
+      <div class="d-none d-lg-flex flex-row">
+        {% partial 'staticMenu/items' items=topNavigation.menuItems %}
+      </div>
+
+      <div class="nav-item flex-column navbar-toggler border-0" rv-on-click="toggle">
+        <bs4-icon color="primary" src="{{ '/assets/iconset/icon_close.svg' | theme }}" size="32" rv-class-rotate-45="isCollapsed"></bs4-icon>
+      </div>
+
+    </nav>
+  </div>
 </hpn-navbar>

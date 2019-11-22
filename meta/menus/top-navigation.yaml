@@ -12,6 +12,59 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Sabine Berndt-Bartel'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: zentrum-sabine-berndt-bartel
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Honorar
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: zentrum-honorar
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Standort
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: zentrum-standort
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Kontakt
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: kontakt
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Hypnose
         nesting: '0'
@@ -45,7 +98,7 @@ items:
                 type: static-page
                 url: ''
                 code: ''
-                reference: hypnose-nonverbal
+                reference: nonverbale-hypnose
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -110,7 +163,7 @@ items:
                 type: static-page
                 url: ''
                 code: ''
-                reference: hypnose-honorar
+                reference: zentrum-honorar
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -136,7 +189,7 @@ items:
         type: static-page
         url: ''
         code: ''
-        reference: weitere-leistungen-yager-therapie
+        reference: yager-terapie
         cmsPage: ''
         replace: '0'
         viewBag:
@@ -174,8 +227,10 @@ items:
                 title: Allergie
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anwendungsgebiete-allergie
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -467,6 +522,33 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Psychosomatische Energetik (PSE)'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: weitere-leistungen-psychosomatische-energetik
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Kinesiologischer Muskeltest'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: weitere-leistungen-kinesiologischer-muskeltest
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Kontakt
         nesting: '0'
@@ -480,4 +562,31 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: Fragebögen
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: kontakt-fragebogen
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Anfahrt
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: kontakt-anfahrt
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
 name: top-navigation

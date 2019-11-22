@@ -15,16 +15,125 @@
                 </a>
             {% endif %}
             {% if item.items %}
-                <div class="nav-item-level-2-wrapper py-3 collapsed">
-                    {% for item in item.items %}
-                        {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
-                        <div rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}} {% if item.items %}nav-item-level-2-with-childs{% endif %}">
-                            {% if not item.viewBag.isHidden %}
-                                <a rv-on-click="onItemClick" class="nav-link " href="{{ item.url }}">{{ item.title }}</a>
+                {% if item.items | length > 10 %}
+                    {% set A = [] %}
+                    {% set B = [] %}
+                    {% set C = [] %}
+                    {% set D = [] %}
+                    {% set E = [] %}
+                    {% set F = [] %}
+                    {% set G = [] %}
+                    {% set H = [] %}
+                    {% set I = [] %}
+                    {% set J = [] %}
+                    {% set K = [] %}
+                    {% set L = [] %}
+                    {% set M = [] %}
+                    {% set N = [] %}
+                    {% set O = [] %}
+                    {% set P = [] %}
+                    {% set Q = [] %}
+                    {% set R = [] %}
+                    {% set S = [] %}
+                    {% set T = [] %}
+                    {% set U = [] %}
+                    {% set V = [] %}
+                    {% set W = [] %}
+                    {% set X = [] %}
+                    {% set Y = [] %}
+                    {% set Z = [] %}
+                    <div class="nav-item-level-2-wrapper nav-item-level-2-wrapper-alphabetically py-3 collapsed">
+                        {% for item in item.items | sort %}
+                            {% set letter = item.title | slice(0, 1) | upper %}
+                            {% if letter == 'A' %}
+                                {% set A = A | merge([item]) %}
+                            {% elseif letter == 'B' %}
+                                {% set B = B | merge([item]) %}
+                            {% elseif letter == 'C' %}
+                                {% set C = C | merge([item]) %}
+                            {% elseif letter == 'D' %}
+                                {% set D = D | merge([item]) %}
+                            {% elseif letter == 'E' %}
+                                {% set E = E | merge([item]) %}
+                            {% elseif letter == 'F' %}
+                                {% set F = F | merge([item]) %}
+                            {% elseif letter == 'G' %}
+                                {% set G = G | merge([item]) %}
+                            {% elseif letter == 'H' %}
+                                {% set H = H | merge([item]) %}
+                            {% elseif letter == 'I' %}
+                                {% set I = I | merge([item]) %}
+                            {% elseif letter == 'J' %}
+                                {% set J = J | merge([item]) %}
+                            {% elseif letter == 'K' %}
+                                {% set K = K | merge([item]) %}
+                            {% elseif letter == 'L' %}
+                                {% set L = L | merge([item]) %}
+                            {% elseif letter == 'M' %}
+                                {% set M = M | merge([item]) %}
+                            {% elseif letter == 'N' %}
+                                {% set N = N | merge([item]) %}
+                            {% elseif letter == 'O' %}
+                                {% set O = O | merge([item]) %}
+                            {% elseif letter == 'P' %}
+                                {% set P = P | merge([item]) %}
+                            {% elseif letter == 'Q' %}
+                                {% set Q = Q | merge([item]) %}
+                            {% elseif letter == 'R' %}
+                                {% set R = R | merge([item]) %}
+                            {% elseif letter == 'S' %}
+                                {% set S = S | merge([item]) %}
+                            {% elseif letter == 'T' %}
+                                {% set T = T | merge([item]) %}
+                            {% elseif letter == 'U' %}
+                                {% set U = U | merge([item]) %}
+                            {% elseif letter == 'V' %}
+                                {% set V = V | merge([item]) %}
+                            {% elseif letter == 'W' %}
+                                {% set W = W | merge([item]) %}
+                            {% elseif letter == 'X' %}
+                                {% set X = X | merge([item]) %}
+                            {% elseif letter == 'Y' %}
+                                {% set Y = Y | merge([item]) %}
+                            {% elseif letter == 'Z' %}
+                                {% set Z = Z | merge([item]) %}
                             {% endif %}
+                        {% endfor %}
+
+                        {% set grouped = {'A': A, 'B': B, 'C': C, 'D': D, 'E': E, 'F': F, 'G': G, 'H': H, 'I': I, 'J': J, 'K': K, 'L': L, 'M': M, 'N': N, 'O': O, 'P': P, 'Q': Q, 'R': R, 'S': S, 'T': T, 'U': U, 'V': V, 'W': W, 'X': X, 'Y': Y, 'Z': Z} %}
+
+                        <div class="container">
+                            <div class="card-columns">
+                                {% for letter, items in grouped %}
+                                    {% if items %}
+                                        <div class="card border-0 bg-transparent">
+                                            <strong>{{letter}}</strong>
+                                            {% for item in items %}
+                                                {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
+                                                <div rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}} {% if item.items %}nav-item-level-2-with-childs{% endif %}">
+                                                    {% if not item.viewBag.isHidden %}
+                                                        <a rv-on-click="onItemClick" class="nav-link " href="{{ item.url }}">{{ item.title }}</a>
+                                                    {% endif %}
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
                         </div>
-                    {% endfor %}
-                </div>
+                    </div>
+                {% else %}
+                    <div class="nav-item-level-2-wrapper py-3 collapsed">
+                        {% for item in item.items %}
+                            {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
+                            <div rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}} {% if item.items %}nav-item-level-2-with-childs{% endif %}">
+                                {% if not item.viewBag.isHidden %}
+                                    <a rv-on-click="onItemClick" class="nav-link " href="{{ item.url }}">{{ item.title }}</a>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             {% endif %}
         </div>
     {% endif %}
