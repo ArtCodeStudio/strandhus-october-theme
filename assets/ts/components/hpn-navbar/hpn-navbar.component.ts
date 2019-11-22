@@ -70,10 +70,9 @@ export class HpnNavbarComponent extends Bs4NavbarComponent {
       }
       const parent = target.parentNode as HTMLElement;
       if (target && this.pjax) {
-        event.preventDefault();
         // If this element has childs toggle the menu
         if (parent.classList.contains('nav-item-level-1-with-childs')) {
-          this.toggle();
+          console.debug('hover');
         }
       }
     }
