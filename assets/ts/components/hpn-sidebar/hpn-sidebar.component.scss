@@ -1,0 +1,22 @@
+hpn-sidebar {
+  @extend bs4-sidebar;
+  width: 100vw;
+  padding-top: 200px;
+  padding-left: 48px;
+  padding-bottom: 100px;
+  &#main-sidebar {
+    background-color: rgba($body-bg, 0.7);
+    backdrop-filter: blur(10px);
+    color: inherit;
+    max-height: 100vh;
+    @include scrollbars(.6em, theme-color(secondary), transparent);
+    overflow-x: auto;
+  }
+  .nav-item-letter {
+
+  }
+}
+
+.navbar-main-sidebar {
+  z-index: $zindex-fixed + 101;
+}

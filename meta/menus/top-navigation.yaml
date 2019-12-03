@@ -27,19 +27,6 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Honorar
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: zentrum-honorar
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
                 title: Standort
                 nesting: '0'
                 type: static-page
@@ -59,6 +46,19 @@ items:
                 url: ''
                 code: ''
                 reference: kontakt
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Honorar
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: zentrum-honorar
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -148,10 +148,8 @@ items:
                 title: 'Häufige Frage'
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
                 reference: hypnose-faq
-                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -445,7 +443,7 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Selbstwertproblem
+                title: Selbstwertprobleme
                 nesting: '0'
                 type: static-page
                 url: ''

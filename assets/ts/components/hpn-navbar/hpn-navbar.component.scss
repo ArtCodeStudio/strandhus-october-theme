@@ -17,19 +17,6 @@ hpn-navbar.navbar {
       backdrop-filter: blur(10px);
     }
   }
-  .navbar-brand {
-    position: absolute;
-    max-width: 200px;
-    z-index: $zindex-fixed + 101;
-    white-space: initial;
-    .navbar-brand-text {
-      display: block;
-      font-size: $font-size-base;
-      padding-left: 26px;
-      line-height: 1.2;
-      font-weight: $font-weight-bold;
-    }
-  }
   .nav {
     padding: 1rem;
     .nav-item {
@@ -90,5 +77,20 @@ hpn-navbar.navbar {
         }
       }
     }
+  }
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 15px;
+  max-width: 200px;
+  z-index: $zindex-fixed + 101;
+  white-space: initial;
+  .navbar-brand-text {
+    display: block;
+    font-size: $font-size-base;
+    padding-left: 26px;
+    line-height: 1.2;
+    font-weight: $font-weight-bold;
   }
 }
