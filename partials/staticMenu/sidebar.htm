@@ -10,7 +10,7 @@
                     {{ item.title }}
                 </span>
             {% else %}
-                <a {% if item.items %}rv-on-click="toggleItem | args '{{ titleClass }}'"{% endif %} class="nav-link {% if item.items %}dropdown-toggle{% endif %}" href="{{ item.url }}">
+                <a {% if item.items %}rv-on-click="toggleItem | args '{{ titleClass }}'"{% else %}rv-on-click="onItemClick"{% endif %} class="nav-link {% if item.items %}dropdown-toggle{% endif %}" href="{{ item.url }}">
                     {{ item.title }}
                 </a>
             {% endif %}
