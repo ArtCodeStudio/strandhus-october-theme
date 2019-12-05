@@ -10,6 +10,7 @@ h6, .h6,
 .display-2,
 .display-3,
 .display-4 {
+  word-wrap: break-word;
   color: $title-color;
   margin-top: $headings-margin-bottom * 2;
 }
@@ -21,8 +22,35 @@ h1, .h1 {
     font-size: 2rem;
     font-weight: $font-weight-bold;
   }
+  @include media-breakpoint-down(lg){
+    font-size: 2rem;
+    small {
+      font-size: 80%;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: $h1-font-size;
+    small {
+      font-size: 2rem;
+    }
+  }
+}
+
+h2, .h2 {
+  @include media-breakpoint-down(lg){
+    font-size: 1.8rem;
+  }
 }
 
 h3, .h3 {
   margin-bottom: $headings-margin-bottom * 0.5;
+  @include media-breakpoint-down(lg){
+    font-size: 1.5rem;
+  }
+}
+
+h3, .h3 {
+  @include media-breakpoint-down(lg){
+    font-size: 1.25rem;
+  }
 }
