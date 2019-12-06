@@ -3,7 +3,7 @@
 [staticMenu footer]
 code = "footer"
 ==
-<div class="container d-flex flex-column">
+<div class="container d-flex flex-column pb-5">
   <div class="row order-1 order-md-0">
     <div class="col-12 col-md pt-5">
       {{ this.theme.general_address | raw}}
@@ -15,10 +15,10 @@ code = "footer"
       {{ this.theme.general_opening_hours | raw}}
     </div>
     <div class="d-flex col-auto division-image">
-      <bs4-icon class="d-none d-lg-block" src="{{ 'assets/images/hypnosezentrum-cuxhaven-footer-division.svg' | theme }}"></bs4-icon>
-      <bs4-icon class="d-block d-md-none" src="{{ 'assets/images/hypnosezentrum-cuxhaven-footer-division-90.svg' | theme }}"></bs4-icon>
+      <bs4-icon class="d-none d-lg-block division-image-desktop" src="{{ 'assets/images/hypnosezentrum-cuxhaven-footer-division.svg' | theme }}"></bs4-icon>
+      <bs4-icon class="d-block d-md-none division-image-mobile" src="{{ 'assets/images/hypnosezentrum-cuxhaven-footer-division-90.svg' | theme }}"></bs4-icon>
     </div>
-    <div class="col-12 col-md pt-5">
+    <div class="col-12 col-md pt-md-5">
       {% partial 'staticMenu/items' items=footer.menuItems %}
     </div>
   </div>

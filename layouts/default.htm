@@ -3,6 +3,8 @@ useContent = 1
 default = 0
 
 [seoTags]
+
+[contenteditor]
 ==
 <!DOCTYPE html>
 <html lang="de">
@@ -45,10 +47,10 @@ default = 0
             </div>
         </div>
         
-        {#% framework %#}
+        <script type="text/javascript" src="{{ 'assets/js/vendors.main.bundle.js' | theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/main.bundle.js' | theme }}"></script>
+        {% framework %}
         {% scripts %}
-        <script async="" type="text/javascript" src="{{ 'assets/js/vendors.main.bundle.js' | theme }}"></script>
-        <script async="" type="text/javascript" src="{{ 'assets/js/main.bundle.js' | theme }}"></script>
         
     </body>
 </head>
