@@ -5,9 +5,12 @@ import {
 } from '@ribajs/core';
 import routerModule from '@ribajs/router';
 
+// BS4 Components
 import { Bs4IconComponent } from '@ribajs/bs4/src/components/bs4-icon/bs4-icon.component';
 import { Bs4ButtonComponent } from '@ribajs/bs4/src/components/bs4-button/bs4-button.component';
 import { Bs4ToggleButtonComponent } from '@ribajs/bs4/src/components/bs4-toggle-button/bs4-toggle-button.component';
+import { Bs4AccordionComponent } from '@ribajs/bs4/src/components/bs4-accordion/bs4-accordion.component';
+
 import { dataScrollPositionYBinder } from '@ribajs/extras/src/binders/data-scroll-position-y.binder';
 
 import { jqueryModule } from '@ribajs/jquery';
@@ -26,7 +29,7 @@ export class Main {
 
     // selected elements from modules
     this.riba.module.regist({
-      components: { Bs4ButtonComponent, Bs4IconComponent, Bs4ToggleButtonComponent },
+      components: { Bs4ButtonComponent, Bs4IconComponent, Bs4ToggleButtonComponent, Bs4AccordionComponent },
       binders: { dataScrollPositionYBinder },
     });
 

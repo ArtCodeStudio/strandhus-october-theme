@@ -263,3 +263,51 @@ form:
               label: Quote
               type: textarea
               span: right
+      # Fee groups
+      fee_item_title_name:
+        tab: Fees
+        label: Name title
+        type: text
+        span: left
+        default: "Behandlung"
+      fee_item_title_sessions:
+        tab: Fees
+        label: Sessions title
+        type: text
+        span: left
+        default: "Sitzungen"
+      fee_item_title_price:
+        tab: Fees
+        label: Price title
+        type: text
+        span: left
+        default: "Honorar in EUR"
+      fee_groups:
+        tab: Fees
+        prompt: Add new group
+        titleFrom: groups
+        type: repeater
+        form:
+          fields:
+            title:
+              label: Title
+              type: text
+              span: left
+            items:
+              prompt: Add new item
+              titleFrom: items
+              type: repeater
+              form:
+                fields:
+                  name:
+                    label: Name
+                    type: text
+                    span: left
+                  sessions:
+                    label: Sessions
+                    type: text
+                    span: left
+                  price:
+                    label: Price
+                    type: text
+                    span: left

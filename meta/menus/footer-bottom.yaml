@@ -1,0 +1,63 @@
+name: footer-bottom
+items:
+    -
+        title: 'Ihr Experte für Hypnose'
+        type: url
+        url: 'https://www.youtube.com/watch?v=GgbGgtq-NMc'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: with-stars
+            isExternal: '1'
+    -
+        title: 'Häufige Frage'
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: hypnose-faq
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Honorar
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: zentrum-honorar
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Anfahrt
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: kontakt-anfahrt
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Erfahrungsberichte
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: erfahrungsberichte
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
