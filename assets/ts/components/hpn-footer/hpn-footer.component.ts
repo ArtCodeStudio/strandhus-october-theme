@@ -16,7 +16,6 @@ export class HpnFooterComponent extends Component {
 
   constructor(element?: HTMLElement) {
     super(element);
-    console.debug('constructor', this);
     this.init(HpnFooterComponent.observedAttributes);
   }
 
@@ -25,14 +24,6 @@ export class HpnFooterComponent extends Component {
     .then((view) => {
       return view;
     });
-  }
-
-  protected async beforeBind() {
-    console.debug('beforeBind');
-  }
-
-  protected async afterBind() {
-    console.debug('afterBind', this.scope);
   }
 
   protected requiredAttributes() {

@@ -3,8 +3,8 @@ hpn-navbar.navbar {
   padding: 0;
   .nav {
     transition: $transition-base;
-    background-color: rgba($body-bg, 0.7);
-    backdrop-filter: blur(10px);
+    background-color: rgba($body-bg, $hpn-navbar-bg-opacity);
+    backdrop-filter: blur($hpn-navbar-bg-blur);
     padding: 1rem;
     .nav-item {
       display: flex;
@@ -62,17 +62,18 @@ hpn-navbar.navbar {
   }
   // &.collapsed {
   //   .nav {
-  //     // background-color: rgba($body-bg, 0.7);
-  //     // backdrop-filter: blur(10px);
+  //     // background-color: rgba($body-bg, $hpn-navbar-bg-opacity);
+  //     // backdrop-filter: blur(8px);
   //   }
   // }
-  // &:not(.collapsed) {
-  //   .nav {
-  //     // background-color: rgba($white, 0.7);
-  //     // background-color: rgba($body-bg, 0.7);
-  //     // backdrop-filter: blur(10px);
-  //   }
-  // }
+  &:not(.collapsed) {
+    .nav {
+      // background-color: rgba($white, $hpn-navbar-bg-opacity);
+      // background-color: rgba($body-bg, $hpn-navbar-bg-opacity);
+      // backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba($secondary, $hpn-navbar-expanded-border-bottom-opacity);;
+    }
+  }
 }
 
 .navbar-brand {
@@ -82,6 +83,7 @@ hpn-navbar.navbar {
   z-index: $zindex-fixed + 101;
   white-space: initial;
   .navbar-brand-text {
+    word-break: normal;
     display: block;
     font-size: $font-size-base;
     padding-left: 26px;

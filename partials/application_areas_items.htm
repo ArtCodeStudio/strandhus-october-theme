@@ -7,7 +7,8 @@ snippetName = "Application areas items"
     {% for item in this.theme.application_areas_nav_item  %}
       <a class="col-6 col-md-4" href="{{ item.page | staticPage }}">
         <img
-          class="img-fluid rounded"
+          class="img-fluid rounded lazy"
+          loading="lazy"
           src="{{ item.image | media }}"
           alt="{{ item.title }}"
           srcset="{{ item.image | media | resize(100, 100) }} 100w, {{ item.image | media | resize(200, 200) }} 200w, {{ item.image | media | resize(400, 400) }} 400w, {{ item.image | media | resize(800, 800) }} 800w, {{ item.image | media | resize(1200, 1200) }} 1200w, {{ item.image | media | resize(1600, 1600) }} 1600w"

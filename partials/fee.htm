@@ -7,24 +7,26 @@ snippetName = "Fee"
     {% for group in this.theme.fee_groups  %}
       <template title="{{ group.title }}">
         {% if group.items | length > 0 %}
-          <table class="table table-borderless">
-            <thead>
-              <tr>
-                <th scope="col">{{ this.theme.fee_item_title_name }}</th>
-                <th scope="col">{{ this.theme.fee_item_title_sessions }}</th>
-                <th scope="col">{{ this.theme.fee_item_title_price }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for item in group.items  %}
+          <div class="table-responsive">
+            <table class="table table-borderless">
+              <thead>
                 <tr>
-                  <td scope="row">{{ item.name }}</td>
-                  <td>{{ item.sessions }}</td>
-                  <td>{{ item.price }}</td>
+                  <th scope="col">{{ this.theme.fee_item_title_name }}</th>
+                  <th scope="col">{{ this.theme.fee_item_title_sessions }}</th>
+                  <th scope="col">{{ this.theme.fee_item_title_price }}</th>
                 </tr>
-              {% endfor %}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {% for item in group.items  %}
+                  <tr>
+                    <td scope="row">{{ item.name }}</td>
+                    <td>{{ item.sessions }}</td>
+                    <td>{{ item.price }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         {% endif %}
       </template>
     {% endfor %}

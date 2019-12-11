@@ -7,7 +7,8 @@ snippetName = "Page Header OG Image"
 {% if seoTag.og_image %}
     <div class="content-box ratio-1-1 ratio-md-16-9">
         <img
-            class="content"
+            class="content lazy"
+            loading="lazy"
             src="{{ (seoTag.og_image | media) | app }}"
             srcset="{{ seoTag.og_image | media | app | resize(100, 100) }} 100w, {{ seoTag.og_image | media | app | resize(200, 200) }} 200w, {{ seoTag.og_image | media | app | resize(400, 400) }} 400w, {{ seoTag.og_image | media | app | resize(800, 800) }} 800w, {{ seoTag.og_image | media | app | resize(1200, 1200) }} 1200w, {{ seoTag.og_image | media | app | resize(1600, 1600) }} 1600w, {{ seoTag.og_image | media | app | resize(2000, 2000) }} 2000w, {{ seoTag.og_image | media | app | resize(2400, 2400) }} 2400w"
             sizes="100vw"

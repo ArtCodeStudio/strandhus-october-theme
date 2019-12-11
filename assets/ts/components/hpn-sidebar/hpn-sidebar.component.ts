@@ -15,6 +15,8 @@ interface ToggleItem {
   handle: string;
 }
 
+const ANIMATED_COLLAPSE = false;
+
 interface Scope {
   /**
    * Selector string to get the container element from DOM
@@ -125,18 +127,16 @@ export class HpnSidebarComponent extends Bs4SidebarComponent {
   };
 
   constructor(element?: HTMLElement) {
-    super(element);    
-    console.debug('constructor', this);
+    super(element);
   }
 
   public toggleItem(handle: string, context: any, event: Event) {
-    console.debug('toggleItem: ' + handle);
     event.preventDefault();
     event.stopPropagation();
     const toggleItem = this.getToggleItem(handle);
     if (toggleItem) {
       this.closeAllToggleItems(toggleItem);
-      toggleItem.collapseService.toggle();
+      toggleItem.collapseService.toggle(ANIMATED_COLLAPSE);
     }
 
     if (event) {
@@ -170,7 +170,6 @@ export class HpnSidebarComponent extends Bs4SidebarComponent {
         }
 
         this.hide();
-        console.debug('url', url);
         this.pjax.goTo(url);
       }
     }
@@ -179,7 +178,7 @@ export class HpnSidebarComponent extends Bs4SidebarComponent {
   protected closeAllToggleItems(except?: ToggleItem) {
     for (const toggleItem of this.toggleItems) {
       if (!except || toggleItem.handle !== except.handle) {
-        toggleItem.collapseService.hide();
+        toggleItem.collapseService.hide(ANIMATED_COLLAPSE);
       }
     }
   }
@@ -204,7 +203,6 @@ export class HpnSidebarComponent extends Bs4SidebarComponent {
         });
       }
     });
-    console.debug('connectedCallback');
   }
 
   protected async beforeBind() {
