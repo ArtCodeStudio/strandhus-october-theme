@@ -1,0 +1,29 @@
+bs4-accordion {
+  .accordion {
+    .card, .card .card-header {
+      background: transparent;
+      border: none;
+    }
+    .card {
+      .card-header {
+        @extend h2;
+        margin: 0;
+        &:hover {
+          color: $primary;
+        }
+      }
+      .card-body {
+        table {
+          th, td {
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

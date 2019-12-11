@@ -1,6 +1,6 @@
 import { Binder, Utils } from '@ribajs/core';
 
-import { Pjax, Prefetch } from '@ribajs/router';
+import { Pjax } from '@ribajs/router';
 
 import { Bs4NavbarComponent } from '@ribajs/bs4/src/components/bs4-navbar/bs4-navbar.component';
 
@@ -30,11 +30,12 @@ export class HpnNavbarComponent extends Bs4NavbarComponent {
     collapseHoverSelector: '.nav-item-level-2-wrapper',
     showOnHoverClass: 'show-on-hover',
     hideOnHoverClass: 'hide-on-hover',
+    animated: false,
   };
 
   constructor(element?: HTMLElement) {
     super(element);
-    console.debug('constructor', this);
+    // console.debug('constructor', this);
   }
 
   public onItemClick(context?: Binder<any>, event?: Event) {
@@ -196,7 +197,7 @@ export class HpnNavbarComponent extends Bs4NavbarComponent {
 
   protected connectedCallback() {
     super.connectedCallback();
-    console.debug('connectedCallback', this);
+    // console.debug('connectedCallback', this);
   }
 
   protected requiredAttributes() {

@@ -3,21 +3,8 @@ hpn-navbar.navbar {
   padding: 0;
   .nav {
     transition: $transition-base;
-  }
-  &.collapsed {
-    .nav {
-      background-color: rgba($body-bg, 0.7);
-      backdrop-filter: blur(10px);
-    }
-  }
-  &:not(.collapsed) {
-    .nav {
-      // background-color: rgba($white, 0.7);
-      background-color: rgba($body-bg, 0.7);
-      backdrop-filter: blur(10px);
-    }
-  }
-  .nav {
+    background-color: rgba($body-bg, 0.7);
+    backdrop-filter: blur(10px);
     padding: 1rem;
     .nav-item {
       display: flex;
@@ -73,6 +60,19 @@ hpn-navbar.navbar {
       }
     }
   }
+  // &.collapsed {
+  //   .nav {
+  //     // background-color: rgba($body-bg, 0.7);
+  //     // backdrop-filter: blur(10px);
+  //   }
+  // }
+  // &:not(.collapsed) {
+  //   .nav {
+  //     // background-color: rgba($white, 0.7);
+  //     // background-color: rgba($body-bg, 0.7);
+  //     // backdrop-filter: blur(10px);
+  //   }
+  // }
 }
 
 .navbar-brand {
