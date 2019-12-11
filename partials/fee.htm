@@ -7,7 +7,7 @@ snippetName = "Fee"
     {% for group in this.theme.fee_groups  %}
       <template title="{{ group.title }}">
         {% if group.items | length > 0 %}
-          <div class="table-responsive">
+          <div class="table-responsive d-none d-sm-block">
             <table class="table table-borderless">
               <thead>
                 <tr>
@@ -26,6 +26,20 @@ snippetName = "Fee"
                 {% endfor %}
               </tbody>
             </table>
+          </div>
+          <div class="d-block d-sm-none">
+            {% for item in group.items  %}
+              <dl class="row">
+                <dt class="col-12 col-sm-3">{{ this.theme.fee_item_title_name }}</dt>
+                <dd class="col-12 col-sm-9">{{ item.name }}</dd>
+
+                <dt class="col-12 col-sm-3">{{ this.theme.fee_item_title_sessions }}</dt>
+                <dd class="col-12 col-sm-9">{{ item.sessions }}</dd>
+
+                <dt class="col-12 col-sm-3">{{ this.theme.fee_item_title_price }}</dt>
+                <dd class="col-12 col-sm-9">{{ item.price }}</dd>
+              </dl>
+            {% endfor %}
           </div>
         {% endif %}
       </template>
