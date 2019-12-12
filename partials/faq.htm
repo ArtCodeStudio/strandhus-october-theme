@@ -1,0 +1,39 @@
+[viewBag]
+snippetCode = "faq"
+snippetName = "FAQ"
+snippetProperties[bg][title] = "Background"
+snippetProperties[bg][type] = "dropdown"
+snippetProperties[bg][default] = "transparent"
+snippetProperties[bg][options][transparent] = "Transparent"
+snippetProperties[bg][options][white] = "White"
+snippetProperties[category][title] = "Category"
+snippetProperties[category][type] = "dropdown"
+snippetProperties[category][default] = "all"
+snippetProperties[category][options][all] = "All"
+snippetProperties[category][options][general] = "General"
+snippetProperties[category][options][fee] = "Fee"
+snippetProperties[category][options][therapy] = "Therapy"
+==
+<div class="partial-faq bg-{{ bg }}">
+  <div class="container">
+    {% set titleKey = 'faq_' ~ category ~ '_title' %}
+    <h2>{{ attribute(this.theme, titleKey) }}</h2>
+    <bs4-accordion collapse-icon-src="{{ 'assets/iconset/arrow_carrot.svg' | theme }}" collapse-icon-size="38">
+      {% for item in this.theme.faq_questions  %}
+        {% if category == item.category or category == 'all' %}
+          {% set answer = item.answer | trim %}
+          {% set question = item.question | trim %}
+          <template title="{{ question }}">
+            <div>
+              {% if answer is empty or answer == '<p></p>' %}
+                <p>Derzeit steht noch keine Antwort zur Verfügung.</p>
+              {% else %}
+                {{ answer | raw }}
+              {% endif %}
+            </div>
+          </template>
+        {% endif %}
+      {% endfor %}
+    </bs4-accordion>
+  </div>
+</div>

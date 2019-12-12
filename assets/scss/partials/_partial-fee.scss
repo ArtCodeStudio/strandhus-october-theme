@@ -1,0 +1,27 @@
+.partial-fee {
+  padding: 60px 0 130px 0;
+  bs4-accordion {
+    .accordion {
+      .card {
+        .card-header {
+          margin: 0;
+          @extend h2;
+        }
+        .card-body {
+          padding-top: 0;
+          table {
+            word-break: keep-all;
+            th, td {
+              &:first-child {
+                padding-left: 0;
+              }
+              &:last-child {
+                padding-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

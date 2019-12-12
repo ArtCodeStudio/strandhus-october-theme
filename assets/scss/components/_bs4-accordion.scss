@@ -9,8 +9,6 @@ bs4-accordion {
     }
     .card {
       .card-header {
-        @extend h2;
-        margin: 0;
         padding-left: 0;
         padding-right: 0;
         &:hover {
@@ -25,18 +23,6 @@ bs4-accordion {
       .card-body {
         padding-left: 0;
         padding-right: 0;
-        padding-top: 0;
-        table {
-          word-break: keep-all;
-          th, td {
-            &:first-child {
-              padding-left: 0;
-            }
-            &:last-child {
-              padding-right: 0;
-            }
-          }
-        }
       }
     }
   }

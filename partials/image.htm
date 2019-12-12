@@ -1,0 +1,60 @@
+[viewBag]
+snippetCode = "image"
+snippetName = "Image"
+snippetProperties[useOgImage][title] = "Source is OG Image"
+snippetProperties[useOgImage][type] = "checkbox"
+snippetProperties[useOgImage][default] = 0
+snippetProperties[useOgImage][options][] = ""
+snippetProperties[src][title] = "Custom Source"
+snippetProperties[src][type] = "string"
+snippetProperties[src][default] = "https://via.placeholder.com/2560x1440?text=Snippet%20image%20placeholder"
+snippetProperties[src][options][] = ""
+snippetProperties[alt][title] = "Alternative text (for SEO)"
+snippetProperties[alt][type] = "string"
+snippetProperties[alt][default] = ""
+snippetProperties[alt][options][] = ""
+snippetProperties[container][title] = "With container"
+snippetProperties[container][type] = "checkbox"
+snippetProperties[container][default] = 1
+snippetProperties[container][options][] = ""
+snippetProperties[maxWidth][title] = "Maximal width"
+snippetProperties[maxWidth][type] = "string"
+snippetProperties[maxWidth][default] = "100%"
+snippetProperties[maxWidth][options][] = ""
+snippetProperties[rounded][title] = "Rounded"
+snippetProperties[rounded][type] = "checkbox"
+snippetProperties[rounded][default] = 1
+snippetProperties[rounded][options][] = ""
+snippetProperties[ratio][title] = "With ratio"
+snippetProperties[ratio][type] = "checkbox"
+snippetProperties[ratio][default] = 0
+snippetProperties[ratio][options][] = ""
+snippetProperties[ratioXs][title] = "Ratio Extra Small"
+snippetProperties[ratioXs][type] = "dropdown"
+snippetProperties[ratioXs][default] = "original"
+snippetProperties[ratioXs][options][original] = "Original"
+snippetProperties[ratioXs][options][ratio-1-1] = "1-1"
+snippetProperties[ratioXs][options][ratio-16-9] = "16-9"
+snippetProperties[ratioMd][title] = "Ratio Medium"
+snippetProperties[ratioMd][type] = "dropdown"
+snippetProperties[ratioMd][default] = "original"
+snippetProperties[ratioMd][options][original] = "Original"
+snippetProperties[ratioMd][options][ratio-md-1-1] = "1-1"
+snippetProperties[ratioMd][options][ratio-md-16-9] = "16-9"
+==
+{% if seoTag.og_image and useOgImage %}
+  {% set source = (seoTag.og_image | media) | app %}
+{% else %}
+  {% set source = src %}
+{% endif %}
+<div class="partial-image w-100">
+  <div class="{% if container %}container{% else %}container-fluid{% endif %}" style="max-width: {{ maxWidth }};">
+    <div class="row">
+      <div class="col-12 {% if not container %}px-0{% endif %}">
+        <div {% if ratio %}class="content-box {{ ratioXs }} {{ ratioMd }}"{% endif %}>
+          <img loading="lazy" class="img-fluid {% if rounded %}rounded-30{% endif %}" src="{{ source }}" alt="{{ alt }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

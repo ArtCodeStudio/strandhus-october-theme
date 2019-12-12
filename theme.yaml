@@ -292,7 +292,6 @@ form:
             title:
               label: Title
               type: text
-              span: left
             items:
               prompt: Add new item
               titleFrom: items
@@ -311,3 +310,52 @@ form:
                     label: Price
                     type: text
                     span: left
+      # FAQ groups
+      faq_all_title:
+        tab: FAQ
+        label: All title
+        type: text
+        default: "Alle Fragen"
+        span: left
+      faq_general_title:
+        tab: FAQ
+        label: General title
+        type: text
+        default: "Allgemeine Fragen"
+        span: left
+      faq_fee_title:
+        tab: FAQ
+        label: Fee title
+        type: text
+        default: "Fragen zum Honorar"
+        span: left
+      faq_therapy_title:
+        tab: FAQ
+        label: Therapy title
+        type: text
+        default: "Fragen zu den Therapieformen"
+        span: left
+      faq_questions:
+        tab: FAQ
+        prompt: Add new question
+        titleFrom: questions
+        type: repeater
+        form:
+          fields:
+            answer:
+              label: Answer
+              type: richeditor
+              size: large
+              span: right
+            category:
+              label: Category
+              type: dropdown
+              span: left
+              options:
+                general: General
+                fee: Fee
+                therapy: Therapy
+            question:
+              label: Question
+              type: text
+              span: left
