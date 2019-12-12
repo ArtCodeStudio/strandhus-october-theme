@@ -1,16 +1,29 @@
-description = "Editable content"
-
 [viewBag]
-snippetCode = "editable-content"
-snippetName = "Editable content"
-snippetProperties[filename][title] = "Content Filename"
-snippetProperties[filename][type] = "string"
-snippetProperties[filename][default] = ""
-snippetProperties[filename][options][] = ""
-snippetProperties[maxWidth][title] = "Max width"
-snippetProperties[maxWidth][type] = "string"
-snippetProperties[maxWidth][default] = "100%"
-snippetProperties[maxWidth][options][] = ""
+snippetCode = "button"
+snippetName = "Button"
+snippetProperties[label][title] = "Label"
+snippetProperties[label][type] = "string"
+snippetProperties[label][default] = "Click me"
+snippetProperties[label][options][] = ""
+snippetProperties[align][title] = "Alignment"
+snippetProperties[align][type] = "dropdown"
+snippetProperties[align][default] = "text-center"
+snippetProperties[align][options][justify-content-start] = "Left"
+snippetProperties[align][options][justify-content-center] = "Center"
+snippetProperties[align][options][justify-content-end] = "Right"
+snippetProperties[href][title] = "Target Url"
+snippetProperties[href][type] = "string"
+snippetProperties[href][default] = ""
+snippetProperties[href][options][] = ""
+snippetProperties[page][title] = "Or Target Page"
+snippetProperties[page][type] = "string"
+snippetProperties[page][default] = ""
+snippetProperties[page][options][] = ""
+snippetProperties[style][title] = "Style"
+snippetProperties[style][type] = "dropdown"
+snippetProperties[style][default] = "btn-animated-underline-primary"
+snippetProperties[style][options][btn-animated-underline-primary] = "Underline Primary"
+snippetProperties[style][options][btn-lg btn-primary] = "Primary"
 snippetProperties[marginTop][title] = "Margin Top"
 snippetProperties[marginTop][type] = "dropdown"
 snippetProperties[marginTop][default] = 1
@@ -48,10 +61,14 @@ snippetProperties[paddingBottom][options][] = 3
 snippetProperties[paddingBottom][options][] = 4
 snippetProperties[paddingBottom][options][] = 5
 ==
-<div class="container partial-editable-content mt-{{ marginTop }} mb-{{ marginBottom }} pt-{{ paddingTop }} pb-{{ paddingBottom }}">
-  <div class="row">
-    <div class="col" style="max-width: {{ maxWidth }};">
-      {% component 'contenteditor' file=filename %}
-    </div>
+<div class="partial-button mt-{{ marginTop }} mb-{{ marginBottom }} pt-{{ paddingTop }} pb-{{ paddingBottom }}">
+  <div class="container d-flex {{ align }}">
+    {% if href is not empty %}
+      {% set target = href %}
+    {% endif %}
+    {% if page is not empty %}
+      {% set target = page | staticPage %}
+    {% endif %}
+    <bs4-button class="btn {{ style }}" {% if target %}rv-route="'{{ target }}'"{% endif %}>{{ label }}</bs4-button>
   </div>
 </div>
