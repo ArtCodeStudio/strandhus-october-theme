@@ -1,0 +1,28 @@
+title = "site.webmanifest"
+url = "/site.webmanifest"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+contentType = "json"
+customContentType = "application/manifest+json"
+force_show = 1
+==
+{
+    "name": "{{ this.theme.site_name }}",
+    "short_name": "{{ this.theme.site_name }}",
+    "icons": [
+        {
+            "src": "{{ 'assets/favicons/android-chrome-192x192.png' | theme }}",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "{{ 'assets/favicons/android-chrome-512x512.png' | theme }}",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "{{ this.theme.theme_color }}",
+    "background_color": "{{ this.theme.background_color }}",
+    "display": "standalone"
+}

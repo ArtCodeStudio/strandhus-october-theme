@@ -1,43 +1,12 @@
 items:
     -
-        title: Info
+        title: Kontakt
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
-        reference: info
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Partner
-        nesting: '0'
-        type: static-page
-        code: ''
-        reference: partner
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Impressum
-        nesting: '0'
-        type: static-page
-        code: ''
-        reference: impressum
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Datenschutz
-        nesting: '0'
-        type: static-page
-        code: ''
-        reference: datenschutz
+        reference: kontakt
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -47,8 +16,36 @@ items:
         title: FAQ
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: hypnose-faq
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Impressum
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: impressum
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Datenschutz
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: datenschutz
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -58,8 +55,10 @@ items:
         title: AGB
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: agb
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'

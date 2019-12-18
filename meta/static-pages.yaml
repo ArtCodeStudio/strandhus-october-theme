@@ -39,8 +39,6 @@ static-pages:
     kontakt:
         kontakt-anfahrt: {  }
         kontakt-fragebogen: {  }
-    info: {  }
-    partner: {  }
     impressum: {  }
     datenschutz: {  }
     agb: {  }

@@ -16,6 +16,7 @@ default = 0
     <title>{{ this.page.title }}</title>
     
     {% component 'seoTags' %}
+    {% partial 'favicons' %}
 
     {% styles %}
     <link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">
@@ -51,6 +52,8 @@ default = 0
         <script type="text/javascript" src="{{ 'assets/js/main.bundle.js' | theme }}"></script>
         {% framework %}
         {% scripts %}
+        
+        {% partial 'provenexpert_widget_portrait' %}
         
     </body>
 </head>

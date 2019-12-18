@@ -3,7 +3,7 @@ items:
     -
         title: 'Ihr Experte für Hypnose'
         type: url
-        url: 'https://www.youtube.com/watch?v=GgbGgtq-NMc'
+        url: 'https://www.provenexpert.com/de-de/praxis-fuer-psychosomatische-energetik-hypnose-entspannung/'
         code: ''
         viewBag:
             isHidden: '0'

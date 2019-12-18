@@ -1,0 +1,15 @@
+
+.partial-provenexpert-widget-footer {
+  background-color: $white;
+  #pewl {
+    border: none !important;
+  }
+  
+  #ProvenExpert_widgetbar_container {
+    > div {
+      position: inherit !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }  
+}
