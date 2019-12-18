@@ -1,8 +1,10 @@
 
 .partial-provenexpert-widget-footer {
-  background-color: $white;
+  z-index: $zindex-fixed + 1;
+  background-color: $body-bg;
   #pewl {
     border: none !important;
+    background-color: transparent !important;
   }
   
   #ProvenExpert_widgetbar_container {
@@ -10,6 +12,7 @@
       position: inherit !important;
       border: none !important;
       box-shadow: none !important;
+      background-color: transparent !important;
     }
   }  
 }

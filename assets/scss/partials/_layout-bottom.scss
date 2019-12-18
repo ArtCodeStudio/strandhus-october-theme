@@ -1,5 +1,5 @@
 #layout-bottom {
-  padding-top: 100px;
+  margin-top: 100px;
 
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcf6f5+0,d5c1c3+100 */
   background: linear-gradient(to bottom, $body-bg 0%,$tertiary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -31,18 +31,5 @@
       max-width: 80px;
       max-height: 80px;
     }
-  }
-
-  .nav-footer-in-column {
-    .nav-item {
-      // .nav-link {
-      //   padding-left: 0;
-      //   padding-right: 0;
-      // }
-    }
-  }
-
-  .nav-footer-bottom {
-
   }
 }

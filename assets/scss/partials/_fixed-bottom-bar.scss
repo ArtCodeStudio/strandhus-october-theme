@@ -1,0 +1,15 @@
+body[data-scroll-position-y="bottom"] {
+  .partial-fixed-bottom-bar {
+    background-color: transparent;
+    padding-bottom: 250px;
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.partial-fixed-bottom-bar {
+  transition: $transition-base;
+  background-color: $body-bg;
+  padding-bottom: 0;
+}

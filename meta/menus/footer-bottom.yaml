@@ -2,9 +2,13 @@ name: footer-bottom
 items:
     -
         title: 'Ihr Experte für Hypnose'
+        nesting: ''
         type: url
         url: 'https://www.provenexpert.com/de-de/praxis-fuer-psychosomatische-energetik-hypnose-entspannung/'
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: with-stars
@@ -18,6 +22,24 @@ items:
         reference: hypnose-faq
         cmsPage: ''
         replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Tel: (04723) 79 64 157'
+        type: url
+        url: 'tel:047237964157'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'E-Mail: kontakt@hypnose-cuxhaven.de'
+        type: url
+        url: 'mailto:kontakt@hypnose-cuxhaven.de'
+        code: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
