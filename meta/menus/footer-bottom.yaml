@@ -14,58 +14,27 @@ items:
             cssClass: with-stars
             isExternal: '1'
     -
-        title: 'Häufige Frage'
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: hypnose-faq
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
         title: 'Tel: (04723) 79 64 157'
+        nesting: ''
         type: url
         url: 'tel:047237964157'
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: 'E-Mail: kontakt@hypnose-cuxhaven.de'
+        nesting: ''
         type: url
         url: 'mailto:kontakt@hypnose-cuxhaven.de'
         code: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Honorar
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: zentrum-honorar
+        reference: ''
         cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Anfahrt
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: kontakt-anfahrt
-        cmsPage: ''
-        replace: '0'
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
