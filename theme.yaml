@@ -387,3 +387,25 @@ form:
                             label: Question
                             type: text
                             span: left
+            at_a_glance_slides:
+                tab: At a glance
+                prompt: 'Add new slide'
+                titleFrom: slides
+                type: repeater
+                form:
+                    fields:
+                        image:
+                            label: Image
+                            type: mediafinder
+                            mode: image
+                            span: left
+                        extern_image:
+                            label: Image by Url
+                            type: text
+                            comment: 'Enter here a external image url if you want to use this instead'
+                            span: right
+                        alt:
+                            label: 'Alt text'
+                            comment: 'Image alternative text attribute for SEO and Screenreaders'
+                            type: text
+                            span: right
