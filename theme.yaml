@@ -388,7 +388,7 @@ form:
                             type: text
                             span: left
             at_a_glance_slides:
-                tab: At a glance
+                tab: Slideshow - At a glance
                 prompt: 'Add new slide'
                 titleFrom: slides
                 type: repeater
@@ -409,3 +409,35 @@ form:
                             comment: 'Image alternative text attribute for SEO and Screenreaders'
                             type: text
                             span: right
+            # Contact Reasons
+            contact_reasons_section:
+                label: 'Reasons'
+                type: section
+                tab: Contact
+            contact_reasons_title:
+                tab: Contact
+                label: 'Reasons title'
+                type: text
+            contact_reasons:
+                tab: Contact
+                prompt: 'Add new contact reason'
+                titleFrom: reasons
+                type: repeater
+                form:
+                    fields:
+                        text:
+                            label: 'Reason text'
+                            type: text
+            # Contact Concern
+            contact_concern_section:
+                label: 'Concern'
+                type: section
+                tab: Contact
+            contact_concern_title:
+                tab: Contact
+                label: 'Concern title'
+                type: text
+            contact_concern_content:
+                tab: Contact
+                label: 'Concern content text'
+                type: richeditor

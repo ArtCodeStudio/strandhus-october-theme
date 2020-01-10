@@ -31,10 +31,10 @@ snippetProperties[filename][options][] = ""
             {% set image = slide.extern_image %}
 
             {% if slide.image is not empty %}
-            {% set image = slide.image %}
+            {% set image = slide.image | media %}
             {% endif%}
-            <div class="slide col-12 p-0">
-              <img lazyload="lazy" class="img-fluid w-100 lazy" src="{{ image }}" alt="{{ slide.alt }}">
+            <div class="slide col-12 p-0 embed-responsive embed-responsive-1by1">
+              <img lazyload="lazy" class="embed-responsive-item lazy" src="{{ image }}" alt="{{ slide.alt }}">
             </div>
           {% endfor %}
         </div>
