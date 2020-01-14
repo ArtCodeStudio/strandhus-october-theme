@@ -6,6 +6,40 @@ default = 0
 
 [contenteditor]
 ==
+<?php
+function onContactFormSubmit()
+{
+    $inputs = array('contactReason', 'contactSelectApplication', 'contactMessage', 'contactLastname', 'contactFirstname', 'contactMail', 'contactPhone', 'contactRecallTime', 'contactAgreement');
+    foreach ($inputs as &$inputName) {
+        $this->page[$inputName] = input($inputName);
+        $values[$inputName] = input($inputName);
+    }
+    
+    $buildOwnerMessage = function ($message) use ($values) {
+        // TODO use email and name from backend or theme settings
+        $message->to('info@thp-garber.de', 'Viola Garber');
+        // $message->from($vars['email'], $vars['name']);
+        // $message->subject("Neue Anfrage von ".$vars['name'].": ".$vars['regard']);
+    };
+    
+    $buildSenderMessage = function ($message) use ($values) {
+        $message->to($vars['email'], $vars['name']);
+    };
+
+    // mail to site owner
+    // Mail::send('hypnose::contact-notification', $values, $buildOwnerMessage);
+    
+    // mail to contact sender
+    // Mail::send('hypnose::contact', $values, $buildSenderMessage);
+    
+    Log::info('Used contact from user: '.$values['contactFirstname'].' '.$values['contactLastname'].' ('.$values['contactMail'].')');
+    
+    // TODO catch errors
+    $this->page['result'] = "Nachricht abgeschickt";
+    
+}
+?>
+==
 <!DOCTYPE html>
 <html lang="de">
 

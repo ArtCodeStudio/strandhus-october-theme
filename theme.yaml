@@ -418,6 +418,10 @@ form:
                 tab: Contact
                 label: 'Reasons title'
                 type: text
+            contact_reasons_content:
+                tab: Contact
+                label: 'Reasons content text'
+                type: richeditor
             contact_reasons:
                 tab: Contact
                 prompt: 'Add new contact reason'
@@ -440,4 +444,36 @@ form:
             contact_concern_content:
                 tab: Contact
                 label: 'Concern content text'
+                type: richeditor
+            # Contact Recall
+            contact_recall_section:
+                label: 'Recall'
+                type: section
+                tab: Contact
+            contact_recall_title:
+                tab: Contact
+                label: 'Recall title'
+                type: text
+            contact_recall_content:
+                tab: Contact
+                label: 'Recall content text'
+                type: richeditor
+            contact_recall_trimes:
+                tab: Contact
+                prompt: 'Add new recall time'
+                titleFrom: reasons
+                type: repeater
+                form:
+                    fields:
+                        text:
+                            label: 'Recall time text'
+                            type: text
+            # Contact Legal
+            contact_legal_data_protection_content:
+                tab: Contact
+                label: 'Data protection text'
+                type: richeditor
+            contact_legal_agreement_content:
+                tab: Contact
+                label: 'Agreement text'
                 type: richeditor
