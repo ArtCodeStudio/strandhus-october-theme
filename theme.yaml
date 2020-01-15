@@ -477,3 +477,21 @@ form:
                 tab: Contact
                 label: 'Agreement text'
                 type: richeditor
+            # Forms
+            forms:
+                tab: Forms
+                titleFrom: report
+                prompt: 'Add new pdf form'
+                type: repeater
+                form:
+                    fields:
+                        title:
+                            label: Title
+                            type: text
+                        content:
+                            label: 'Introduction text'
+                            type: richeditor
+                        pdf:
+                            label: Pdf file
+                            type: mediafinder
+                            mode: file

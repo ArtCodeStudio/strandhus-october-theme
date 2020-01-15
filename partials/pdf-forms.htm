@@ -1,0 +1,16 @@
+[viewBag]
+snippetCode = "pdf-forms"
+snippetName = "PDF Forms"
+==
+<div class="container pdf-forms">
+  <div class="row">
+    <div class="col-12">
+      {% for form in this.theme.forms  %}
+        <h2>{{ form.title }}</h2>
+        {{ form.content | raw}}
+        <pdf-form-fields src="{{ form.pdf | media }}" worker-src="{{ 'assets/js/vendors.pdfjsWorker.bundle.js' | theme }}"></pdf-form-fields>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
