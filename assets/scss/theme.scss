@@ -18,6 +18,9 @@
 @import 'typo';
 @import 'nav';
 
+// binder style overwrites
+@import './binders/index';
+
 // component style overwrites
 @import './components/index';
 

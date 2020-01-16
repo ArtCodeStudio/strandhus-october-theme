@@ -485,6 +485,10 @@ form:
                 type: repeater
                 form:
                     fields:
+                        active:
+                            label: Active
+                            type: checkbox
+                            default: true
                         title:
                             label: Title
                             type: text
