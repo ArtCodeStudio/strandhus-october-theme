@@ -23,8 +23,6 @@ snippetProperties[filename][options][] = ""
         control-next-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
         indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
         indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}"
-        control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
-        control-next-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
       >
         <div class="slideshow-inner">
           {% for slide in this.theme.at_a_glance_slides %}
@@ -45,7 +43,5 @@ snippetProperties[filename][options][] = ""
       {% component 'contenteditor' file=filename %}
       <bs4-button class="btn btn-animated-underline-primary" rv-route="'{{ 'anwendungsgebiete' | staticPage }}'">Zu den Anwendungsgebieten</bs4-button>
     </div>
-
-
   </div>
 </div>
