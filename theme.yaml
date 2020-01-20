@@ -259,8 +259,29 @@ form:
                 type: richeditor
                 label: 'Opening hours'
                 tab: General
+            # Application Areas
             application_areas_nav_item:
                 tab: 'Application areas'
+                titleFrom: items
+                type: repeater
+                form:
+                    fields:
+                        image:
+                            label: Image
+                            type: mediafinder
+                            mode: image
+                            span: left
+                        title:
+                            label: Title
+                            type: text
+                            span: right
+                        page:
+                            label: Page
+                            type: text
+                            span: right
+            # Additional Areas
+            additional_areas_nav_item:
+                tab: 'Additional areas'
                 titleFrom: items
                 type: repeater
                 form:

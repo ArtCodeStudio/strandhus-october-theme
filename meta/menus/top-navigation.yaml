@@ -14,11 +14,13 @@ items:
             isExternal: '0'
         items:
             -
-                title: Übersicht
+                title: 'Über das Zentrum'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: zentrum
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -94,10 +96,8 @@ items:
                 title: Hypnosetherapie
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
-                reference: hypnose-hypnotherapie
-                cmsPage: ''
+                reference: hypnose
                 replace: '0'
                 viewBag:
                     isHidden: '0'

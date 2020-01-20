@@ -33,14 +33,14 @@ snippetProperties[ratioXs][title] = "Ratio Extra Small"
 snippetProperties[ratioXs][type] = "dropdown"
 snippetProperties[ratioXs][default] = "original"
 snippetProperties[ratioXs][options][original] = "Original"
-snippetProperties[ratioXs][options][ratio-1-1] = "1-1"
-snippetProperties[ratioXs][options][ratio-16-9] = "16-9"
+snippetProperties[ratioXs][options][embed-responsive-1by1] = "1by1"
+snippetProperties[ratioXs][options][embed-responsive-16by9] = "16by9"
 snippetProperties[ratioMd][title] = "Ratio Medium"
 snippetProperties[ratioMd][type] = "dropdown"
 snippetProperties[ratioMd][default] = "original"
 snippetProperties[ratioMd][options][original] = "Original"
-snippetProperties[ratioMd][options][ratio-md-1-1] = "1-1"
-snippetProperties[ratioMd][options][ratio-md-16-9] = "16-9"
+snippetProperties[ratioMd][options][embed-responsive-md-1by1] = "1by1"
+snippetProperties[ratioMd][options][embed-responsive-md-16by9] = "16by9"
 ==
 {% if seoTag.og_image and useOgImage %}
   {% set source = (seoTag.og_image | media) | app %}
@@ -51,7 +51,7 @@ snippetProperties[ratioMd][options][ratio-md-16-9] = "16-9"
   <div class="{% if container %}container{% else %}container-fluid{% endif %}">
     <div class="row" style="max-width: {{ maxWidth }};">
       <div class="col-12 {% if not container %}px-0{% endif %}">
-        <div {% if ratio %}class="content-box {{ ratioXs }} {{ ratioMd }}"{% endif %}>
+        <div {% if ratio %}class="embed-responsive {{ ratioXs }} {{ ratioMd }}"{% endif %}>
           <img loading="lazy" class="img-fluid {% if rounded %}rounded-30{% endif %}" src="{{ source }}" alt="{{ alt }}">
         </div>
       </div>

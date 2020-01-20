@@ -2,42 +2,44 @@
 snippetCode = "application-areas-slideshow"
 snippetName = "Application areas slideshow"
 ==
-<div class="container application-areas-slideshow">
-  <div class="row">
-    <div class="col-12">
-      <h2>Was wir im Hypnosezentrum behandeln</h2>
-      <bs4-slideshow
-        controls="false"
-        lg-controls="true"
-        indicators="false"
-        control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
-        control-next-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
-        controls-position="outsite-middle"
-        autoplay="true"
-        autoplay-interval="0"
-        md-autoplay-interval="8000"
-        autoplay-velocity="0.05"
-        draggable="false"
-      >
-        <div class="slideshow-inner">
-          {% for item in this.theme.application_areas_nav_item  %}
-            <div class="slide col-6 col-md-4 draggable" rv-route="'{{ item.page | staticPage }}'">
-              <img
-                class="img-fluid rounded lazy draggable"
-                loading="lazy"
-                src="{{ item.image | media }}"
-                alt="{{ item.title }}"
-                srcset="{{ item.image | media | resize(100, 100) }} 100w, {{ item.image | media | resize(200, 200) }} 200w, {{ item.image | media | resize(400, 400) }} 400w, {{ item.image | media | resize(800, 800) }} 800w, {{ item.image | media | resize(1200, 1200) }} 1200w, {{ item.image | media | resize(1600, 1600) }} 1600w"
-                sizes="(min-width: 768px) 30vw, 90vw"
-              >
-              <p class="mt-2 mb-4 text-truncate">{{ item.title }}</p>
-            </div>
-          {% endfor %}
-        </div>
+<div class="application-areas-slideshow">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Was wir im Hypnosezentrum behandeln</h2>
+        <bs4-slideshow
+          controls="false"
+          lg-controls="true"
+          indicators="false"
+          control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
+          control-next-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
+          lg-controls-position="outsite-middle"
+          autoplay="true"
+          autoplay-interval="0"
+          md-autoplay-interval="8000"
+          autoplay-velocity="0.05"
+          draggable="false"
+        >
+          <div class="slideshow-inner">
+            {% for item in this.theme.application_areas_nav_item  %}
+              <div class="slide col-6 col-md-4 draggable" rv-route="'{{ item.page | staticPage }}'">
+                <img
+                  class="img-fluid rounded lazy draggable"
+                  loading="lazy"
+                  src="{{ item.image | media }}"
+                  alt="{{ item.title }}"
+                  srcset="{{ item.image | media | resize(100, 100) }} 100w, {{ item.image | media | resize(200, 200) }} 200w, {{ item.image | media | resize(400, 400) }} 400w, {{ item.image | media | resize(800, 800) }} 800w, {{ item.image | media | resize(1200, 1200) }} 1200w, {{ item.image | media | resize(1600, 1600) }} 1600w"
+                  sizes="(min-width: 768px) 30vw, 90vw"
+                >
+                <p class="mt-2 mb-4 text-truncate">{{ item.title }}</p>
+              </div>
+            {% endfor %}
+          </div>
 
-      </bs4-slideshow>
+        </bs4-slideshow>
+
+      </div>
 
     </div>
-
   </div>
 </div>
