@@ -1,10 +1,5 @@
-import {
-  Riba,
-  coreModule,
-  Utils,
-} from '@ribajs/core';
+import { Riba, coreModule, Utils } from '@ribajs/core';
 import routerModule from '@ribajs/router';
-import pdfModule from '@ribajs/pdf';
 
 // BS4 Components
 import { Bs4IconComponent } from '@ribajs/bs4/src/components/bs4-icon/bs4-icon.component';
@@ -21,37 +16,35 @@ import { jqueryModule } from '@ribajs/jquery';
 import * as CustomComponents from './components';
 
 export class Main {
+    private riba = new Riba();
 
-  private riba = new Riba();
+    constructor() {
+        this.riba.module.regist(coreModule);
+        this.riba.module.regist(jqueryModule);
+        this.riba.module.regist(routerModule);
 
-  constructor() {
-    this.riba.module.regist(coreModule);
-    this.riba.module.regist(jqueryModule);
-    this.riba.module.regist(routerModule);
-    this.riba.module.regist(pdfModule);
+        // selected elements from modules
+        this.riba.module.regist({
+            components: {
+                Bs4ButtonComponent,
+                Bs4IconComponent,
+                Bs4ToggleButtonComponent,
+                Bs4AccordionComponent,
+                Bs4SlideshowComponent,
+            },
+            binders: { dataScrollPositionYBinder },
+        });
 
-    // selected elements from modules
-    this.riba.module.regist({
-      components: {
-        Bs4ButtonComponent,
-        Bs4IconComponent,
-        Bs4ToggleButtonComponent,
-        Bs4AccordionComponent,
-        Bs4SlideshowComponent,
-      },
-      binders: { dataScrollPositionYBinder },
-    });
+        // Regist custom components
+        this.riba.module.regist({
+            components: CustomComponents,
+            // binders: CustomBinders,
+        });
 
-    // Regist custom components
-    this.riba.module.regist({
-      components: CustomComponents,
-      // binders: CustomBinders,
-    });
-
-    this.riba.bind(document.body, window.model);
-  }
+        this.riba.bind(document.body, window.model);
+    }
 }
 
 Utils.domIsReady(() => {
-  const main = new Main();
+    new Main();
 });
