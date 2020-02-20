@@ -1,8 +1,8 @@
-name: Hypnosezentrum
-description: 'Hypnosezentrum OctoberCMS Theme'
+name: Strandhus
+description: 'Strandhus OctoberCMS Theme'
 author: 'Art+Code Studio'
 homepage: 'https://artandcode.studio/'
-code: hypnose
+code: strandhus
 form:
     tabs:
         fields:
@@ -208,9 +208,8 @@ form:
                 default: '#FCF6F5'
                 tab: Colors
                 assetVar: body-bg
-            # Favicons
             site_name:
-                label: 'Name'
+                label: Name
                 type: text
                 comment: 'The name of the web application as it is usually displayed to the user <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest/name" target="_blank">(e.g., amongst a list of other applications, or as a label for an icon)</a>.'
                 commentHtml: true
@@ -244,13 +243,11 @@ form:
                 commentHtml: true
                 default: '#ffffff'
                 tab: Favicons
-            # Layout Top
-            partial_top_logo:
+            general_logo:
                 type: mediafinder
                 mode: image
                 label: Logo
-                tab: 'Layout Top'
-            # General
+                tab: General
             general_address:
                 type: richeditor
                 label: Address
@@ -259,7 +256,6 @@ form:
                 type: richeditor
                 label: 'Opening hours'
                 tab: General
-            # Application Areas
             application_areas_nav_item:
                 tab: 'Application areas'
                 titleFrom: items
@@ -279,7 +275,6 @@ form:
                             label: Page
                             type: text
                             span: right
-            # Additional Areas
             additional_areas_nav_item:
                 tab: 'Additional areas'
                 titleFrom: items
@@ -409,7 +404,7 @@ form:
                             type: text
                             span: left
             at_a_glance_slides:
-                tab: Slideshow - At a glance
+                tab: 'Slideshow - At a glance'
                 prompt: 'Add new slide'
                 titleFrom: slides
                 type: repeater
@@ -421,7 +416,7 @@ form:
                             mode: image
                             span: left
                         extern_image:
-                            label: Image by Url
+                            label: 'Image by Url'
                             type: text
                             comment: 'Enter here a external image url if you want to use this instead'
                             span: right
@@ -430,9 +425,8 @@ form:
                             comment: 'Image alternative text attribute for SEO and Screenreaders'
                             type: text
                             span: right
-            # Contact Reasons
             contact_reasons_section:
-                label: 'Reasons'
+                label: Reasons
                 type: section
                 tab: Contact
             contact_reasons_title:
@@ -453,9 +447,8 @@ form:
                         text:
                             label: 'Reason text'
                             type: text
-            # Contact Concern
             contact_concern_section:
-                label: 'Concern'
+                label: Concern
                 type: section
                 tab: Contact
             contact_concern_title:
@@ -466,9 +459,8 @@ form:
                 tab: Contact
                 label: 'Concern content text'
                 type: richeditor
-            # Contact Recall
             contact_recall_section:
-                label: 'Recall'
+                label: Recall
                 type: section
                 tab: Contact
             contact_recall_title:
@@ -489,7 +481,6 @@ form:
                         text:
                             label: 'Recall time text'
                             type: text
-            # Contact Legal
             contact_legal_data_protection_content:
                 tab: Contact
                 label: 'Data protection text'
@@ -498,7 +489,6 @@ form:
                 tab: Contact
                 label: 'Agreement text'
                 type: richeditor
-            # Forms
             forms:
                 tab: Forms
                 titleFrom: report
@@ -517,6 +507,6 @@ form:
                             label: 'Introduction text'
                             type: richeditor
                         pdf:
-                            label: Pdf file
+                            label: 'Pdf file'
                             type: mediafinder
                             mode: file

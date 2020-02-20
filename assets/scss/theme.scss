@@ -12,11 +12,12 @@
 
 // vendors
 
-// bootstrap overwrites
+// bootstrap overwrites and custom classes
 @import 'forms';
 @import 'images';
 @import 'typo';
 @import 'nav';
+@import 'colors';
 
 // binder style overwrites
 @import './binders/index';
@@ -34,4 +35,4 @@
 @import '../ts/components/index';
 
 // third party
-@import './third-party/pdfjs';
+// @import './third-party/xyz';

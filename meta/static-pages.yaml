@@ -1,46 +1,6 @@
 static-pages:
     index: {  }
-    zentrum:
-        zentrum-honorar: {  }
-        zentrum-sabine-berndt-bartel: {  }
-        zentrum-standort: {  }
-    hypnose:
-        hypnose-mit-kindern: {  }
-        hypnose-im-urlaub: {  }
-    anwendungsgebiete:
-        anwendungsgebiete-angst: {  }
-        anwendungsgebiete-allergie: {  }
-        anwendungsgebiete-asthma: {  }
-        anwendungsgebiete-burn-out: {  }
-        anwendungsgebiete-chronische-schmerzen: {  }
-        anwendungsgebiete-depression: {  }
-        anwendungsgebiete-gewichtsreduktion: {  }
-        yager-therapie-hautreaktionen: {  }
-        anwendungsgebiete-hypnotisches-magenband: {  }
-        anwendungsgebiete-innere-unruhe: {  }
-        anwendungsgebiete-magen-darmbeschwerden: {  }
-        anwendungsgebiete-phobie: {  }
-        anwendungsgebiete-personliche-weiterentwicklung: {  }
-        anwendungsgebiete-psychosomatische-beschwerden: {  }
-        anwendungsgebiete-rauchentwohnung: {  }
-        anwendungsgebiete-sexuelle-funktionsstorung: {  }
-        anwendungsgebiete-stress: {  }
-        anwendungsgebiete-schlafstorung: {  }
-        anwendungsgebiete-selbstwertproblem: {  }
-        anwendungsgebiete-spannungkopfschmerz: {  }
-        anwendungsgebiete-unerwunschte-verhaltensweisen: {  }
-        anwendungsgebiete-verarbeitung-belastender-traumatischer-erfahrungen: {  }
-        anwendungsgebiete-zwange: {  }
-    weitere-leistungen:
-        weitere-leistungen-psychosomatische-energetik: {  }
-        weitere-leistungen-kinesiologischer-muskeltest: {  }
-    hypnose-faq: {  }
-    kontakt:
-        kontakt-anfahrt: {  }
-        kontakt-fragebogen: {  }
-    impressum: {  }
-    datenschutz: {  }
-    agb: {  }
-    erfahrungsberichte: {  }
-    nonverbale-hypnose: {  }
-    yager-terapie: {  }
+    hotel: {  }
+    wohnen: {  }
+    relax: {  }
+    entdecken: {  }

@@ -1,0 +1,21 @@
+[viewBag]
+==
+{% if items %}
+    {# Level 2 #}
+    {% for item in items %}
+        {% if not item.viewBag.isHidden and item.items%}
+            {#{item | json_encode()}#}
+            {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
+            <ul class="col-12 nav nav-sub align-items-center justify-content-center {{titleClass}} {{ item.viewBag.cssClass }}" rv-parent-route-class-test="'wohnen'" {#rv-parent-route-class-test="'{{ item.url }}'"#}>
+                {% for item in item.items %}
+                    {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
+                    <li rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}} {% if item.items %}nav-item-level-2-with-childs{% endif %}">
+                        {% if not item.viewBag.isHidden %}
+                            <a rv-on-click="onItemClick" class="nav-link " href="{{ item.url }}">{{ item.title }}</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+{% endif %}

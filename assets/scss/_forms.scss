@@ -7,13 +7,3 @@
   background-size: 32px;
 }
 
-.custom-select-lg {
-  border-radius: $input-border-radius-lg;
-}
-
-
-.form-control {
-  &:not(:placeholder-shown) {
-    background-color: $input-focus-bg;
-  }
-}

@@ -1,12 +1,32 @@
 items:
     -
-        title: Zentrum
+        title: HOTEL
         nesting: '0'
         type: static-page
-        url: ''
         code: ''
-        reference: zentrum
-        cmsPage: ''
+        reference: hotel
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: WOHNEN
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: wohnen
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: RELAX
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: relax
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -14,590 +34,79 @@ items:
             isExternal: '0'
         items:
             -
-                title: 'Über das Zentrum'
-                nesting: '0'
-                type: static-page
-                url: ''
+                title: Standard
+                nesting: ''
+                type: url
+                url: /
                 code: ''
-                reference: zentrum
+                reference: ''
                 cmsPage: ''
-                replace: '0'
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Sabine Berndt-Bartel'
-                nesting: '0'
-                type: static-page
-                url: ''
+                title: Appartment
+                nesting: ''
+                type: url
+                url: /
                 code: ''
-                reference: zentrum-sabine-berndt-bartel
+                reference: ''
                 cmsPage: ''
-                replace: '0'
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Standort
-                nesting: '0'
-                type: static-page
-                url: ''
+                title: Komfort
+                nesting: ''
+                type: url
+                url: /
                 code: ''
-                reference: zentrum-standort
+                reference: ''
                 cmsPage: ''
-                replace: '0'
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Kontakt
-                nesting: '0'
-                type: static-page
-                url: ''
+                title: 'Premium See'
+                nesting: ''
+                type: url
+                url: /
                 code: ''
-                reference: kontakt
+                reference: ''
                 cmsPage: ''
-                replace: '0'
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Honorar
-                nesting: '0'
-                type: static-page
-                url: ''
+                title: 'Premium Seite'
+                nesting: ''
+                type: url
+                url: /
                 code: ''
-                reference: zentrum-honorar
+                reference: ''
                 cmsPage: ''
-                replace: '0'
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
     -
-        title: Hypnose
+        title: ENTDECKEN
         nesting: '0'
         type: static-page
-        url: ''
         code: ''
-        reference: hypnose
-        cmsPage: ''
+        reference: entdecken
         replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        items:
-            -
-                title: Hypnosetherapie
-                nesting: '0'
-                type: static-page
-                code: ''
-                reference: hypnose
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Nonverbale Hypnose'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: nonverbale-hypnose
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Hypnose mit Kindern'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: hypnose-mit-kindern
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Hypnose im Urlaub'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: hypnose-im-urlaub
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Anwendungsgebiete
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Häufige Frage'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: hypnose-faq
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Honorar
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: zentrum-honorar
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-    -
-        title: 'Nonverbale Hypnose'
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: nonverbale-hypnose
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Yager-Therapie
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: yager-terapie
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Anwendungsgebiete
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: anwendungsgebiete
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-        items:
-            -
-                title: Angst
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-angst
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Allergie
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-allergie
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Asthma
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-asthma
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Burn-out
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-burn-out
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Chronische Schmerzen'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-chronische-schmerzen
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Depression
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-depression
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Gewichtsreduktion
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-gewichtsreduktion
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Hautreaktionen
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: yager-therapie-hautreaktionen
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Hypnotisches Magenband'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-hypnotisches-magenband
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Innere Unruhe'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-innere-unruhe
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Magen-Darmbeschwerden
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-magen-darmbeschwerden
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Phobie
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-phobie
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Persönliche Weiterentwicklung'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-personliche-weiterentwicklung
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Psychosomatische Beschwerden'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-psychosomatische-beschwerden
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Rauchentwöhnung
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-rauchentwohnung
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Sexuelle Funktionsstörung'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-sexuelle-funktionsstorung
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Stress
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-stress
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Schlafstörung
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-schlafstorung
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Selbstwertprobleme
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-selbstwertproblem
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Spannungkopfschmerz
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-spannungkopfschmerz
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Unerwünschte Verhaltensweisen'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-unerwunschte-verhaltensweisen
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Verarbeitung belastender, traumatischer Erfahrungen'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-verarbeitung-belastender-traumatischer-erfahrungen
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Zwänge
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: anwendungsgebiete-zwange
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-    -
-        title: 'weitere Leistungen'
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: weitere-leistungen
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-        items:
-            -
-                title: 'Psychosomatische Energetik (PSE)'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: weitere-leistungen-psychosomatische-energetik
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: 'Kinesiologischer Muskeltest'
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: weitere-leistungen-kinesiologischer-muskeltest
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-    -
-        title: Kontakt
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: kontakt
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-        items:
-            -
-                title: Fragebögen
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: kontakt-fragebogen
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Anfahrt
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: kontakt-anfahrt
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
 name: top-navigation

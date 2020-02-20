@@ -1,3 +1,3 @@
-export { HpnNavbarComponent } from './hpn-navbar/hpn-navbar.component';
-export { HpnFooterComponent } from './hpn-footer/hpn-footer.component';
-export { HpnSidebarComponent } from './hpn-sidebar/hpn-sidebar.component';
+export { HshNavbarComponent } from './hsh-navbar/hsh-navbar.component';
+export { HshFooterComponent } from './hsh-footer/hsh-footer.component';
+export { HshSidebarComponent } from './hsh-sidebar/hsh-sidebar.component';

@@ -4,31 +4,30 @@
 code = "top-navigation"
 ==
 {# Desktop #}
-<hpn-navbar class="navbar navbar-expand navbar-light fixed-top collapsed d-none d-xl-block">
-  <div class="navbar-wrapper w-100" rv-on-mouseenter="onNavbarHover" rv-on-mouseleave="onNavbarLeave">
-    <a class="navbar-brand p-2" href="/" rv-on-click="onItemClick" rv-on-mouseover="onItemHover">
-      <bs4-icon src="{{ 'assets/images/hypnosezentrum-cuxhaven-logo-symbol.svg' | theme }}" size="60"></bs4-icon>
-      <div class="navbar-brand-text text-primary">Fachzentrum für ursachenorientierte Hypnose</div>
+<hsh-navbar class="navbar navbar-expand navbar-light bg-white fixed-top collapsed d-none d-xl-block">
+  <nav class="navbar-wrapper row" rv-on-mouseenter="onNavbarHover" rv-on-mouseleave="onNavbarLeave">
+    <a class="navbar-brand p-3 col-auto justify-content-start navbar-start" href="/" rv-on-click="onItemClick">
+      <bs4-icon src="{{ this.theme.general_logo | media }}"></bs4-icon>
     </a>
-    <nav class="nav flex-row justify-content-end">
-      <div class="d-flex flex-row">
-        {% partial 'staticMenu/items' items=topNavigation.menuItems %}
-      </div>
 
-      <div class="nav-item flex-column navbar-toggler border-0" rv-on-click="toggle">
-        <bs4-icon color="primary" src="{{ '/assets/iconset/icon_close.svg' | theme }}" size="32" rv-class-rotate-45="isCollapsed"></bs4-icon>
-      </div>
+    <ul class="col nav align-items-center justify-content-center navbar-center">
+      {% partial 'staticMenu/items' items=topNavigation.menuItems %}
+    </ul>
 
-    </nav>
-  </div>
-</hpn-navbar>
+    <ul class="col-auto nav align-items-center justify-content-end navbar-end">
+      AUSZEIT BUCHEN
+    </ul>
+
+    {% partial 'staticMenu/items-childs' items=topNavigation.menuItems %}
+
+  </nav>
+</hsh-navbar>
 
 {# Mobile #}
 <nav class="navbar navbar-light navbar-main-sidebar fixed-top collapsed d-flex d-xl-none">
   <div class="nav flex-row justify-content-end w-100">
     <a class="navbar-brand p-2" href="/">
       <bs4-icon src="{{ 'assets/images/hypnosezentrum-cuxhaven-logo-symbol.svg' | theme }}" size="60"></bs4-icon>
-      <div class="navbar-brand-text text-primary">Fachzentrum für ursachenorientierte Hypnose</div>
     </a>
     <bs4-toggle-button target-id="main-sidebar" id="toggle-button-main-sidebar">
       <div class="nav-item flex-column navbar-toggler border-0" rv-on-click="toggle">
@@ -39,8 +38,8 @@ code = "top-navigation"
   </div>
 </nav>
 
-<hpn-sidebar id="main-sidebar" position="right" auto-show-on-wider-than="-1" auto-hide-on-slimmer-than="992" width="100vw" watch-new-page-ready-event="false">
+<hsh-sidebar id="main-sidebar" position="right" auto-show-on-wider-than="-1" auto-hide-on-slimmer-than="992" width="100vw" watch-new-page-ready-event="false">
   <div class="d-flex flex-column">
     {% partial 'staticMenu/sidebar' items=topNavigation.menuItems %}
   </div>
-</hpn-sidebar>
+</hsh-sidebar>

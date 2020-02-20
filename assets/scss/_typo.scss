@@ -1,56 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&display=swap');
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6,
-.display-1,
-.display-2,
-.display-3,
-.display-4 {
-  word-wrap: break-word;
-  color: $title-color;
-  margin-top: $headings-margin-bottom * 2;
+/**
+ * @license
+ * MyFonts Webfont Build ID 3866849, 2020-02-13T07:19:19-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HorizontesScript-Bold by Sudtipos
+ * URL: https://www.myfonts.com/fonts/sudtipos/horizontes-script/bold/
+ * Copyright: Copyright (c) 2014-2019 by Panco Sassano and Alejandro Paul. All rights reserved. www.sudtipos.com, with Reserved Font Name "Horizontes Script"
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3b00e1");
+
+  
+@font-face {
+    font-family: 'HorizontesScript';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/HorizontesScript-Bold.eot');
+    src:
+        url('../fonts/HorizontesScript-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HorizontesScript-Bold.woff2') format('woff2'),
+        url('../fonts/HorizontesScript-Bold.woff') format('woff'),
+        url('../fonts/HorizontesScript-Bold.ttf') format('truetype');
 }
 
-h1, .h1 {
-  margin-bottom: $headings-margin-bottom * 2;
-  margin-top: $headings-margin-bottom * 2;
-  small {
-    font-size: 2rem;
-    font-weight: $font-weight-bold;
-  }
-  @include media-breakpoint-down(lg){
-    font-size: 2rem;
-    small {
-      font-size: 80%;
-    }
-  }
-  @include media-breakpoint-up(lg) {
-    font-size: $h1-font-size;
-    small {
-      font-size: 2rem;
-    }
-  }
-}
-
-h2, .h2 {
-  @include media-breakpoint-down(lg){
-    font-size: 1.8rem;
-  }
-}
-
-h3, .h3 {
-  margin-bottom: $headings-margin-bottom * 0.5;
-  @include media-breakpoint-down(lg){
-    font-size: 1.5rem;
-  }
-}
-
-h3, .h3 {
-  @include media-breakpoint-down(lg){
-    font-size: 1.25rem;
-  }
-}
