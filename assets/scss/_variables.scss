@@ -293,7 +293,7 @@ $embed-responsive-aspect-ratios: join(
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-base:            $font-family-sans-serif;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
@@ -301,24 +301,24 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
 $font-weight-lighter:         lighter !default;
-$font-weight-light:           400; // 300 !default;
+$font-weight-light:           300; // 300 !default;
 $font-weight-normal:          500; // 400 !default;
-$font-weight-bold:            700 !default;
+$font-weight-bold:            600; // 700 !default;
 $font-weight-bolder:          bolder !default;
 
-$font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$font-weight-base:            $font-weight-normal; // $font-weight-normal !default;
+$line-height-base:            2; // 1.5 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
+$h1-font-size:                $font-size-base * 5; // $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 4.5; // $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 3.5; // $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 2.5; // $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
+$headings-margin-bottom:      $spacer * 3; // $spacer / 2 !default;
 $headings-font-family:        null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-light; // 500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
@@ -735,7 +735,7 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 $navbar-padding-y:                  $spacer / 2 !default;
 $navbar-padding-x:                  $spacer !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         1.5rem; // .5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -755,10 +755,10 @@ $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
-$navbar-light-color:                rgba($black, .5) !default;
-$navbar-light-hover-color:          rgba($black, .7) !default;
-$navbar-light-active-color:         rgba($black, .9) !default;
-$navbar-light-disabled-color:       rgba($black, .3) !default;
+$navbar-light-color:                rgba($body-color, 1); // rgba($black, .5) !default;
+$navbar-light-hover-color:          rgba($primary, 1); // rgba($black, .7) !default;
+$navbar-light-active-color:         rgba($primary, 1); // rgba($black, .9) !default;
+$navbar-light-disabled-color:       rgba($body-color, .3) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 

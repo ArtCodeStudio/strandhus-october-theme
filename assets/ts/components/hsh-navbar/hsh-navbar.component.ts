@@ -32,20 +32,18 @@ export class HshNavbarComponent extends Bs4NavbarComponent {
 
     public onItemClick(context?: Binder<any>, event?: Event) {
         if (event) {
-          const target = event.target as HTMLAnchorElement | null;
-          if (!target) {
-            return console.warn('Target not found!');
-          }
-          if (target && this.pjax) {
-            event.preventDefault();
-            let url = target.href || '/';
-            if (Utils.isAbsoluteUrl(url) && Utils.isInternalUrl(url)) {
-              url = target.pathname + target.search;
+            const target = event.target as HTMLAnchorElement | null;
+            if (!target) {
+                return console.warn('Target not found!');
             }
-            this.pjax.goTo(url);
-          }
+            if (target && this.pjax) {
+                event.preventDefault();
+                let url = target.href || '/';
+                if (Utils.isAbsoluteUrl(url) && Utils.isInternalUrl(url)) {
+                    url = target.pathname + target.search;
+                }
+                this.pjax.goTo(url);
+            }
         }
-      }
-
-
+    }
 }

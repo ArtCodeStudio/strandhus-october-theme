@@ -4,7 +4,6 @@
 
 @import 'bootstrap';
 
-
 // Bootstrap style extensions from @ribajs/bs4
 @import '../../node_modules/@ribajs/bs4/src/index';
 
@@ -13,7 +12,9 @@
 // vendors
 
 // bootstrap overwrites and custom classes
+@import 'buttons';
 @import 'forms';
+@import 'grid';
 @import 'images';
 @import 'typo';
 @import 'nav';
@@ -30,7 +31,7 @@
 
 // partials
 @import './partials/index';
-
+ 
 // components
 @import '../ts/components/index';
 

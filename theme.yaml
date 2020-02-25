@@ -196,12 +196,6 @@ form:
                 default: '#9B666B'
                 tab: Colors
                 assetVar: body-color
-            title_color:
-                type: colorpicker
-                label: title-color
-                default: '#C79499'
-                tab: Colors
-                assetVar: title-color
             bs4_body_bg:
                 type: colorpicker
                 label: body-bg
@@ -403,26 +397,50 @@ form:
                             label: Question
                             type: text
                             span: left
-            at_a_glance_slides:
-                tab: 'Slideshow - At a glance'
-                prompt: 'Add new slide'
-                titleFrom: slides
+            beside_text_slideshows:
+                tab: 'Slideshow beside text'
+                prompt: 'Add new slideshow'
+                titleFrom: slideshows
                 type: repeater
                 form:
                     fields:
-                        image:
-                            label: Image
-                            type: mediafinder
-                            mode: image
+                        images:
+                            prompt: 'Add new image'
+                            titleFrom: images
+                            type: repeater
                             span: left
-                        extern_image:
-                            label: 'Image by Url'
+                            form:
+                                fields:
+                                    image:
+                                        label: Image
+                                        type: mediafinder
+                                        mode: image
+                                    extern_image:
+                                        label: 'Image by Url'
+                                        type: text
+                                        comment: 'Enter here a external image url if you want to use this instead'
+                                    alt:
+                                        label: 'Alt text'
+                                        comment: 'Image alternative text attribute for SEO and Screenreaders'
+                                        type: text
+                        title:
+                            label: Title
                             type: text
-                            comment: 'Enter here a external image url if you want to use this instead'
                             span: right
-                        alt:
-                            label: 'Alt text'
-                            comment: 'Image alternative text attribute for SEO and Screenreaders'
+                        title_special:
+                            label: Special title
+                            type: text
+                            span: right
+                        content:
+                            label: Content
+                            type: richeditor
+                            span: right
+                        button_label:
+                            label: Button label
+                            type: text
+                            span: right
+                        button_url:
+                            label: Button url
                             type: text
                             span: right
             contact_reasons_section:

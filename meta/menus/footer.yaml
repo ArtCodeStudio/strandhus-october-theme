@@ -1,67 +1,168 @@
 items:
     -
-        title: Kontakt
-        nesting: '0'
-        type: static-page
+        title: 'Traumurlaub an der Nordsee'
+        nesting: ''
+        type: all-static-pages
         url: ''
         code: ''
-        reference: kontakt
+        reference: ''
         cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Hotel Strandhus'
+                nesting: ''
+                type: url
+                url: 'https://hotel-strandhus.jumplink.eu/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Bildergalerie
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: impressionen
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Wellness
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: relax
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Inklusivleistungen
+                nesting: ''
+                type: url
+                url: 'https://hotel-strandhus.jumplink.eu/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Naturidyll & Nachhaltigkeit'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: nachhaltigkeit
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Preise
+                nesting: ''
+                type: url
+                url: 'https://hotel-strandhus.jumplink.eu/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
-        title: FAQ
-        nesting: '0'
-        type: static-page
+        title: 'Kontakt & Anreise'
+        nesting: ''
+        type: all-static-pages
         url: ''
         code: ''
-        reference: hypnose-faq
+        reference: ''
         cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-    -
-        title: Impressum
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: impressum
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Datenschutz
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: datenschutz
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: AGB
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: agb
-        cmsPage: ''
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
+        items:
+            -
+                title: Kontakt
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: kontakt
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Anreise
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: anreise
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Instagram
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: impressionen
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Impressum
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: impressum
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Datenschutz
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: datenschutz
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Credits
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: credits
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
 name: footer

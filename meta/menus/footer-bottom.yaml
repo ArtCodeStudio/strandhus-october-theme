@@ -1,53 +1,28 @@
 name: footer-bottom
 items:
     -
-        title: 'Ihr Experte für Hypnose'
-        nesting: ''
+        title: Angebote
         type: url
-        url: 'https://www.provenexpert.com/de-de/praxis-fuer-psychosomatische-energetik-hypnose-entspannung/'
+        url: 'https://hotel-strandhus.jumplink.eu/'
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: with-stars
             isExternal: '1'
     -
-        title: 'Tel: (04723) 79 64 157'
-        nesting: ''
+        title: Buchung
         type: url
-        url: 'tel:047237964157'
+        url: 'https://hotel-strandhus.jumplink.eu/'
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: 'E-Mail: kontakt@hypnose-cuxhaven.de'
-        nesting: ''
+        title: 'Tel. +49 4721 399 930'
         type: url
-        url: 'mailto:kontakt@hypnose-cuxhaven.de'
+        url: 'tel:04721399930'
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Erfahrungsberichte
-        nesting: '0'
-        type: static-page
-        url: ''
-        code: ''
-        reference: erfahrungsberichte
-        cmsPage: ''
-        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''

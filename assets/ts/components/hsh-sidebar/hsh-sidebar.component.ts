@@ -1,6 +1,6 @@
 import { Utils } from '@ribajs/core';
 
-import { Pjax, Prefetch } from '@ribajs/router';
+import { Pjax } from '@ribajs/router';
 
 import { Bs4SidebarComponent } from '@ribajs/bs4/src/components/bs4-sidebar/bs4-sidebar.component';
 
@@ -77,9 +77,6 @@ interface Scope {
      */
     toggle: HshSidebarComponent['toggle'];
 
-    // Custom
-    toggleItem: HshSidebarComponent['toggleItem'];
-
     onItemClick: HshSidebarComponent['onItemClick'];
 }
 
@@ -87,8 +84,6 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
     public static tagName = 'hsh-sidebar';
 
     protected autobind = true;
-
-    protected toggleItems: Array<ToggleItem> = [];
 
     protected pjax?: Pjax;
 
@@ -127,37 +122,11 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
         show: this.show,
         toggle: this.toggle,
 
-        // custom
-        toggleItem: this.toggleItem,
         onItemClick: this.onItemClick,
     };
 
     constructor(element?: HTMLElement) {
         super(element);
-    }
-
-    public toggleItem(handle: string, context: any, event: Event) {
-        event.preventDefault();
-        event.stopPropagation();
-        const toggleItem = this.getToggleItem(handle);
-        if (toggleItem) {
-            this.closeAllToggleItems(toggleItem);
-            toggleItem.collapseService.toggle(ANIMATED_COLLAPSE);
-        }
-
-        if (event) {
-            const target = event.target as HTMLAnchorElement | null;
-            if (!target) {
-                return console.warn('Target not found!');
-            }
-            if (target && this.pjax) {
-                let url = target.href || '/';
-                if (Utils.isAbsoluteUrl(url) && Utils.isInternalUrl(url)) {
-                    url = target.pathname + target.search;
-                }
-                this.pjax.goTo(url);
-            }
-        }
     }
 
     public onItemClick(context?: any, event?: Event) {
@@ -174,42 +143,14 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
                     url = target.pathname + target.search;
                 }
 
-                this.hide();
+                // this.hide();
                 this.pjax.goTo(url);
             }
         }
     }
 
-    protected closeAllToggleItems(except?: ToggleItem) {
-        for (const toggleItem of this.toggleItems) {
-            if (!except || toggleItem.handle !== except.handle) {
-                toggleItem.collapseService.hide(ANIMATED_COLLAPSE);
-            }
-        }
-    }
-
-    protected getToggleItem(handle: string) {
-        for (const toggleItem of this.toggleItems) {
-            if (toggleItem.handle === handle) {
-                return toggleItem;
-            }
-        }
-        return null;
-    }
-
     protected connectedCallback() {
         super.connectedCallback();
-        const dropdownToggleElements = this.el.querySelectorAll('.collapse') as NodeListOf<
-            HTMLButtonElement | HTMLAnchorElement
-        >;
-        dropdownToggleElements.forEach(toggleElement => {
-            if (toggleElement.dataset.handle) {
-                this.toggleItems.push({
-                    collapseService: new CollapseService([toggleElement]),
-                    handle: toggleElement.dataset.handle,
-                });
-            }
-        });
     }
 
     protected async beforeBind() {

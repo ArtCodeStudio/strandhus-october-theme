@@ -3,8 +3,10 @@ items:
         title: HOTEL
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: hotel
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -14,19 +16,10 @@ items:
         title: WOHNEN
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: wohnen
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: RELAX
-        nesting: '0'
-        type: static-page
-        code: ''
-        reference: relax
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -99,11 +92,26 @@ items:
                     cssClass: ''
                     isExternal: '0'
     -
+        title: RELAX
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: relax
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
         title: ENTDECKEN
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: entdecken
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'

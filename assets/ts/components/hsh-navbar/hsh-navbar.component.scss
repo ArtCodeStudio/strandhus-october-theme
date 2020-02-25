@@ -4,6 +4,23 @@ hsh-navbar.navbar {
         width: 300px;
     }
 
+    .nav-link, .btn-animated-underline-primary {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-lg;
+    }
+
+    .btn-animated-underline-primary {
+        color: $primary;
+    }
+
+    .nav-sub  {
+        display: none;
+        .nav-link {
+            font-weight: $font-weight-light;
+            font-size: $font-size-base;
+        }
+    }
+
 }
 
 // hsh-navbar.navbar {
