@@ -242,14 +242,6 @@ form:
                 mode: image
                 label: Logo
                 tab: General
-            general_address:
-                type: richeditor
-                label: Address
-                tab: General
-            general_opening_hours:
-                type: richeditor
-                label: 'Opening hours'
-                tab: General
             application_areas_nav_item:
                 tab: 'Application areas'
                 titleFrom: items
@@ -404,6 +396,9 @@ form:
                 type: repeater
                 form:
                     fields:
+                        name:
+                            label: Name
+                            type: text
                         images:
                             prompt: 'Add new image'
                             titleFrom: images
@@ -433,6 +428,10 @@ form:
                             span: right
                         content:
                             label: Content
+                            type: richeditor
+                            span: right
+                        content_short:
+                            label: Short content
                             type: richeditor
                             span: right
                         button_label:

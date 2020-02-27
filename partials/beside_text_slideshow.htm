@@ -3,65 +3,83 @@ description = "Slideshow beside text"
 [viewBag]
 snippetCode = "beside_text_slideshows"
 snippetName = "Slideshow beside text"
-snippetProperties[index][title] = "Index"
-snippetProperties[index][type] = "string"
-snippetProperties[index][default] = 0
-snippetProperties[index][options][] = ""
+snippetProperties[name][title] = "Name"
+snippetProperties[name][type] = "string"
+snippetProperties[name][default] = ""
+snippetProperties[name][options][] = ""
 ==
 {% set indexNum = index | number_format %}
-
+{% set findName = name | lower | replace({' ': ''}) %}
 {% set slideshow = this.theme.beside_text_slideshows[index] %}
+
+{% for curSlideshow in this.theme.beside_text_slideshows %}
+    {% set curName = curSlideshow.name | lower | replace({' ': ''}) %}
+    {% if curName == findName %}
+        {% set slideshow = curSlideshow %}
+    {% endif %}
+{% endfor %}
+
 
 {% if slideshow is defined %}
 
-{% set button_url = slideshow.button_url | staticPage %}
-{% if button_url is not defined %}
-{% set button_url = slideshow.button_url %}
-{% endif %}
-
-<div class="container-fluid container-limited-1 beside_text_slideshow my-5 py-5">
-
-    <div class="row">
-
-        <div class="col-12 col-lg-6  py-5 p-lg-5">
-
-            <h3 class="d-block d-lg-none">
-                {{ slideshow.title }}
-                <p class="font-special">{{ slideshow.title_special }}</p>
-            </h3>
-
-            <bs4-slideshow controls="false" indicators="false" sticky="true" autoplay="false"
-                control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
-                control-next-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
-                indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
-                indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}">
-                <div class="slideshow-inner">
-                    {% for slide in slideshow.images %}
-                        {% set image = slide.extern_image %}
-                        {% if slide.image is not empty %}
-                            {% set image = slide.image | media %}
-                        {% endif %}
-                        <div class="slide col-12 embed-responsive embed-responsive-2by3">
-                            <img lazyload="lazy" class="embed-responsive-item lazy" src="{{ image }}" alt="{{ slide.alt }}">
-                        </div>
-                    {% endfor %}
+    {% set button_url = slideshow.button_url | staticPage %}
+    {% if button_url is not defined %}
+    {% set button_url = slideshow.button_url %}
+    {% endif %}
+    
+    <div class="container-fluid container-limited-1 beside_text_slideshow my-5 py-5">
+    
+        <div class="row">
+    
+            <div class="col-12 col-lg-6  py-5 p-lg-5">
+    
+                <div class="d-block d-lg-none">
+                    <div class="text-primary">
+                        {{ slideshow.content_short | raw }}
+                    </div>
+                    <h3>
+                        {{ slideshow.title }}
+                        <p class="font-special">{{ slideshow.title_special }}</p>
+                    </h3>
                 </div>
-            </bs4-slideshow>
+    
+                <bs4-slideshow controls="false" indicators="false" sticky="true" autoplay="false"
+                    control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
+                    control-next-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}"
+                    indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
+                    indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}">
+                    <div class="slideshow-inner">
+                        {% for slide in slideshow.images %}
+                            {% set image = slide.extern_image %}
+                            {% if slide.image is not empty %}
+                                {% set image = slide.image | media %}
+                            {% endif %}
+                            <div class="slide col-12 embed-responsive embed-responsive-2by3">
+                                <img lazyload="lazy" class="embed-responsive-item lazy" src="{{ image }}" alt="{{ slide.alt }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </bs4-slideshow>
+            </div>
+    
+            <div class="col-12 col-lg-6  p-lg-5 my-lg-5">
+                <div class="d-none d-lg-block">
+                    <div class="text-primary">
+                        {{ slideshow.content_short | raw }}
+                    </div>
+                    <h3>
+                        {{ slideshow.title }}
+                        <p class="font-special">{{ slideshow.title_special }}</p>
+                    </h3>
+                </div>
+                {{ slideshow.content | raw }}
+                <bs4-button class="btn btn-animated-underline-primary" rv-route="'{{ button_url }}'">{{ slideshow.button_label }}</bs4-button>
+            </div>
+    
         </div>
-
-        <div class="col-12 col-lg-6  p-lg-5 my-lg-5">
-            <h3 class="d-none d-lg-block">
-                {{ slideshow.title }}
-                <p class="font-special">{{ slideshow.title_special }}</p>
-            </h3>
-            {{ slideshow.content | raw }}
-            <bs4-button class="btn btn-animated-underline-primary" rv-route="'{{ button_url }}'">{{ slideshow.button_label }}</bs4-button>
-        </div>
-
     </div>
-</div>
 {% else %}
     <div class="alert alert-danger" role="alert">
-        Slideshow not found, make sure you have created a slideshow with the index "{{ index }}" in the theme settings.
+        Slideshow not found, make sure you have created a slideshow with the name "{{ name }}" in your theme settings.
     </div>
 {% endif %}

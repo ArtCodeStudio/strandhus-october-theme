@@ -8,7 +8,7 @@ import { Bs4ToggleButtonComponent } from '@ribajs/bs4/src/components/bs4-toggle-
 import { Bs4AccordionComponent } from '@ribajs/bs4/src/components/bs4-accordion/bs4-accordion.component';
 import { Bs4SlideshowComponent } from '@ribajs/bs4/src/components/bs4-slideshow/bs4-slideshow.component';
 
-import { dataScrollPositionYBinder } from '@ribajs/extras/src/binders/data-scroll-position-y.binder';
+// import { dataScrollPositionYBinder } from '@ribajs/extras/src/binders/data-scroll-position-y.binder';
 
 import { jqueryModule } from '@ribajs/jquery';
 
@@ -32,7 +32,7 @@ export class Main {
                 Bs4AccordionComponent,
                 Bs4SlideshowComponent,
             },
-            binders: { dataScrollPositionYBinder },
+            // binders: { dataScrollPositionYBinder },
         });
 
         // Regist custom components

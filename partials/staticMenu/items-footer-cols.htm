@@ -1,0 +1,30 @@
+[viewBag]
+==
+{% for item in items %}
+    {% if not item.viewBag.isHidden %}
+        {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
+        <div class="col-12 col-lg-auto pt-5 {{ titleClass }} {{ item.viewBag.cssClass }} {{ str_studly(item.title) | lower  }}">
+            <strong>
+                {{ item.title }}
+            </strong>
+            {% if item.items %}
+                {% for item in item.items %}
+                    {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
+                    {% if item.url %}
+                        <div rv-route-class-active="'{{ item.url }}'" class="nav-item {{ titleClass }}">
+                            {% if not item.viewBag.isHidden %}
+                                <a rv-route="'{{ item.url }}'" class="{% if item.viewBag.cssClass %}{{ item.viewBag.cssClass }}{% else %}nav-link{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+                            {% endif %}
+                        </div>
+                    {% else %}
+                        <div rv-route-class-active="'{{ item.url }}'" class="nav-item {{ titleClass }}">
+                            <div class="{% if item.viewBag.cssClass %}{{ item.viewBag.cssClass }}{% else %}navbar-text{% endif %}">
+                                {{ item.title }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            </div>
+    {% endif %}
+{% endfor %}

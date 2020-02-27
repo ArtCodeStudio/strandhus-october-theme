@@ -3,20 +3,13 @@
 {% for item in items %}
     {% if not item.viewBag.isHidden %}
         {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
-        <div rv-parent-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-1 flex-column {{titleClass}} {{ item.viewBag.cssClass }} {{ str_studly(item.title) | lower  }} {% if item.items %}nav-item-level-1-with-childs{% endif %}">
+        <li rv-parent-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-1 flex-column {{ titleClass }} {{ item.viewBag.cssClass }} {% if item.items %}nav-item-level-1-with-childs{% endif %}">
             {% if item.code == 'no-link' %}
-                <span class="nav-link px-0 px-md-3">
+                <span class="nav-link">
                     {{ item.title }}
                 </span>
             {% else %}
-                <a rv-route="'{{ item.url }}'" class="nav-link px-0 px-md-3" href="{{ item.url }}">
-                    {% if item.viewBag.cssClass == 'with-stars' %}
-                        <bs4-icon src="{{ '/assets/iconset/icon_star.svg' | theme }}" size="16"></bs4-icon>
-                        <bs4-icon src="{{ '/assets/iconset/icon_star.svg' | theme }}" size="16"></bs4-icon>
-                        <bs4-icon src="{{ '/assets/iconset/icon_star.svg' | theme }}" size="16"></bs4-icon>
-                        <bs4-icon src="{{ '/assets/iconset/icon_star.svg' | theme }}" size="16"></bs4-icon>
-                        <bs4-icon src="{{ '/assets/iconset/icon_star.svg' | theme }}" size="16" class="mr-2"></bs4-icon>
-                    {% endif %}
+                <a rv-route="'{{ item.url }}'" class="nav-link" href="{{ item.url }}">
                     {{ item.title }}
                 </a>
             {% endif %}
@@ -26,12 +19,12 @@
                         {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
                         <div rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}} {% if item.items %}nav-item-level-2-with-childs{% endif %}">
                             {% if not item.viewBag.isHidden %}
-                                <a v-route="'{{ item.url }}'" class="nav-link px-0 px-md-3" href="{{ item.url }}">{{ item.title }}</a>
+                                <a v-route="'{{ item.url }}'" class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
                             {% endif %}
                         </div>
                     {% endfor %}
                 </div>
             {% endif %}
-        </div>
+            </li>
     {% endif %}
 {% endfor %}

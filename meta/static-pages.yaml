@@ -1,7 +1,12 @@
 static-pages:
     index: {  }
     hotel: {  }
-    wohnen: {  }
+    wohnen:
+        premium-seeblick: {  }
+        premium-seeseite: {  }
+        komfort: {  }
+        zimmer-standard: {  }
+        appartements: {  }
     relax: {  }
     entdecken: {  }
     impressionen: {  }

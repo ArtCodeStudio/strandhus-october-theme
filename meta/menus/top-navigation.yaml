@@ -28,65 +28,65 @@ items:
         items:
             -
                 title: Standard
-                nesting: ''
-                type: url
-                url: /
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: zimmer-standard
                 cmsPage: ''
-                replace: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Appartment
-                nesting: ''
-                type: url
-                url: /
-                code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: Komfort
-                nesting: ''
-                type: url
-                url: /
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: komfort
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Premium See'
-                nesting: ''
-                type: url
-                url: /
+                title: Appartement
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: appartements
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Premium Seite'
-                nesting: ''
-                type: url
-                url: /
+                title: 'Premium Seeseite'
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: premium-seeseite
                 cmsPage: ''
-                replace: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Premium Seeblick'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: premium-seeblick
+                cmsPage: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''

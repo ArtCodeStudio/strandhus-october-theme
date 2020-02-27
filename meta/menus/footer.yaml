@@ -1,13 +1,70 @@
 items:
     -
-        title: 'Traumurlaub an der Nordsee'
+        title: 'HOTEL STRANDHUS'
         nesting: ''
-        type: all-static-pages
-        url: ''
-        code: ''
+        type: url
+        url: /
+        code: no-link
         reference: ''
         cmsPage: ''
-        replace: '0'
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Familie Meyer'
+                nesting: ''
+                type: header
+                url: ''
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Am Sahlenburger Strand 25'
+                nesting: ''
+                type: header
+                url: ''
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: '27476 Cuxhavens'
+                nesting: ''
+                type: header
+                url: ''
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'SO FINDEN SIE UNS'
+                type: url
+                url: /
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: 'btn btn-lg btn-animated-underline-primary'
+                    isExternal: '0'
+    -
+        title: 'Traumurlaub an der Nordsee'
+        type: header
+        code: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -30,8 +87,10 @@ items:
                 title: Bildergalerie
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: impressionen
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -41,8 +100,10 @@ items:
                 title: Wellness
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: relax
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -65,8 +126,10 @@ items:
                 title: 'Naturidyll & Nachhaltigkeit'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: nachhaltigkeit
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -87,13 +150,8 @@ items:
                     isExternal: '0'
     -
         title: 'Kontakt & Anreise'
-        nesting: ''
-        type: all-static-pages
-        url: ''
+        type: header
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -103,8 +161,10 @@ items:
                 title: Kontakt
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: kontakt
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -114,8 +174,10 @@ items:
                 title: Anreise
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anreise
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -125,8 +187,10 @@ items:
                 title: Instagram
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: impressionen
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -136,8 +200,10 @@ items:
                 title: Impressum
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: impressum
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -147,8 +213,10 @@ items:
                 title: Datenschutz
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: datenschutz
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -158,8 +226,10 @@ items:
                 title: Credits
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: credits
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
