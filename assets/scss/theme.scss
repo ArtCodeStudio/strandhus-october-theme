@@ -7,12 +7,11 @@
 // Bootstrap style extensions from @ribajs/bs4
 @import '../../node_modules/@ribajs/bs4/src/index';
 
-@import '../../node_modules/@ribajs/pdf/src/index';
-
 // vendors
 
 // bootstrap overwrites and custom classes
 @import 'buttons';
+@import 'carousel';
 @import 'forms';
 @import 'grid';
 @import 'images';

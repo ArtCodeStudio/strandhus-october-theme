@@ -1,0 +1,68 @@
+description = "Fadeshow"
+
+[viewBag]
+snippetCode = "fadeshow"
+snippetName = "fadeshow"
+snippetProperties[name][title] = "Name"
+snippetProperties[name][type] = "string"
+snippetProperties[name][default] = ""
+snippetProperties[name][options][] = ""
+==
+{% set findName = name | lower | replace({' ': ''}) %}
+{% set fadeshow = undefined %}
+{% for curFadeshow in this.theme.fadeshows %}
+    {% set curName = curFadeshow.name | lower | replace({' ': ''}) %}
+    {% if curName == findName %}
+        {% set fadeshow = curFadeshow %}
+    {% endif %}
+{% endfor %}
+
+
+{% if fadeshow is defined %}
+    
+    <div class="partial-fadeshow container-fluid">
+    
+        <div class="row">
+    
+            <div class="col-12 px-0">
+    
+                <bs4-carousel class="carousel slide carousel-fade" interval="5000">
+                    <div class="carousel-inner">
+                        {% for slide in fadeshow.images %}
+                            {% set image = slide.extern_image %}
+                            {% if slide.image is not empty %}
+                                {% set image = slide.image | media %}
+                            {% endif %}
+
+                            {% set button_url = slide.button_url | staticPage %}
+                            {% if button_url is not defined %}
+                            {% set button_url = slide.button_url %}
+                            {% endif %}
+
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img loading="lazy" class="lazy embed-responsive-item" src="{{ image }}" alt="{{ slide.alt }}">
+                                </div>
+                                <div class="carousel-caption carousel-caption-center d-none d-md-flex">
+                                    <h2>
+                                        <p class="font-special">{{ slide.title_special }}</p>
+                                        {{ slide.title }}
+                                    </h2>
+                         
+                                    {{ slide.content | raw }}
+                                    {% if slide.button_label is not empty %}
+                                        <bs4-button class="btn btn-animated-underline-primary" rv-route="'{{ button_url }}'">{{ slide.button_label }}</bs4-button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </bs4-carousel>
+            </div>    
+        </div>
+    </div>
+{% else %}
+    <div class="alert alert-danger" role="alert">
+        Slideshow not found, make sure you have created a slideshow with the name "{{ name }}" in your theme settings.
+    </div>
+{% endif %}

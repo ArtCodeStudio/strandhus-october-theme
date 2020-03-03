@@ -442,6 +442,57 @@ form:
                             label: Button url
                             type: text
                             span: right
+            fadeshows:
+                tab: 'Fadeshow'
+                prompt: 'Add new fadeshow'
+                titleFrom: fadeshows
+                type: repeater
+                form:
+                    fields:
+                        name:
+                            label: Name
+                            type: text
+                        images:
+                            prompt: 'Add new image'
+                            titleFrom: images
+                            type: repeater
+                            form:
+                                fields:
+                                    image:
+                                        label: Image
+                                        type: mediafinder
+                                        mode: image
+                                        span: right
+                                    extern_image:
+                                        label: 'Image by Url'
+                                        type: text
+                                        comment: 'Enter here a external image url if you want to use this instead'
+                                        span: left
+                                    alt:
+                                        label: 'Alt text'
+                                        comment: 'Image alternative text attribute for SEO and Screenreaders'
+                                        type: text
+                                        span: left
+                                    title:
+                                        label: Title
+                                        type: text
+                                        span: left
+                                    title_special:
+                                        label: Special title
+                                        type: text
+                                        span: left
+                                    content:
+                                        label: Content
+                                        type: richeditor
+                                        span: left
+                                    button_label:
+                                        label: Button label
+                                        type: text
+                                        span: left
+                                    button_url:
+                                        label: Button url
+                                        type: text
+                                        span: left
             contact_reasons_section:
                 label: Reasons
                 type: section

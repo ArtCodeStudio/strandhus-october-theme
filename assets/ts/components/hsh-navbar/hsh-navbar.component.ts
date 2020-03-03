@@ -11,7 +11,7 @@ export class HshNavbarComponent extends Bs4NavbarComponent {
 
     protected pjax?: Pjax;
 
-    static get observedAttributes() {
+    static get observedAttributes(): string[] {
         return ['collapse-selector'];
     }
 

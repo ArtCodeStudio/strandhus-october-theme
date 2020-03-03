@@ -2,27 +2,35 @@ name: footer-bottom
 items:
     -
         title: Angebote
-        type: url
-        url: 'https://hotel-strandhus.jumplink.eu/'
+        nesting: '0'
+        type: static-page
         code: ''
+        reference: angebote
+        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: with-stars
             isExternal: '1'
     -
         title: Buchung
-        type: url
-        url: 'https://hotel-strandhus.jumplink.eu/'
+        nesting: '0'
+        type: static-page
         code: ''
+        reference: buchung
+        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: 'Tel. +49 4721 399 930'
+        nesting: ''
         type: url
         url: 'tel:04721399930'
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

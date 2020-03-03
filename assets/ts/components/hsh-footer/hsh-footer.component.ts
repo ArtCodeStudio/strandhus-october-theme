@@ -5,7 +5,7 @@ export class HshFooterComponent extends Component {
 
     protected autobind = true;
 
-    static get observedAttributes() {
+    static get observedAttributes(): string[] {
         return [];
     }
 
@@ -22,7 +22,7 @@ export class HshFooterComponent extends Component {
         });
     }
 
-    protected requiredAttributes() {
+    protected requiredAttributes(): string[] {
         return [];
     }
 

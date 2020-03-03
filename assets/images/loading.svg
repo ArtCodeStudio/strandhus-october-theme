@@ -6,23 +6,23 @@
 	.st0{fill:#1D1D1B;}
 </style>
 <g>
-	<polygon class="st0" points="12,5.3 12,2.7 6.7,2.7 6.7,5.3 9.3,5.3 	"/>
-	<rect x="4" y="5.3" class="st0" width="2.7" height="2.7"/>
-	<polygon class="st0" points="4,10.7 4,8 1.4,8 1.4,10.7 1.4,13.3 1.4,16 4,16 4,13.3 	"/>
-	<rect x="4" y="16" class="st0" width="2.7" height="2.7"/>
-	<rect x="25.3" y="5.3" class="st0" width="2.7" height="2.7"/>
-	<polygon class="st0" points="25.3,5.3 25.3,2.7 20,2.7 20,5.3 22.7,5.3 	"/>
-	<rect x="17.3" y="5.3" class="st0" width="2.7" height="2.7"/>
-	<rect x="14.7" y="8" class="st0" width="2.7" height="2.7"/>
-	<rect x="12" y="5.3" class="st0" width="2.7" height="2.7"/>
-	<rect x="22.7" y="18.7" class="st0" width="2.7" height="2.7"/>
-	<rect x="25.3" y="16" class="st0" width="2.7" height="2.7"/>
-	<rect x="14.7" y="26.7" class="st0" width="2.7" height="2.7"/>
-	<polygon class="st0" points="28,8 28,10.7 28,13.3 28,16 30.6,16 30.6,8 	"/>
-	<rect x="20" y="21.3" class="st0" width="2.7" height="2.7"/>
-	<rect x="17.3" y="24" class="st0" width="2.7" height="2.7"/>
-	<rect x="6.7" y="18.7" class="st0" width="2.7" height="2.7"/>
-	<rect x="9.3" y="21.3" class="st0" width="2.7" height="2.7"/>
-	<rect x="12" y="24" class="st0" width="2.7" height="2.7"/>
+	<polygon class="st0" points="13.3,8.8 13.3,7 9.7,7 9.7,8.8 11.5,8.8 	"/>
+	<rect x="7.9" y="8.8" class="st0" width="1.8" height="1.8"/>
+	<polygon class="st0" points="7.9,12.4 7.9,10.6 6.1,10.6 6.1,12.4 6.1,14.2 6.1,16 7.9,16 7.9,14.2 	"/>
+	<rect x="7.9" y="16" class="st0" width="1.8" height="1.8"/>
+	<rect x="22.3" y="8.8" class="st0" width="1.8" height="1.8"/>
+	<polygon class="st0" points="22.3,8.8 22.3,7 18.7,7 18.7,8.8 20.5,8.8 	"/>
+	<rect x="16.9" y="8.8" class="st0" width="1.8" height="1.8"/>
+	<rect x="15.1" y="10.6" class="st0" width="1.8" height="1.8"/>
+	<rect x="13.3" y="8.8" class="st0" width="1.8" height="1.8"/>
+	<rect x="20.5" y="17.8" class="st0" width="1.8" height="1.8"/>
+	<rect x="22.3" y="16" class="st0" width="1.8" height="1.8"/>
+	<rect x="15.1" y="23.2" class="st0" width="1.8" height="1.8"/>
+	<polygon class="st0" points="24.1,10.6 24.1,12.4 24.1,14.2 24.1,16 25.9,16 25.9,10.6 	"/>
+	<rect x="18.7" y="19.6" class="st0" width="1.8" height="1.8"/>
+	<rect x="16.9" y="21.4" class="st0" width="1.8" height="1.8"/>
+	<rect x="9.7" y="17.8" class="st0" width="1.8" height="1.8"/>
+	<rect x="11.5" y="19.6" class="st0" width="1.8" height="1.8"/>
+	<rect x="13.3" y="21.4" class="st0" width="1.8" height="1.8"/>
 </g>
 </svg>

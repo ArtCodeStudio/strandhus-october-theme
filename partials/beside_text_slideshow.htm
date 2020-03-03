@@ -8,9 +8,8 @@ snippetProperties[name][type] = "string"
 snippetProperties[name][default] = ""
 snippetProperties[name][options][] = ""
 ==
-{% set indexNum = index | number_format %}
 {% set findName = name | lower | replace({' ': ''}) %}
-{% set slideshow = this.theme.beside_text_slideshows[index] %}
+{% set slideshow = undefined %}
 
 {% for curSlideshow in this.theme.beside_text_slideshows %}
     {% set curName = curSlideshow.name | lower | replace({' ': ''}) %}

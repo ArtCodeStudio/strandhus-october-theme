@@ -16,3 +16,7 @@ static-pages:
     impressum: {  }
     datenschutz: {  }
     credits: {  }
+    preise: {  }
+    faq: {  }
+    buchung: {  }
+    angebote: {  }

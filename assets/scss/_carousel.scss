@@ -1,0 +1,9 @@
+.carousel-caption-center {
+    display: flex;
+    @extend .carousel-caption;
+    @extend .flex-column;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    top: 20px;
+}
+

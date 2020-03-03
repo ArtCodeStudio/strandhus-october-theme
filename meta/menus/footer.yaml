@@ -40,31 +40,35 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: '27476 Cuxhavens'
-                nesting: ''
+                title: '27476 Cuxhaven'
                 type: header
-                url: ''
                 code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'SO FINDEN SIE UNS'
+                nesting: ''
                 type: url
                 url: /
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: 'btn btn-lg btn-animated-underline-primary'
                     isExternal: '0'
     -
         title: 'Traumurlaub an der Nordsee'
+        nesting: ''
         type: header
+        url: ''
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -137,21 +141,26 @@ items:
                     isExternal: '0'
             -
                 title: Preise
-                nesting: ''
-                type: url
-                url: 'https://hotel-strandhus.jumplink.eu/'
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: preise
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
     -
         title: 'Kontakt & Anreise'
+        nesting: ''
         type: header
+        url: ''
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -229,6 +238,19 @@ items:
                 url: ''
                 code: ''
                 reference: credits
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: FAQ
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: faq
                 cmsPage: ''
                 replace: '0'
                 viewBag:
