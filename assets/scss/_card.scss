@@ -1,0 +1,11 @@
+.card {
+    border-left: none;
+    border-right: none;
+    .card-header {
+        margin: 0;
+        border: none;
+        @extend .align-items-center;
+        background-color: transparent;
+        text-transform: none;
+    }
+}

@@ -23,7 +23,7 @@ snippetProperties[name][options][] = ""
 
     {% set button_url = slideshow.button_url | staticPage %}
     {% if button_url is not defined %}
-    {% set button_url = slideshow.button_url %}
+        {% set button_url = slideshow.button_url %}
     {% endif %}
     
     <div class="container-fluid container-limited-1 beside_text_slideshow my-5 py-5">
@@ -32,7 +32,7 @@ snippetProperties[name][options][] = ""
     
             <div class="col-12 col-lg-6  py-5 p-lg-5">
     
-                <div class="d-block d-lg-none">
+                <div class="d-block d-lg-none text-center">
                     <div class="text-primary">
                         {{ slideshow.content_short | raw }}
                     </div>
@@ -53,8 +53,8 @@ snippetProperties[name][options][] = ""
                             {% if slide.image is not empty %}
                                 {% set image = slide.image | media %}
                             {% endif %}
-                            <div class="slide col-12 embed-responsive embed-responsive-2by3">
-                                <img lazyload="lazy" class="embed-responsive-item lazy" src="{{ image }}" alt="{{ slide.alt }}">
+                            <div class="slide col-12 embed-responsive embed-responsive-2by3 lazy">
+                                <img lazyload="lazy" class="embed-responsive-item" src="{{ image }}" alt="{{ slide.alt }}">
                             </div>
                         {% endfor %}
                     </div>

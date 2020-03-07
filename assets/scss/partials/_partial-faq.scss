@@ -1,13 +1,3 @@
 .partial-faq {
   padding: 100px 0 130px 0;
-  bs4-accordion {
-    .accordion {
-      .card {
-        .card-header {
-          margin: 0;
-          @extend h3;
-        }
-      }
-    }
-  }
 }

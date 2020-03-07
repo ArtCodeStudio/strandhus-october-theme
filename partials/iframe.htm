@@ -1,0 +1,17 @@
+[viewBag]
+snippetCode = "iframe"
+snippetName = "Iframe"
+snippetProperties[source][title] = "Source"
+snippetProperties[source][type] = "string"
+snippetProperties[source][default] = ""
+snippetProperties[source][options][] = ""
+==
+<div class="partial-iframe w-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <iframe class="w-100" src="{{ source | raw }}" frameborder="0" style="height: calc(100vh - 72px - 64px);"></iframe>
+      </div>
+    </div>
+  </div>
+</div>

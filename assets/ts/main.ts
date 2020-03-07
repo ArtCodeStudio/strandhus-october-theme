@@ -8,6 +8,7 @@ import { Bs4ToggleButtonComponent } from '@ribajs/bs4/src/components/bs4-toggle-
 import { Bs4AccordionComponent } from '@ribajs/bs4/src/components/bs4-accordion/bs4-accordion.component';
 import { Bs4SlideshowComponent } from '@ribajs/bs4/src/components/bs4-slideshow/bs4-slideshow.component';
 import { Bs4CarouselComponent } from '@ribajs/bs4/src/components/bs4-carousel/bs4-carousel.component';
+import { Bs4DropdownComponent } from '@ribajs/bs4/src/components/bs4-dropdown/bs4-dropdown.component';
 
 // import { dataScrollPositionYBinder } from '@ribajs/extras/src/binders/data-scroll-position-y.binder';
 
@@ -33,6 +34,7 @@ export class Main {
                 Bs4AccordionComponent,
                 Bs4SlideshowComponent,
                 Bs4CarouselComponent,
+                Bs4DropdownComponent,
             },
             // binders: { dataScrollPositionYBinder },
         });

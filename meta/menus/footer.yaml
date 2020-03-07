@@ -41,8 +41,13 @@ items:
                     isExternal: '0'
             -
                 title: '27476 Cuxhaven'
+                nesting: ''
                 type: header
+                url: ''
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -76,24 +81,11 @@ items:
         items:
             -
                 title: 'Hotel Strandhus'
-                nesting: ''
-                type: url
-                url: 'https://hotel-strandhus.jumplink.eu/'
-                code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Bildergalerie
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: impressionen
+                reference: hotel
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -114,14 +106,14 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Inklusivleistungen
-                nesting: ''
-                type: url
-                url: 'https://hotel-strandhus.jumplink.eu/'
+                title: Bildergalerie
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: impressionen
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -133,6 +125,32 @@ items:
                 url: ''
                 code: ''
                 reference: nachhaltigkeit
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Erlebnisse
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: entdecken
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Inklusivleistungen
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: inklusivleistungen
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -183,10 +201,8 @@ items:
                 title: Anreise
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
                 reference: anreise
-                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'

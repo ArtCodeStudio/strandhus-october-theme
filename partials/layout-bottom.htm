@@ -57,6 +57,21 @@ code = "footer"
       </a>
     </div>
   </div>
+
+  <div class="row order-3 mb-5">
+    <div class="col-12 px-0">
+      <bs4-dropdown class="dropup art-code-popup w-100 d-flex justify-content-center align-items-center">
+        <button rv-on-click="toggle" class="btn btn-link dropdown-toggle" id="dropdownArtCodeStudio" aria-haspopup="true" aria-expanded="false">
+          <bs4-icon class="mx-auto heartbeat" color="#FF0040" src="{{ '/assets/images/loading.svg' | theme }}" size="100" alt="Handcrafted by Art+Code Studio"></bs4-icon>
+        </button>
+        <div class="dropdown-menu p-3 text-left" aria-labelledby="dropdownArtCodeStudio">
+          <p><strong>Webdesign by Art+Code Studio</strong></p>
+          <p>Das <a href="https://artandcode.studio/" target="_blank" rel="noopener">Art+Code Studio</a> versteht, dass jeder Kunde einzigartig ist, jedes Projekt einen anderen Ansatz erfordert und dass jedes Projekte unvoreingenommen und mit freien Gedanken begonnen werden muss. So entdecken wir in enger Zusammenarbeit mit unseren Kunden das Potenzial und schaffen kreative und schöne Lösungen. Schreib uns: <a href="mailto:hi@artandcode.studio">hi@artandcode.studio</a></p>
+        </div>
+      </bs4-dropdown>
+    </div>
+  </div>
+
 </div>
 
 {% partial 'fixed-bottom-bar' %}

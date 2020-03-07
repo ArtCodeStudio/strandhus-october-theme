@@ -40,10 +40,10 @@ snippetProperties[name][options][] = ""
                             {% endif %}
 
                             <div class="carousel-item {% if loop.first %}active{% endif %}">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <img loading="lazy" class="lazy embed-responsive-item" src="{{ image }}" alt="{{ slide.alt }}">
+                                <div class="embed-responsive embed-responsive-2by3 embed-responsive-md-16by9 lazy">
+                                    <img loading="lazy" class="embed-responsive-item" src="{{ image }}" alt="{{ slide.alt }}">
                                 </div>
-                                <div class="carousel-caption carousel-caption-center d-none d-md-flex">
+                                <div class="carousel-caption carousel-caption-center d-flex d-md-flex">
                                     <h2>
                                         <p class="font-special">{{ slide.title_special }}</p>
                                         {{ slide.title }}

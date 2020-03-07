@@ -3,10 +3,6 @@
   bs4-accordion {
     .accordion {
       .card {
-        .card-header {
-          margin: 0;
-          @extend h2;
-        }
         .card-body {
           padding-top: 0;
           table {

@@ -22,19 +22,6 @@ snippetName = "Contact form"
           {% endfor %}
         </div>
 
-        {# Ihr Anliegen #}
-        <div class="form-group contact_concern">
-          <label class="h2" for="contactSelectApplication">{{ this.theme.contact_concern_title }}</label>
-          {{ this.theme.contact_concern_content | raw }}
-
-          <select class="custom-select custom-select-lg" name="contactSelectApplication" id="contactSelectApplication" required>
-            <option value="" selected>Anwendungsgebiet auswählen*</option>
-            {% for application_area in this.theme.application_areas_nav_item  %}
-              <option value="{{ application_area.title }}">{{ application_area.title }}</option>
-            {% endfor %}
-          </select>
-        </div>
-
         {# Message #}
         <div class="form-group">
           <label class="sr-only" for="contactMessage">Nachricht*</label>
@@ -62,20 +49,6 @@ snippetName = "Contact form"
           <input class="form-control form-control-lg" name="contactPhone" id="contactPhone" rows="6" placeholder="Telefon*" required></input>
         </div>
 
-        {# Recall #}
-        <div class="form-group contact_recall">
-          <label class="h2" for="contactSelectApplication">{{ this.theme.contact_recall_title }}</label>
-          {{ this.theme.contact_recall_content | raw }}
-
-          {% for time in this.theme.contact_recall_trimes %}
-            <div class="form-check custom-control custom-radio">
-              <input class="custom-control-input" type="radio" name="contactRecallTime" id="contactRecallTime{{ loop.index }}" value="{{ time.text }}" {% if loop.index == 1 %}checked{% endif %}>
-              <label class="custom-control-label" for="contactRecallTime{{ loop.index }}">
-                {{ time.text }}
-              </label>
-            </div>
-          {% endfor %}
-        </div>
 
         <div class="form-group contact_legal_data_protection">
           {{ this.theme.contact_legal_data_protection_content | raw }}
@@ -94,7 +67,7 @@ snippetName = "Contact form"
 
     
         {# Button #}
-        <button type="submit" class="btn btn-primary btn-lg">Absenden</button>
+        <button type="submit" class="btn btn-secondary btn-lg">Absenden</button>
       </form>
     </div>
   </div>

@@ -34,13 +34,21 @@ snippetProperties[ratioXs][type] = "dropdown"
 snippetProperties[ratioXs][default] = "original"
 snippetProperties[ratioXs][options][original] = "Original"
 snippetProperties[ratioXs][options][embed-responsive-1by1] = "1by1"
+snippetProperties[ratioXs][options][embed-responsive-3by2] = "3by2"
+snippetProperties[ratioXs][options][embed-responsive-2by3] = "2by3"
+snippetProperties[ratioXs][options][embed-responsive-21by9] = "21by9"
+snippetProperties[ratioXs][options][embed-responsive-16by9] = "16by9"
 snippetProperties[ratioXs][options][embed-responsive-16by9] = "16by9"
 snippetProperties[ratioMd][title] = "Ratio Medium"
 snippetProperties[ratioMd][type] = "dropdown"
 snippetProperties[ratioMd][default] = "original"
 snippetProperties[ratioMd][options][original] = "Original"
 snippetProperties[ratioMd][options][embed-responsive-md-1by1] = "1by1"
+snippetProperties[ratioMd][options][embed-responsive-md-3by2] = "3by2"
+snippetProperties[ratioMd][options][embed-responsive-md-2by3] = "2by3"
+snippetProperties[ratioMd][options][embed-responsive-md-21by9] = "21by9"
 snippetProperties[ratioMd][options][embed-responsive-md-16by9] = "16by9"
+snippetProperties[ratioMd][options][embed-responsive-md-4by3] = "4by3"
 ==
 {% if seoTag.og_image and useOgImage %}
   {% set source = (seoTag.og_image | media) | app %}
@@ -49,10 +57,10 @@ snippetProperties[ratioMd][options][embed-responsive-md-16by9] = "16by9"
 {% endif %}
 <div class="partial-image w-100">
   <div class="{% if container %}container{% else %}container-fluid{% endif %}">
-    <div class="row" style="max-width: {{ maxWidth }};">
+    <div class="row" {% if maxWidth != '100%' %}style="max-width: {{ maxWidth }};"{% endif %}>
       <div class="col-12 {% if not container %}px-0{% endif %}">
-        <div {% if ratio %}class="embed-responsive {{ ratioXs }} {{ ratioMd }}"{% endif %}>
-          <img loading="lazy" class="img-fluid {% if rounded %}rounded-30{% endif %} {% if ratio %}embed-responsive-item{% endif %}" src="{{ source }}" alt="{{ alt }}">
+        <div {% if ratio %}class="embed-responsive {{ ratioXs }} {{ ratioMd }} lazy"{% endif %}>
+          <img loading="lazy" class="img-fluid {% if rounded %}rounded-30{% endif %} {% if ratio %}embed-responsive-item{% else %} lazy {% endif %}" src="{{ source }}" alt="{{ alt }}">
         </div>
       </div>
     </div>
