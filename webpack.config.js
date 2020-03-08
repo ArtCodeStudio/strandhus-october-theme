@@ -2,6 +2,8 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const { DuplicatesPlugin } = require("inspectpack/plugin");
+// https://github.com/arcanis/pnp-webpack-plugin
+const PnpWebpackPlugin = require(`pnp-webpack-plugin`);
 
 /**
  * output errors on watch
@@ -60,7 +62,15 @@ module.exports = env => {
     resolve: {
       modules: ['node_modules'],
       extensions: ['.ts', '.tsx', '.js', '.json'],
-      symlinks: true
+      symlinks: true,
+      plugins: [
+        PnpWebpackPlugin,
+      ],
+    },
+    resolveLoader: {
+      plugins: [
+        PnpWebpackPlugin.moduleLoader(module),
+      ],
     },
     module: {
       rules: [

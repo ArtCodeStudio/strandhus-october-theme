@@ -82,10 +82,10 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         $gray-200;
 $dark:          $gray-800 !default;
 
-$theme-colors: () !default;
+$theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
@@ -145,7 +145,7 @@ $enable-deprecation-messages:                 true !default;
 // You can add more entries to the $spacers map, should you need more variation.
 
 $spacer: 1rem !default;
-$spacers: () !default;
+$spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
@@ -154,7 +154,8 @@ $spacers: map-merge(
     2: ($spacer * .5),
     3: $spacer,
     4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    5: ($spacer * 3),
+    6: ($spacer * 6)
   ),
   $spacers
 );
