@@ -1,7 +1,7 @@
 {
-  "name": "hypnose-october-theme",
-  "version": "1.7.0",
-  "description": "Hypnose OctoberCMS Theme",
+  "name": "strandhus-october-theme",
+  "version": "1.8.0",
+  "description": "Strandhus OctoberCMS Theme",
   "main": "assets/ts/main.ts",
   "typings": "assets/ts/types",
   "scripts": {
@@ -37,14 +37,14 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/ArtCodeStudio/hypnose-october-theme/blob/master/README.md"
+      "url": "https://github.com/ArtCodeStudio/strandhus-october-theme/blob/master/README.md"
     }
   ],
   "bugs": {
-    "url": "https://github.com/ArtCodeStudio/hypnose-october-theme/issues"
+    "url": "https://github.com/ArtCodeStudio/strandhus-october-theme/issues"
   },
-  "url": "https://github.com/ArtCodeStudio/hypnose-october-theme",
-  "homepage": "https://hypnose.jumplink.eu/",
+  "url": "https://github.com/ArtCodeStudio/strandhus-october-theme",
+  "homepage": "https://hotel-strandhus.jumplink.eu/",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -59,9 +59,11 @@
     "@babel/runtime-corejs3": "^7.8.4",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
     "@typescript-eslint/parser": "^2.21.0",
+    "@yarnpkg/pnpify": "^2.0.0-rc.18",
     "babel-loader": "^8.0.6",
     "babel-plugin-array-includes": "^2.0.3",
     "concurrently": "^5.1.0",
+    "copy-webpack-plugin": "^5.1.1",
     "core-js": "^3.6.4",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
@@ -69,7 +71,6 @@
     "html-loader": "^0.5.5",
     "inspectpack": "^4.4.0",
     "pnp-webpack-plugin": "^1.6.4",
-    "copy-webpack-plugin": "^5.1.1",
     "prettier": "^1.19.1",
     "pug-loader": "^2.4.0",
     "terser-webpack-plugin": "^2.3.5",

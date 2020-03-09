@@ -15,7 +15,7 @@ export class HshNavbarComponent extends Bs4NavbarComponent {
         return ['collapse-selector'];
     }
 
-    protected scope: any = {
+    protected scope = {
         toggle: this.toggle,
         show: this.show,
         hide: this.hide,
@@ -30,7 +30,7 @@ export class HshNavbarComponent extends Bs4NavbarComponent {
         // console.debug('constructor', this);
     }
 
-    public onItemClick(context?: Binder<any>, event?: Event) {
+    public onItemClick(context?: Binder<unknown>, event?: Event): void {
         if (event) {
             const target = event.target as HTMLAnchorElement | null;
             if (!target) {

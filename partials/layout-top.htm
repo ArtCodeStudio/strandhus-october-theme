@@ -5,7 +5,7 @@ code = "top-navigation"
 ==
 {# Desktop #}
 <hsh-navbar class="navbar navbar-expand navbar-light bg-white fixed-top collapsed d-none d-xl-block">
-  <nav class="navbar-nav row" rv-on-mouseenter="onNavbarHover" rv-on-mouseleave="onNavbarLeave">
+  <nav class="navbar-nav row">
     <a class="navbar-brand col-auto d-flex justify-content-start navbar-start" href="/" rv-on-click="onItemClick">
       <bs4-icon src="{{ this.theme.general_logo | media }}"></bs4-icon>
     </a>
@@ -16,7 +16,7 @@ code = "top-navigation"
 
     <ul class="col-auto nav align-items-center justify-content-end navbar-end">
       <li class="nav-item">
-        <bs4-button class="btn btn-animated-underline-primary" href="/">AUSZEIT BUCHEN</bs4-button>
+        <bs4-button class="btn btn-animated-underline-primary" rv-route="'/buchung'">AUSZEIT BUCHEN</bs4-button>
       </li>
     </ul>
 

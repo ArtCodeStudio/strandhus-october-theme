@@ -1,4 +1,4 @@
-import { Component } from '@ribajs/core';
+import { Component, View } from '@ribajs/core';
 
 export class HshFooterComponent extends Component {
     public static tagName = 'hsh-footer';
@@ -9,14 +9,14 @@ export class HshFooterComponent extends Component {
         return [];
     }
 
-    protected scope: any = {};
+    protected scope = {};
 
     constructor(element?: HTMLElement) {
         super(element);
         this.init(HshFooterComponent.observedAttributes);
     }
 
-    protected async init(observedAttributes: string[]) {
+    protected async init(observedAttributes: string[]): Promise<View | null | undefined> {
         return super.init(observedAttributes).then(view => {
             return view;
         });
@@ -28,19 +28,19 @@ export class HshFooterComponent extends Component {
 
     protected parsedAttributeChangedCallback(
         attributeName: string,
-        oldValue: any,
-        newValue: any,
+        oldValue: unknown,
+        newValue: unknown,
         namespace: string | null,
-    ) {
+    ): void {
         super.parsedAttributeChangedCallback(attributeName, oldValue, newValue, namespace);
     }
 
     // deconstructor
-    protected disconnectedCallback() {
+    protected disconnectedCallback(): void {
         super.disconnectedCallback();
     }
 
-    protected template() {
+    protected template(): string | null {
         return null;
     }
 }

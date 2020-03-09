@@ -13,8 +13,6 @@ interface ToggleItem {
     handle: string;
 }
 
-const ANIMATED_COLLAPSE = false;
-
 interface Scope {
     /**
      * Selector string to get the container element from DOM
@@ -87,7 +85,7 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
 
     protected pjax?: Pjax;
 
-    static get observedAttributes() {
+    static get observedAttributes(): string[] {
         return [
             'id',
             'container-selector',
@@ -129,7 +127,7 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
         super(element);
     }
 
-    public onItemClick(context?: any, event?: Event) {
+    public onItemClick(context?: Scope, event?: Event): void {
         if (event) {
             const target = event.target as HTMLAnchorElement | null;
             if (!target) {
@@ -149,34 +147,34 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
         }
     }
 
-    protected connectedCallback() {
+    protected connectedCallback(): void {
         super.connectedCallback();
     }
 
-    protected async beforeBind() {
+    protected async beforeBind(): Promise<void> {
         return super.beforeBind();
     }
 
-    protected async afterBind() {
+    protected async afterBind(): Promise<void> {
         super.afterBind();
         this.pjax = Pjax.getInstance('main');
     }
 
-    protected requiredAttributes() {
+    protected requiredAttributes(): string[] {
         return ['id'];
     }
 
     protected parsedAttributeChangedCallback(
         attributeName: string,
-        oldValue: any,
-        newValue: any,
+        oldValue: unknown,
+        newValue: unknown,
         namespace: string | null,
-    ) {
+    ): void {
         super.parsedAttributeChangedCallback(attributeName, oldValue, newValue, namespace);
     }
 
     // deconstructor
-    protected disconnectedCallback() {
+    protected disconnectedCallback(): void {
         super.disconnectedCallback();
     }
 }
