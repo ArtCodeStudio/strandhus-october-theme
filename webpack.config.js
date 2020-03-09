@@ -4,6 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { DuplicatesPlugin } = require("inspectpack/plugin");
 // https://github.com/arcanis/pnp-webpack-plugin
 const PnpWebpackPlugin = require(`pnp-webpack-plugin`);
+const CopyPlugin = require('copy-webpack-plugin');
 
 /**
  * output errors on watch
@@ -78,7 +79,7 @@ module.exports = env => {
         {
           test: /\.(tsx?)|\.(js)$/,
           exclude: [/node_modules\/(?!@ribajs)/, /(bower_components)/],
-          loader: 'babel-loader',
+          loader: require.resolve('babel-loader'),
         },
         // html templates
         {
@@ -105,6 +106,11 @@ module.exports = env => {
     plugins:  [
       new ConsoleNotifierPlugin(),
       new DuplicatesPlugin(),
+      new CopyPlugin([
+        // `require.resolve('bootstrap')` resolves to `'bootstrap/dist/js/bootstrap.js'`
+        { from: path.resolve(path.dirname(require.resolve('bootstrap')), '../../scss'), to: path.resolve('./assets/scss/vendors/bootstrap/'), toType: 'dir' },
+        { from: path.dirname(require.resolve('@ribajs/bs4')) + '/**/*.scss', to: path.resolve('./assets/scss/vendors/@ribajs/bs4'), toType: 'dir', context: path.dirname(require.resolve('@ribajs/bs4')) },
+      ]),
     ],
   };
 };

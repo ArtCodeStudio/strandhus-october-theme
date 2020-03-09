@@ -5,7 +5,7 @@
 @import 'bootstrap';
 
 // Bootstrap style extensions from @ribajs/bs4
-@import '../../node_modules/@ribajs/bs4/src/index';
+@import './vendors/@ribajs/bs4/index';
 
 // vendors
 
@@ -28,13 +28,10 @@
 @import './components/index';
 
 // Layout
-@import 'layout/index';
+@import './layout/index';
 
 // partials
 @import './partials/index';
  
 // components
 @import '../ts/components/index';
-
-// third party
-// @import './third-party/xyz';
