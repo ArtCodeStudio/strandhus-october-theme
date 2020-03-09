@@ -2,12 +2,12 @@
 @import 'custom-variables';
 @import 'variables';
 
+// vendors
 @import 'bootstrap';
-
 // Bootstrap style extensions from @ribajs/bs4
 @import './vendors/@ribajs/bs4/index';
 
-// vendors
+
 
 // bootstrap overwrites and custom classes
 @import 'animations';

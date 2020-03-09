@@ -69,6 +69,7 @@
     "html-loader": "^0.5.5",
     "inspectpack": "^4.4.0",
     "pnp-webpack-plugin": "^1.6.4",
+    "copy-webpack-plugin": "^5.1.1",
     "prettier": "^1.19.1",
     "pug-loader": "^2.4.0",
     "terser-webpack-plugin": "^2.3.5",
@@ -84,8 +85,7 @@
     "@ribajs/iconset": "^1.8.0",
     "@ribajs/jquery": "^1.8.0",
     "@ribajs/router": "^1.8.0",
-    "bootstrap": "^4.4.1",
-    "copy-webpack-plugin": "^5.1.1"
+    "bootstrap": "^4.4.1"
   },
   "resolutions": {
     "@ribajs/bs4": "portal:/srv/users/hotel-strandhus/apps/hotel-strandhus/riba/packages/bs4",

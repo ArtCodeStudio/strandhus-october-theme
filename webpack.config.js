@@ -4,6 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { DuplicatesPlugin } = require("inspectpack/plugin");
 // https://github.com/arcanis/pnp-webpack-plugin
 const PnpWebpackPlugin = require(`pnp-webpack-plugin`);
+// https://github.com/webpack-contrib/copy-webpack-plugin
 const CopyPlugin = require('copy-webpack-plugin');
 
 /**
