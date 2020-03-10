@@ -242,44 +242,6 @@ form:
                 mode: image
                 label: Logo
                 tab: General
-            application_areas_nav_item:
-                tab: 'Application areas'
-                titleFrom: items
-                type: repeater
-                form:
-                    fields:
-                        image:
-                            label: Image
-                            type: mediafinder
-                            mode: image
-                            span: left
-                        title:
-                            label: Title
-                            type: text
-                            span: right
-                        page:
-                            label: Page
-                            type: text
-                            span: right
-            additional_areas_nav_item:
-                tab: 'Additional areas'
-                titleFrom: items
-                type: repeater
-                form:
-                    fields:
-                        image:
-                            label: Image
-                            type: mediafinder
-                            mode: image
-                            span: left
-                        title:
-                            label: Title
-                            type: text
-                            span: right
-                        page:
-                            label: Page
-                            type: text
-                            span: right
             personal_reports:
                 tab: 'Personal reports'
                 titleFrom: report
@@ -442,6 +404,70 @@ form:
                             label: Button url
                             type: text
                             span: right
+            image_navigations:
+                tab: 'Image navigation'
+                prompt: 'Add new image navigation'
+                titleFrom: navigations
+                type: repeater
+                form:
+                    fields:
+                        name:
+                            label: Name
+                            type: text
+                        title_1:
+                            label: Title
+                            type: text
+                            span: left
+                        title_2:
+                            label: Title 2
+                            type: text
+                            span: right
+                        title_1_is_special:
+                            label: Title is special
+                            type: checkbox
+                            default: false
+                            span: left
+                        title_2_is_special:
+                            label: Title 2 is special
+                            type: checkbox
+                            default: false
+                            span: right
+                        images:
+                            prompt: 'Add new image'
+                            titleFrom: images
+                            type: repeater
+                            form:
+                                fields:
+                                    image:
+                                        label: Image
+                                        type: mediafinder
+                                        mode: image
+                                        span: left
+                                    title:
+                                        label: Title
+                                        type: text
+                                        span: right
+                                    info:
+                                        label: Info
+                                        type: text
+                                        span: right
+                                    url:
+                                        label: Url or page
+                                        type: text
+                                        span: right
+                                    extern_image:
+                                        label: 'Image by Url'
+                                        type: text
+                                        comment: 'Enter here a external image url if you want to use this instead'
+                                        span: left
+                                    space_top:
+                                        label: Top space
+                                        type: number
+                                        step: 1
+                                        min: 0
+                                        max: 9
+                                        default: 0
+                                        span: left
             fadeshows:
                 tab: 'Fadeshow'
                 prompt: 'Add new fadeshow'

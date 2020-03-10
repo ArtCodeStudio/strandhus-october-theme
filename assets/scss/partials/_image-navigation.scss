@@ -1,0 +1,11 @@
+.partial-image-navigation {
+    a {
+        color: $body-color;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .col-lg {
+        max-width: 500px;
+    }
+}

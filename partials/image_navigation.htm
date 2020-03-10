@@ -1,0 +1,80 @@
+[viewBag]
+snippetCode = "image_navigation"
+snippetName = "Image navigation"
+snippetProperties[name][title] = "Name"
+snippetProperties[name][type] = "string"
+snippetProperties[name][default] = ""
+snippetProperties[name][options][] = ""
+==
+
+{% set findName = name | lower | replace({' ': ''}) %}
+
+{% set imageNavigation = undefined %}
+
+{% for curImageNavigation in this.theme.image_navigations %}
+    {% set curName = curImageNavigation.name | lower | replace({' ': ''}) %}
+    {% if curName == findName %}
+        {% set imageNavigation = curImageNavigation %}
+    {% endif %}
+{% endfor %}
+
+{% if imageNavigation is defined and imageNavigation.name is defined %}
+    <div class="container-fluid container-limited-1 partial-image-navigation">
+        <div class="row mt-7 d-flex justify-content-center">
+
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-4">
+                    <span {% if imageNavigation.title_1_is_special %}class="font-special"{% endif %}>{{ imageNavigation.title_1 }}</span>
+                    <span {% if imageNavigation.title_2_is_special %}class="font-special"{% endif %}>{{ imageNavigation.title_2 }}</span>
+                </h2>
+                
+            </div>
+
+            {% for item in imageNavigation.images %}
+
+                {% set imageIsResizeable = false %}
+                {% set image = item.extern_image %}
+                {% if image is not defined or image is empty %}
+                    {% set image = item.image | media %}
+                    {% set imageIsResizeable = true %}
+                {% endif %}
+
+                {% set url = item.url | staticPage %}
+                {% if url is empty or url is empty %}
+                    {% set url = item.url %}
+                {% endif %}
+
+                <a class="col-12 col-lg mx-lg-4 mt-lg-{{ item.space_top }}" href="{{ url }}">
+                    <div class="embed-responsive embed-responsive-1by1 lazy">
+                        <img
+                            class="img-fluid embed-responsive-item"
+                            loading="lazy"
+                            src="{{ image }}"
+                            alt="{{ item.title }}"
+                            {% if imageIsResizeable %}
+                                srcset="{{ image | resize(100, 100) }} 100w, {{ image | resize(200, 200) }} 200w, {{ image | resize(400, 400) }} 400w, {{ image | resize(800, 800) }} 800w, {{ image | resize(1200, 1200) }} 1200w, {{ image | resize(1600, 1600) }} 1600w"
+                                sizes="(min-width: 768px) 30vw, 90vw"
+                            {% endif %}
+                        >
+                    </div>
+                    <p class="mt-2 mb-4 d-flex justify-content-between align-items-center">
+                        <span class="font-size-lg font-weight-bold">{{ item.title }}</span>
+                        <span class="d-flex align-items-center">
+                            <span class="text-uppercase">{{ item.info }}</span>
+                            <bs4-icon class="ml-1" src="{{ 'assets/iconset/arrow.svg' | theme }}" size="32" direction="right"></bs4-icon>
+                        </span>
+                        
+                    </p>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% else %}
+    <div class="container partial-image-navigation">
+        <div class="row">
+            <div class="col-12 alert alert-danger" role="alert">
+                Image navigation not found, make sure you have created a image navigation with the name "{{ name }}" in your theme settings.
+            </div>
+        </div>
+    </div>
+{% endif %}

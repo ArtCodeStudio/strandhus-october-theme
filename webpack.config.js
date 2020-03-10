@@ -115,18 +115,20 @@ module.exports = env => {
             new ConsoleNotifierPlugin(),
             new DuplicatesPlugin(),
             new CopyPlugin([
-                // `require.resolve('bootstrap')` resolves to `'bootstrap/dist/js/bootstrap.js'`
+                // Copy bootstrap scss files. Note: `require.resolve('bootstrap')` resolves to `'bootstrap/dist/js/bootstrap.js'` because this is the main file in package.json
                 {
                     from: path.resolve(path.dirname(require.resolve('bootstrap')), '../../scss'),
                     to: path.resolve('./assets/scss/vendors/bootstrap/'),
                     toType: 'dir',
                 },
+                // Copy @ribajs/bs4 scss files
                 {
                     from: path.dirname(require.resolve('@ribajs/bs4')) + '/**/*.scss',
                     to: path.resolve('./assets/scss/vendors/@ribajs/bs4'),
                     toType: 'dir',
                     context: path.dirname(require.resolve('@ribajs/bs4')),
                 },
+                // Copy iconset svg's
                 {
                     from: path.resolve(path.dirname(require.resolve('@ribajs/iconset')), 'svg'),
                     to: path.resolve('./assets/iconset/'),

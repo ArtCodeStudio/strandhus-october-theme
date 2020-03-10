@@ -70,9 +70,24 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .font-special {
+    display: block;
     font-family: $font-family-special;
 }
 
 .font-stretched {
     letter-spacing: 2px;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .font-size#{$infix}-sm {
+        font-size: $font-size-sm;
+    }
+    .font-size#{$infix}-base {
+        font-size: $font-size-base;
+    }
+    .font-size#{$infix}-lg {
+        font-size: $font-size-lg;
+    }
 }

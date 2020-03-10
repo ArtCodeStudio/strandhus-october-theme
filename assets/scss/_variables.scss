@@ -133,7 +133,7 @@ $enable-hover-media-query:                    false !default; // Deprecated, no 
 $enable-grid-classes:                         true !default;
 $enable-pointer-cursor-for-buttons:           true !default;
 $enable-print-styles:                         true !default;
-$enable-responsive-font-sizes:                false !default;
+$enable-responsive-font-sizes:                true; // false !default;
 $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
 
@@ -155,7 +155,10 @@ $spacers: map-merge(
     3: $spacer,
     4: ($spacer * 1.5),
     5: ($spacer * 3),
-    6: ($spacer * 6)
+    6: ($spacer * 6),
+    7: ($spacer * 12),
+    8: ($spacer * 24),
+    9: ($spacer * 28)
   ),
   $spacers
 );

@@ -19,7 +19,7 @@ snippetProperties[name][options][] = ""
 {% endfor %}
 
 
-{% if slideshow is defined %}
+{% if slideshow is defined and slideshow.images is defined %}
 
     {% set button_url = slideshow.button_url | staticPage %}
     {% if button_url is not defined %}
@@ -38,7 +38,7 @@ snippetProperties[name][options][] = ""
                     </div>
                     <h3>
                         {{ slideshow.title }}
-                        <p class="font-special">{{ slideshow.title_special }}</p>
+                        <span class="font-special">{{ slideshow.title_special }}</span>
                     </h3>
                 </div>
     
@@ -68,7 +68,7 @@ snippetProperties[name][options][] = ""
                     </div>
                     <h3>
                         {{ slideshow.title }}
-                        <p class="font-special">{{ slideshow.title_special }}</p>
+                        <span class="font-special">{{ slideshow.title_special }}</span>
                     </h3>
                 </div>
                 {{ slideshow.content | raw }}
@@ -78,7 +78,11 @@ snippetProperties[name][options][] = ""
         </div>
     </div>
 {% else %}
-    <div class="alert alert-danger" role="alert">
-        Slideshow not found, make sure you have created a slideshow with the name "{{ name }}" in your theme settings.
+    <div class="container">
+        <div class="row">
+            <div class="col-12 alert alert-danger" role="alert">
+                Slideshow not found, make sure you have created a slideshow with the name "{{ name }}" in your theme settings.
+            </div>
+        </div>
     </div>
 {% endif %}
