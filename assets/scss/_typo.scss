@@ -41,10 +41,12 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     text-transform: uppercase;
-    .font-special {
-        // font-size: 80%;
+    .font-special, &.font-special {
         margin-top: $spacer;
         text-transform: none;
+    }
+    .font-special {
+        font-size: 140%;
     }
 }
 

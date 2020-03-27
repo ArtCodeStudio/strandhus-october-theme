@@ -119,13 +119,11 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Naturidyll & Nachhaltigkeit'
+                title: Nachhaltigkeit
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
                 reference: nachhaltigkeit
-                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -201,8 +199,10 @@ items:
                 title: Anreise
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anreise
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'

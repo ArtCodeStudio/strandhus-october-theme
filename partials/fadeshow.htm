@@ -34,9 +34,10 @@ snippetProperties[name][options][] = ""
                                 {% set image = slide.image | media %}
                             {% endif %}
 
-                            {% set button_url = slide.button_url | staticPage %}
-                            {% if button_url is not defined %}
-                            {% set button_url = slide.button_url %}
+                            {% if slide.button_url | first == '/' %}
+                                {% set button_url = slide.button_url %}
+                            {% else %}
+                                {% set button_url = slide.button_url | staticPage %}
                             {% endif %}
 
                             <div class="carousel-item {% if loop.first %}active{% endif %}">
