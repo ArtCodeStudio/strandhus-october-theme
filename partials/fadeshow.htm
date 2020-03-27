@@ -29,8 +29,13 @@ snippetProperties[name][options][] = ""
                 <bs4-carousel class="carousel slide carousel-fade" interval="5000">
                     <div class="carousel-inner">
                         {% for slide in fadeshow.images %}
-                            {% set image = slide.extern_image %}
-                            {% if slide.image is not empty %}
+                            {% set isExtern = false %}
+                            {% if slide.extern_image is defined and slide.extern_image is not empty %}
+                                {% set isExtern = true %}
+                                {% set image = slide.extern_image %}
+                            {% endif %}
+                            {% if slide.image is defined and slide.image is not empty %}
+                                {% set isExtern = false %}
                                 {% set image = slide.image | media %}
                             {% endif %}
 
@@ -42,7 +47,28 @@ snippetProperties[name][options][] = ""
 
                             <div class="carousel-item {% if loop.first %}active{% endif %}">
                                 <div class="embed-responsive embed-responsive-2by3 embed-responsive-md-16by9 lazy">
-                                    <img loading="lazy" class="embed-responsive-item" src="{{ image }}" alt="{{ slide.alt }}">
+                                    <img
+                                        loading="lazy"
+                                        class="embed-responsive-item"
+                                        {% if isExtern == false %}
+                                        srcset="
+                                            {{ image | resize(200, null, { mode: 'cover' }) }} 200w,
+                                            {{ image | resize(400, null, { mode: 'cover' }) }} 400w,
+                                            {{ image | resize(800, null, { mode: 'cover' }) }} 800w,
+                                            {{ image | resize(1000, null, { mode: 'cover' }) }} 1000w,
+                                            {{ image | resize(1200, null, { mode: 'cover' }) }} 1200w,
+                                            {{ image | resize(1400, null, { mode: 'cover' }) }} 1400w,
+                                            {{ image | resize(1600, null, { mode: 'cover' }) }} 1600w,
+                                            {{ image | resize(1800, null, { mode: 'cover' }) }} 1800w,
+                                            {{ image | resize(2000, null, { mode: 'cover' }) }} 2000w,
+                                            {{ image | resize(2500, null, { mode: 'cover' }) }} 2500w,
+                                            {{ image | resize(3000, null, { mode: 'cover' }) }} 3000w
+                                        "
+                                        sizes="100vw"
+                                        {% endif %}
+                                        src="{{ image }}"
+                                        alt="{{ slide.alt }}"
+                                    >
                                 </div>
                                 <div class="carousel-caption carousel-caption-center d-flex d-md-flex">
                                     <h2>

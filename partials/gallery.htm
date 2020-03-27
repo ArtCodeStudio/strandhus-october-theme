@@ -214,13 +214,13 @@ function onStart() {
                     <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy" id="{{ image.handle }}">
                         <img class="img-fluid embed-responsive-item" 
                         srcset="
-                        {{ image.src | media | resize(200, {}) }} 200w,
-                        {{ image.src | media | resize(300, {}) }} 300w,
-                        {{ image.src | media | resize(400, {}) }} 400w,
-                        {{ image.src | media | resize(500, {}) }} 500w,
-                        {{ image.src | media | resize(600, {}) }} 600w,
-                        {{ image.src | media | resize(700, {}) }} 700w,
-                        {{ image.src | media | resize(800, {}) }} 800w,
+                        {{ image.src | media | resize(200, null, { mode: 'cover' }) }} 200w,
+                        {{ image.src | media | resize(300, null, { mode: 'cover' }) }} 300w,
+                        {{ image.src | media | resize(400, null, { mode: 'cover' }) }} 400w,
+                        {{ image.src | media | resize(500, null, { mode: 'cover' }) }} 500w,
+                        {{ image.src | media | resize(600, null, { mode: 'cover' }) }} 600w,
+                        {{ image.src | media | resize(700, null, { mode: 'cover' }) }} 700w,
+                        {{ image.src | media | resize(800, null, { mode: 'cover' }) }} 800w,
                         "
                         loading="lazy"
                         sizes="100vw,
