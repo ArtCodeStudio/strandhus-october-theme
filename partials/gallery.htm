@@ -1,0 +1,237 @@
+[viewBag]
+snippetCode = "gallerie"
+snippetName = "Gallerie"
+snippetProperties[folderName][title] = "folder name"
+snippetProperties[folderName][type] = "string"
+snippetProperties[folderName][default] = ""
+snippetProperties[folderName][options][] = ""
+
+snippetProperties[marginTop][title] = "Margin Top"
+snippetProperties[marginTop][type] = "dropdown"
+snippetProperties[marginTop][default] = 1
+snippetProperties[marginTop][options][] = 0
+snippetProperties[marginTop][options][] = 1
+snippetProperties[marginTop][options][] = 2
+snippetProperties[marginTop][options][] = 3
+snippetProperties[marginTop][options][] = 4
+snippetProperties[marginTop][options][] = 5
+snippetProperties[marginTop][options][] = 6
+snippetProperties[marginBottom][title] = "Margin Bottom"
+snippetProperties[marginBottom][type] = "dropdown"
+snippetProperties[marginBottom][default] = 1
+snippetProperties[marginBottom][options][] = 0
+snippetProperties[marginBottom][options][] = 1
+snippetProperties[marginBottom][options][] = 2
+snippetProperties[marginBottom][options][] = 3
+snippetProperties[marginBottom][options][] = 4
+snippetProperties[marginBottom][options][] = 5
+snippetProperties[marginBottom][options][] = 6
+snippetProperties[marginLeftRight][title] = "Margin Left Right"
+snippetProperties[marginLeftRight][type] = "dropdown"
+snippetProperties[marginLeftRight][default] = 1
+snippetProperties[marginLeftRight][options][] = 0
+snippetProperties[marginLeftRight][options][] = 1
+snippetProperties[marginLeftRight][options][] = 2
+snippetProperties[marginLeftRight][options][] = 3
+snippetProperties[marginLeftRight][options][] = 4
+snippetProperties[marginLeftRight][options][] = 5
+snippetProperties[paddingTop][title] = "Padding Top"
+snippetProperties[paddingTop][type] = "dropdown"
+snippetProperties[paddingTop][default] = 0
+snippetProperties[paddingTop][options][] = 0
+snippetProperties[paddingTop][options][] = 1
+snippetProperties[paddingTop][options][] = 2
+snippetProperties[paddingTop][options][] = 3
+snippetProperties[paddingTop][options][] = 4
+snippetProperties[paddingTop][options][] = 5
+snippetProperties[paddingBottom][title] = "Padding Bottom"
+snippetProperties[paddingBottom][type] = "dropdown"
+snippetProperties[paddingBottom][default] = 0
+snippetProperties[paddingBottom][options][] = 0
+snippetProperties[paddingBottom][options][] = 1
+snippetProperties[paddingBottom][options][] = 2
+snippetProperties[paddingBottom][options][] = 3
+snippetProperties[paddingBottom][options][] = 4
+snippetProperties[paddingBottom][options][] = 5
+==
+<?php
+
+/**
+ * @author Thorsten Rotering <support@rotering-net.de>
+ * @see https://rotering-net.de/tut/php/groesster-gemeinsamer-teiler.html
+ * @version 1.1 (2016-05-07)
+ *
+ * Hiermit wird unentgeltlich, jeder Person, die eine Kopie dieses Skripts erhält, die Erlaubnis erteilt,
+ * diese uneingeschränkt zu benutzen, inklusive und ohne Ausnahme, dem Recht, sie zu verwenden, zu kopieren,
+ * zu Ändern, zu fusionieren, zu verlegen, zu verbreiten, zu unterlizenzieren und/oder zu verkaufen, und
+ * Personen, die dieses Skript erhalten, diese Rechte zu geben, unter den folgenden Bedingungen:
+ *
+ * Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in allen Kopien oder Teilkopien des
+ * Skripts beizulegen.
+ *
+ * DAS SKRIPT WIRD OHNE JEDE AUSDRÃœCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIESSLICH DER
+ * GARANTIE ZUR BENUTZUNG FÃœR DEN VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG,
+ * JEDOCH NICHT DARAUF BESCHRÃ„NKT. IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHTINHABER FÃœR JEGLICHEN SCHADEN
+ * ODER SONSTIGE ANSPRÃœCHE HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÃœLLUNG EINES VERTRAGES, EINES DELIKTES ODER
+ * ANDERS IM ZUSAMMENHANG MIT DEM SKRIPT ODER SONSTIGER VERWENDUNG DES SKRIPTS ENTSTANDEN.
+ */
+
+/**
+ * Ermittelt den größten gemeinsamen Teiler zweier Zahlen.
+ * @param int $pNumber1 Die erste ganze Zahl, von der der größte gemeinsamer Teiler bestimmt werden soll. 
+ * @param int $pNumber2 Die zweite ganze Zahl, von der der größte gemeinsamer Teiler bestimmt werden soll. 
+ * @return int Der größte gemeinsame Teiler.
+ */
+function gcd($pNumber1, $pNumber2) {
+    $lNumber1 = abs($pNumber1);
+    $lNumber2 = abs($pNumber2);
+    $lShiftCount = 0;
+    
+    /* Liefere 0 zurÃ¼ck, wenn eine der Zahlen 0 ist. */
+    if (!($lNumber1 && $lNumber2)) {
+        return 0;
+    }
+    
+    /* Liefere die erste Zahl zurÃ¼ck, wenn beide Zahlen gleich sind. */
+    if ($lNumber1 == $lNumber2) {
+        return $lNumber1;
+    }
+    
+    /* Teile die Zahlen solange durch 2, wie sie den gemeinsamen Primfaktor 2 enthalten. */
+    while (!($lNumber1 & 1 || $lNumber2 & 1)) {
+        $lNumber1 = $lNumber1 >> 1;
+        $lNumber2 = $lNumber2 >> 1;
+        $lShiftCount++;       
+    }
+    
+    /* Wende den euklidischen Algorithmus an. */
+    if ($lNumber1 & 1) {
+        $lDistance = -$lNumber2;
+    } else {
+        $lDistance = $lNumber1;
+    }
+    
+    while ($lDistance) {
+        while (!($lDistance & 1)) {
+            $lDistance = $lDistance >> 1;
+        }
+        
+        if ($lDistance > 0) {
+            $lNumber1 = $lDistance;
+        } else {
+            $lNumber2 = -$lDistance;
+        }
+        
+        $lDistance = $lNumber1 - $lNumber2;
+    }
+    
+    /* Multiplizierte $lShiftCount-mal mit 2 und liefere das Ergebnis zurÃ¼ck. */
+    return $lNumber1 << $lShiftCount;
+}
+
+function onStart() {
+    
+    $mediaPath = base_path() . Config::get('cms.storage.media.path');
+    $folderName = trim($this['folderName']);
+    $fullPath = $mediaPath;
+
+    if (strlen($folderName) > 0 ) {
+        $fullPath = $fullPath . '/' . $folderName;
+    }
+    
+    if (!file_exists($fullPath) || !is_dir($fullPath)) {
+        $this['error'] = $fullPath . ' not found or is not a directory';
+        return;
+    }
+        
+
+    $files = scandir($fullPath);
+
+
+    $imageNames = preg_grep('/^.*\.(jpg|jpeg|png|gif)$/i', $files);
+    $images = [];
+    $ratios = [];
+    
+    foreach ($imageNames as &$imageName) {
+        $image = $folderName . '/' . $imageName;
+        list($width, $height, $type, $attr) = getimagesize($fullPath . '/' . $imageName);
+
+        $gcd = $this->gcd($width, $height);
+
+        $width = $width / $gcd;
+        $height = $height / $gcd;
+        $ratioName = $height . 'by' . $width;
+        $ratio = round(($height / $width) * 100, 2);
+
+        $imageData['height'] = $height;
+        $imageData['width'] = $width;
+        $imageData['ratio'] = $ratio;
+        $imageData['ratioName'] = $ratioName;
+        $imageData['src'] = $image;
+        $imageData['name'] = $imageName;
+        $imageData['handle'] = preg_replace('/[^A-Za-z0-9\-]/', '-', strtolower($imageName));
+
+        $ratioData = array($ratioName => $ratio);
+
+        // if (!in_array($ratios, $ratioData)) {
+        //     $ratios[] = $ratioData;
+        // }
+
+        if (!isset($ratios[$ratioName])) {
+            $ratios[$ratioName] = $ratio;
+        }
+
+        $images[] = $imageData;
+    }
+    
+    $this['images'] = $images;
+    $this['ratios'] = $ratios;
+}
+?>
+==
+
+<style>
+    {%- for ratioName, ratio in ratios -%}
+        .embed-responsive-{{ ratioName }}:before {
+            padding-top: {{ ratio }}%;
+        }
+    {%- endfor -%}
+</style>
+
+<div class="container-fluid mt-{{ marginTop }} mb-{{ marginBottom }} pt-{{ paddingTop }} pb-{{ paddingBottom }}">
+    <div class="row mx-{{ marginLeftRight }}">
+        {% if error %}
+            <div class="col-12 pt-5">
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="col-12">
+            <div class="card-columns">
+                {% for image in images %}
+                    <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy" id="{{ image.handle }}">
+                        <img class="img-fluid embed-responsive-item" 
+                        srcset="
+                        {{ image.src | media | resize(200, {}) }} 200w,
+                        {{ image.src | media | resize(300, {}) }} 300w,
+                        {{ image.src | media | resize(400, {}) }} 400w,
+                        {{ image.src | media | resize(500, {}) }} 500w,
+                        {{ image.src | media | resize(600, {}) }} 600w,
+                        {{ image.src | media | resize(700, {}) }} 700w,
+                        {{ image.src | media | resize(800, {}) }} 800w,
+                        "
+                        loading="lazy"
+                        sizes="100vw,
+                        @media (min-width: 576px) 30vw"
+                        height="{{ image.height }}"
+                        width="{{ image.width }}"
+                        alt="{{ image.name }}"
+                        ></img>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
