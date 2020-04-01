@@ -209,29 +209,33 @@ function onStart() {
         {% endif %}
 
         <div class="col-12">
-            <div class="card-columns">
-                {% for image in images %}
-                    <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy" id="{{ image.handle }}">
-                        <img class="img-fluid embed-responsive-item" 
-                        srcset="
-                        {{ image.src | media | resize(200, null, { mode: 'cover' }) }} 200w,
-                        {{ image.src | media | resize(300, null, { mode: 'cover' }) }} 300w,
-                        {{ image.src | media | resize(400, null, { mode: 'cover' }) }} 400w,
-                        {{ image.src | media | resize(500, null, { mode: 'cover' }) }} 500w,
-                        {{ image.src | media | resize(600, null, { mode: 'cover' }) }} 600w,
-                        {{ image.src | media | resize(700, null, { mode: 'cover' }) }} 700w,
-                        {{ image.src | media | resize(800, null, { mode: 'cover' }) }} 800w,
-                        "
-                        loading="lazy"
-                        sizes="100vw,
-                        @media (min-width: 576px) 30vw"
-                        height="{{ image.height }}"
-                        width="{{ image.width }}"
-                        alt="{{ image.name }}"
-                        ></img>
-                    </div>
-                {% endfor %}
-            </div>
+            <rv-photoswipe open-image-on-click="false" control-next-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}" control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}" control-close-icon-src="{{ 'assets/iconset/icon_close.svg' | theme }}" control-zoom-in-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" control-zoom-out-icon-src="{{ 'assets/iconset/icon_minus.svg' | theme }}" control-fullscreen-on-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-on.svg' | theme }}" control-fullscreen-off-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-off.svg' | theme }}" control-share-icon-src="{{ 'assets/iconset/social_share.svg' | theme }}">
+                <div class="card-columns">
+                    {% for image in images %}
+                        <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy" id="{{ image.handle }}">
+                            <img class="img-fluid embed-responsive-item" 
+                                rv-on-click="openByIndex | args {{ loop.index0 }}"
+                                srcset="
+                                {{ image.src | media | resize(200, null, { mode: 'cover' }) }} 200w,
+                                {{ image.src | media | resize(300, null, { mode: 'cover' }) }} 300w,
+                                {{ image.src | media | resize(400, null, { mode: 'cover' }) }} 400w,
+                                {{ image.src | media | resize(500, null, { mode: 'cover' }) }} 500w,
+                                {{ image.src | media | resize(600, null, { mode: 'cover' }) }} 600w,
+                                {{ image.src | media | resize(700, null, { mode: 'cover' }) }} 700w,
+                                {{ image.src | media | resize(800, null, { mode: 'cover' }) }} 800w,
+                                "
+                                loading="lazy"
+                                sizes="100vw,
+                                @media (min-width: 576px) 30vw"
+                                height="{{ image.height }}"
+                                height="{{ image.height }}"
+                                width="{{ image.width }}"
+                                alt="{{ image.name }}"
+                            ></img>
+                        </div>
+                    {% endfor %}
+                </div>
+            </rv-photoswipe>
         </div>
     </div>
 </div>

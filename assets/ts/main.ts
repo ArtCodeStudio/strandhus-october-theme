@@ -13,6 +13,7 @@ import { Bs4DropdownComponent } from '@ribajs/bs4/src/components/bs4-dropdown/bs
 // import { dataScrollPositionYBinder } from '@ribajs/extras/src/binders/data-scroll-position-y.binder';
 
 import { jqueryModule } from '@ribajs/jquery';
+import { photoswipeModule } from '@ribajs/photoswipe';
 
 // import * as CustomBinders from './binders';
 import * as CustomComponents from './components';
@@ -24,6 +25,7 @@ export class Main {
         this.riba.module.regist(coreModule);
         this.riba.module.regist(jqueryModule);
         this.riba.module.regist(routerModule);
+        this.riba.module.regist(photoswipeModule);
 
         // selected elements from modules
         this.riba.module.regist({

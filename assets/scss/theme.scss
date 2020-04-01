@@ -6,6 +6,7 @@
 @import 'bootstrap';
 // Bootstrap style extensions from @ribajs/bs4
 @import './vendors/@ribajs/bs4/index';
+@import './vendors/@ribajs/photoswipe/index';
 
 // bootstrap overwrites and custom classes
 @import 'animations';

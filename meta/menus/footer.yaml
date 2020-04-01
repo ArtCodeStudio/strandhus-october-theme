@@ -106,13 +106,11 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Bildergalerie
+                title: Bildergallerie
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
                 reference: impressionen
-                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -122,8 +120,10 @@ items:
                 title: Nachhaltigkeit
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: nachhaltigkeit
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -248,12 +248,12 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Credits
+                title: FAQ
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: credits
+                reference: faq
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -261,12 +261,12 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: FAQ
+                title: Credits
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: faq
+                reference: credits
                 cmsPage: ''
                 replace: '0'
                 viewBag:

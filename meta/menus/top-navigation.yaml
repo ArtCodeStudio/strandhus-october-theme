@@ -16,8 +16,10 @@ items:
         title: WOHNEN
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: wohnen
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -25,38 +27,12 @@ items:
             isExternal: '0'
         items:
             -
-                title: Standard
+                title: 'Premium Seeblick'
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: zimmer-standard
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Komfort
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: komfort
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Appartement
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: appartements
+                reference: premium-seeblick
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -77,12 +53,38 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Premium Seeblick'
+                title: Appartement
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: premium-seeblick
+                reference: appartements
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Komfort
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: komfort
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Standard
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: zimmer-standard
                 cmsPage: ''
                 replace: '0'
                 viewBag:

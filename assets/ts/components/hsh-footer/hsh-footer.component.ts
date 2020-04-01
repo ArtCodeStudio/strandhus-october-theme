@@ -17,7 +17,7 @@ export class HshFooterComponent extends Component {
     }
 
     protected async init(observedAttributes: string[]): Promise<View | null | undefined> {
-        return super.init(observedAttributes).then(view => {
+        return super.init(observedAttributes).then((view) => {
             return view;
         });
     }

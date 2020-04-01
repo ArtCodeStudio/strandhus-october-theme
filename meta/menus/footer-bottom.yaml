@@ -1,11 +1,11 @@
 name: footer-bottom
 items:
     -
-        title: Angebote
+        title: Anfragen
         nesting: '0'
         type: static-page
         code: ''
-        reference: angebote
+        reference: kontakt
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -26,9 +26,13 @@ items:
             isExternal: '0'
     -
         title: 'Tel. +49 4721 399 930'
+        nesting: ''
         type: url
         url: 'tel:04721399930'
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: 'd-none d-md-block'
