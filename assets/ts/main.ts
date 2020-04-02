@@ -1,5 +1,5 @@
 import { Riba, coreModule, Utils } from '@ribajs/core';
-import routerModule from '@ribajs/router';
+import { routerModule } from '@ribajs/router';
 
 // BS4 Components
 import { Bs4IconComponent } from '@ribajs/bs4/src/components/bs4-icon/bs4-icon.component';

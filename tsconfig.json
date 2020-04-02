@@ -6,10 +6,10 @@
   "compilerOptions": {
     "outDir": "./assets/js/",
     "typeRoots": [
-      "./node_modules/@types",
-      "./node_modules/@ribajs/core/src/types",
-      "./assets/ts/types",
-      "./node_modules/@ribajs/photoswipe/src/types"
+      "node_modules/@types",
+      "node_modules/@ribajs/core/src/types",
+      "assets/ts/types",
+      "node_modules/@ribajs/photoswipe/src/types"
     ],
   }
 }

@@ -158,10 +158,10 @@ function onStart() {
 
         $gcd = $this->gcd($width, $height);
 
-        $width = $width / $gcd;
-        $height = $height / $gcd;
-        $ratioName = $width . 'by' . $height;
-        $ratio = round(($height / $width) * 100, 2);
+        $gcdWidth = $width / $gcd;
+        $gcdHeight = $height / $gcd;
+        $ratioName = $gcdWidth . 'by' . $gcdHeight;
+        $ratio = round(($gcdHeight / $gcdWidth) * 100, 2);
 
         $imageData['height'] = $height;
         $imageData['width'] = $width;
@@ -209,7 +209,7 @@ function onStart() {
         {% endif %}
 
         <div class="col-12">
-            <rv-photoswipe open-image-on-click="false" control-next-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}" control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_alt.svg' | theme }}" control-close-icon-src="{{ 'assets/iconset/icon_close.svg' | theme }}" control-zoom-in-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" control-zoom-out-icon-src="{{ 'assets/iconset/icon_minus.svg' | theme }}" control-fullscreen-on-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-on.svg' | theme }}" control-fullscreen-off-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-off.svg' | theme }}" control-share-icon-src="{{ 'assets/iconset/social_share.svg' | theme }}">
+            <rv-photoswipe open-image-on-click="false" control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}" control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}" control-close-icon-src="{{ 'assets/iconset/icon_close.svg' | theme }}" control-zoom-in-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" control-zoom-out-icon-src="{{ 'assets/iconset/icon_minus.svg' | theme }}" control-fullscreen-on-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-on.svg' | theme }}" control-fullscreen-off-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-off.svg' | theme }}" control-share-icon-src="{{ 'assets/iconset/social_share.svg' | theme }}">
                 <div class="card-columns">
                     {% for image in images %}
                         <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy" id="{{ image.handle }}">
@@ -229,6 +229,7 @@ function onStart() {
                                 @media (min-width: 576px) 30vw"
                                 height="{{ image.height }}"
                                 height="{{ image.height }}"
+                                data-fs-src="{{ image.src | media }}"
                                 width="{{ image.width }}"
                                 alt="{{ image.name }}"
                             ></img>
