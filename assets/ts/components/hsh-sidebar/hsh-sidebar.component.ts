@@ -4,14 +4,14 @@ import { Pjax } from '@ribajs/router';
 
 import { Bs4SidebarComponent } from '@ribajs/bs4/src/components/bs4-sidebar/bs4-sidebar.component';
 
-import { CollapseService } from '@ribajs/bs4/src/services/collapse.service';
+// import { CollapseService } from '@ribajs/bs4/src/services/collapse.service';
 
 type State = 'overlay-left' | 'overlay-right' | 'side-left' | 'side-right' | 'hidden';
 
-interface ToggleItem {
-    collapseService: CollapseService;
-    handle: string;
-}
+// interface ToggleItem {
+//     collapseService: CollapseService;
+//     handle: string;
+// }
 
 interface Scope {
     /**
