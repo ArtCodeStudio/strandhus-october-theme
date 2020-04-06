@@ -54,13 +54,11 @@ items:
                     isExternal: '0'
             -
                 title: 'SO FINDEN SIE UNS'
-                nesting: ''
-                type: url
-                url: /
+                nesting: '0'
+                type: static-page
                 code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
+                reference: anreise
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: 'btn btn-lg btn-animated-underline-primary'
@@ -109,8 +107,10 @@ items:
                 title: Bildergallerie
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: impressionen
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'

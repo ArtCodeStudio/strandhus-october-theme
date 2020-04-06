@@ -222,11 +222,13 @@ function onStart() {
                                 {{ image.src | media | resize(500, null, { mode: 'cover' }) }} 500w,
                                 {{ image.src | media | resize(600, null, { mode: 'cover' }) }} 600w,
                                 {{ image.src | media | resize(700, null, { mode: 'cover' }) }} 700w,
-                                {{ image.src | media | resize(800, null, { mode: 'cover' }) }} 800w,
+                                {{ image.src | media | resize(800, null, { mode: 'cover' }) }} 800w
                                 "
                                 loading="lazy"
-                                sizes="100vw,
-                                @media (min-width: 576px) 30vw"
+                                sizes="
+                                (min-width: 576px) 30vw,
+                                100vw
+                                "
                                 height="{{ image.height }}"
                                 width="{{ image.width }}"
                                 data-fs-height="{{ image.height }}"

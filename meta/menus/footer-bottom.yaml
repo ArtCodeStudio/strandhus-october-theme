@@ -1,7 +1,7 @@
 name: footer-bottom
 items:
     -
-        title: Anfragen
+        title: ANFRAGEN
         nesting: '0'
         type: static-page
         code: ''
@@ -12,13 +12,11 @@ items:
             cssClass: 'd-none d-md-block'
             isExternal: '1'
     -
-        title: Buchung
+        title: BUCHUNG
         nesting: '0'
         type: static-page
-        url: ''
         code: ''
         reference: buchung
-        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'

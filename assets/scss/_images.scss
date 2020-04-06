@@ -5,7 +5,7 @@
       background-image: url(../images/loading.svg);
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 100px;
+      background-size: 50px;
       @extend .heartbeat;
     }
   }
@@ -16,6 +16,6 @@
     background-image: url(../images/loading.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100px;
+    background-size: 50px;
   }
 }

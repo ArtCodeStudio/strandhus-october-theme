@@ -42,11 +42,20 @@ snippetProperties[name][options][] = ""
                     </h3>
                 </div>
     
-                <bs4-slideshow controls="false" indicators="false" sticky="true" autoplay="false"
+                <bs4-slideshow 
+                    controls="false"
+                    lg-indicators="true"
+                    indicators="false"
+                    lg-controls="true"
+                    sticky="false"
+                    autoplay="false"
+                    draggable="true"
+                    lg-draggable="false"
                     control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
                     control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
                     indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
-                    indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}">
+                    indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}"
+                >
                     <div class="slideshow-inner">
                         {% for slide in slideshow.images %}
                             {% set isExtern = false %}
@@ -66,6 +75,7 @@ snippetProperties[name][options][] = ""
                                     srcset="
                                         {{ image | resize(200, null, { mode: 'cover' }) }} 200w,
                                         {{ image | resize(400, null, { mode: 'cover' }) }} 400w,
+                                        {{ image | resize(600, null, { mode: 'cover' }) }} 600w,
                                         {{ image | resize(800, null, { mode: 'cover' }) }} 800w,
                                         {{ image | resize(1000, null, { mode: 'cover' }) }} 1000w,
                                         {{ image | resize(1200, null, { mode: 'cover' }) }} 1200w,
@@ -74,7 +84,11 @@ snippetProperties[name][options][] = ""
                                         {{ image | resize(1800, null, { mode: 'cover' }) }} 1800w,
                                         {{ image | resize(2000, null, { mode: 'cover' }) }} 2000w,
                                     "
-                                    sizes="(min-width: 992px) 50vw, 100vw"
+                                    sizes="
+                                    (min-width: 1510px) 684px,
+                                    (min-width: 992px) 50vw,
+                                    100vw
+                                    "
                                     {% endif %}
                                     src="{{ image }}"
                                     alt="{{ slide.alt }}"

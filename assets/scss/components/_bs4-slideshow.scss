@@ -1,0 +1,19 @@
+bs4-slideshow {
+    .slideshow-controls {
+        width: 50% !important;
+        justify-content: flex-end !important;
+        padding-bottom: 25px;
+        
+        &.slideshow-control-next {
+            cursor: e-resize;
+            align-items: flex-end;
+        }
+        &.slideshow-control-prev {
+            cursor: w-resize;
+            align-items: flex-start;
+        }
+    }
+    .slideshow-indicators, .slideshow-controls {
+        color: $white !important;
+    }
+}
