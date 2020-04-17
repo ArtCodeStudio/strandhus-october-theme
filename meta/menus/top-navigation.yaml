@@ -66,6 +66,19 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
+                title: '1-Raum Appartement'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: wohnen-1-raum-appartement
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
                 title: Komfort
                 nesting: '0'
                 type: static-page
