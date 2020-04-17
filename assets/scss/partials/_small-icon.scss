@@ -1,0 +1,14 @@
+.small-icon {
+    position: fixed;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+    &.small-icon-left {
+        left: 0;
+    }
+    &.small-icon-right {
+        right: 0;
+    }
+}
+

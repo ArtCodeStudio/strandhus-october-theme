@@ -7,11 +7,7 @@
     "outDir": "./assets/js/",
     "typeRoots": [
       "node_modules/@types",
-      "node_modules/@ribajs/core/src/types",
-      "node_modules/@ribajs/photoswipe/src/types",
       "assets/ts/types",
-      // WORKAROUND
-      "../../../riba/packages/photoswipe/src/types",
     ]
   }
 }
