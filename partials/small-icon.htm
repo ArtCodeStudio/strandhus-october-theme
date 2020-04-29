@@ -4,10 +4,8 @@ snippetName = "small-icon"
 
 
 snippetProperties[icon][title] = "Icon"
-snippetProperties[icon][type] = "dropdown"
-snippetProperties[icon][default] = instagram
-snippetProperties[icon][options][instagram] = instagram
-snippetProperties[icon][options][webcam] = webcam
+snippetProperties[icon][type] = "text"
+snippetProperties[icon][default] = "instagram"
 
 snippetProperties[position][title] = "Position"
 snippetProperties[position][type] = "dropdown"
@@ -24,5 +22,5 @@ snippetProperties[position][options][right] = right
 snippetProperties[link][title] = "Link"
 snippetProperties[link][type] = "text"
 ==
-
-<bs4-icon rv-route="'{{link}}'" class="small-icon small-icon-{{position}}" src="{{ 'assets/iconset/arrow.svg' | theme }}" size="32" direction="right"></bs4-icon>
+{% set icon_url = "assets/iconset/#{icon}.svg" %}
+<bs4-icon rv-route="'{{link}}'" class="small-icon small-icon-{{position}}" src="{{ icon_url | theme }}" size="64" direction="right"></bs4-icon>

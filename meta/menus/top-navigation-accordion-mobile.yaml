@@ -1,0 +1,46 @@
+name: top-navigation-accordion-mobile
+items:
+    -
+        title: Anreise
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: anreise
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Inklusivleistungen
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: inklusivleistungen
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Preise
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: preise
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakt
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: kontakt
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
