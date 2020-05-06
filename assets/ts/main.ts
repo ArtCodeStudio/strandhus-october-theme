@@ -1,4 +1,5 @@
-import { Riba, coreModule, Utils } from '@ribajs/core';
+import { Riba, coreModule } from '@ribajs/core';
+import { ready } from '@ribajs/utils/src/dom'
 import { routerModule } from '@ribajs/router';
 
 // BS4 Components
@@ -51,6 +52,6 @@ export class Main {
     }
 }
 
-Utils.domIsReady(() => {
+ready(() => {
     new Main();
 });

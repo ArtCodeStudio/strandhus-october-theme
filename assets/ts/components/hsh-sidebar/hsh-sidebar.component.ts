@@ -1,4 +1,4 @@
-import { Utils } from '@ribajs/core';
+import { isAbsoluteUrl, isInternalUrl } from "@ribajs/utils/src/url";
 
 import { Pjax } from '@ribajs/router';
 
@@ -128,7 +128,7 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
         super(element);
     }
 
-    public onItemClick(context?: Scope, event?: Event): void {
+    public onItemClick(event?: Event): void {
         if (event) {
             const target = event.target as HTMLAnchorElement | null;
             if (!target) {
@@ -138,7 +138,7 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
             if (target && this.pjax) {
                 event.preventDefault();
                 let url = target.href || '/';
-                if (Utils.isAbsoluteUrl(url) && Utils.isInternalUrl(url)) {
+                if (isAbsoluteUrl(url) && isInternalUrl(url)) {
                     url = target.pathname + target.search;
                 }
 

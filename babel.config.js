@@ -18,7 +18,7 @@ module.exports = {
         [
             '@babel/plugin-transform-runtime',
             {
-                corejs: 3,
+                regenerator: true,
             },
         ],
         '@babel/plugin-syntax-export-default-from',
@@ -27,5 +27,4 @@ module.exports = {
         '@babel/plugin-proposal-optional-chaining',
         'array-includes',
     ],
-    ignore: ['**/custom-elements-es5-adapter.js'],
 };

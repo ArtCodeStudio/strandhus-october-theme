@@ -1,6 +1,5 @@
-import { Binder, Utils } from '@ribajs/core';
-
 import { Pjax } from '@ribajs/router';
+import { isAbsoluteUrl, isInternalUrl } from "@ribajs/utils/src/url";
 
 import { Bs4NavbarComponent } from '@ribajs/bs4/src/components/bs4-navbar/bs4-navbar.component';
 
@@ -30,7 +29,7 @@ export class HshNavbarComponent extends Bs4NavbarComponent {
         // console.debug('constructor', this);
     }
 
-    public onItemClick(context?: Binder<unknown>, event?: Event): void {
+    public onItemClick(event?: Event): void {
         if (event) {
             const target = event.target as HTMLAnchorElement | null;
             if (!target) {
@@ -39,7 +38,7 @@ export class HshNavbarComponent extends Bs4NavbarComponent {
             if (target && this.pjax) {
                 event.preventDefault();
                 let url = target.href || '/';
-                if (Utils.isAbsoluteUrl(url) && Utils.isInternalUrl(url)) {
+                if (isAbsoluteUrl(url) && isInternalUrl(url)) {
                     url = target.pathname + target.search;
                 }
                 this.pjax.goTo(url);

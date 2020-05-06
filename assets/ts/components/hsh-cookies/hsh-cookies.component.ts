@@ -4,6 +4,7 @@ interface Scope {
     denyCookies: HshCookiesComponent['denyCookies'],
     acceptCookies: HshCookiesComponent['acceptCookies'],
 }
+
 export class HshCookiesComponent extends Component {
     public static tagName = 'hsh-cookies';
 
@@ -13,7 +14,7 @@ export class HshCookiesComponent extends Component {
         return [];
     }
 
-    protected scope = {
+    protected scope: Scope = {
         denyCookies: this.denyCookies,
         acceptCookies: this.acceptCookies
     };
@@ -58,22 +59,23 @@ export class HshCookiesComponent extends Component {
 
     protected denyCookies() {
         console.log("denied cookies");
-        this.el.parentNode.removeChild(this.el);
-        document.__defineGetter__("cookie", function() { return '';} );
-        document.__defineSetter__("cookie", function() {} );
+        this.el.parentNode?.removeChild(this.el);
+        (document as any).__defineGetter__("cookie", function() { return '';} );
+        (document as any).__defineSetter__("cookie", function() {} );
         this.deleteCookies();
     }
 
     protected acceptCookies() {
         document.cookie = 'hsh-cookies=accept; expires=Thu, 13 Jul 2022 12:00:00 UTC';
-        this.el.parentNode.removeChild(this.el);
+        this.el.parentNode?.removeChild(this.el);
     }
 
 //stackoverflow
-    protected getCookie(name): string {
+    protected getCookie(name: string): string | null {
         var dc = document.cookie;
         var prefix = name + "=";
         var begin = dc.indexOf("; " + prefix);
+        var end = 0;
         if (begin == -1) {
             begin = dc.indexOf(prefix);
             if (begin != 0) return null;
@@ -81,9 +83,9 @@ export class HshCookiesComponent extends Component {
         else
         {
             begin += 2;
-            var end = document.cookie.indexOf(";", begin);
+            end = document.cookie.indexOf(";", begin);
             if (end == -1) {
-            end = dc.length;
+                end = dc.length;
             }
         }
         // because unescape has been deprecated, replaced with decodeURI
