@@ -31,7 +31,7 @@ code = "top-navigation-accordion-mobile"
 {# Mobile #}
 <nav class="navbar bg-white navbar-light navbar-main-sidebar fixed-top collapsed d-flex d-xl-none">
   <div class="nav flex-row justify-content-between w-100">
-    <a class="navbar-brand col-auto d-flex justify-content-start navbar-start" href="/" rv-on-click="onItemClick">
+    <a class="navbar-brand mr-0 pr-0 col-auto d-flex justify-content-start navbar-start" href="/" rv-on-click="onItemClick">
       <bs4-icon src="{{ this.theme.general_logo | media }}"></bs4-icon>
     </a>
     <bs4-toggle-button target-id="main-sidebar" id="toggle-button-main-sidebar">
@@ -44,7 +44,7 @@ code = "top-navigation-accordion-mobile"
 </nav>
 
 <hsh-sidebar id="main-sidebar" position="right" auto-show-on-wider-than="-1" auto-hide-on-slimmer-than="992" width="100vw" watch-new-page-ready-event="false">
-  <div class="d-flex flex-column top-accordion-container">
+  <div class="d-flex flex-column top-accordion-container text-center">
     {% partial 'staticMenu/sidebar' items=topNavigation.menuItems %}
 
     {% partial 'staticMenu/items-accordion-mobile' items=topNavigationAccordionMobile.menuItems %}

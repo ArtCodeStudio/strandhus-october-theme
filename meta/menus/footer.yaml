@@ -56,8 +56,10 @@ items:
                 title: 'SO FINDEN SIE UNS'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: anreise
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -117,25 +119,23 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Nachhaltigkeit
+                title: 'Live Webcam'
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
-                reference: nachhaltigkeit
-                cmsPage: ''
+                reference: webcam
                 replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Erlebnisse
+                title: Nachhaltigkeit
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: entdecken
+                reference: nachhaltigkeit
                 cmsPage: ''
                 replace: '0'
                 viewBag:

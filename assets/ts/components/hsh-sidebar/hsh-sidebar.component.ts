@@ -3,6 +3,7 @@ import { Utils } from '@ribajs/core';
 import { Pjax } from '@ribajs/router';
 
 import { Bs4SidebarComponent } from '@ribajs/bs4/src/components/bs4-sidebar/bs4-sidebar.component';
+import { EventDispatcher } from '@ribajs/core';
 
 // import { CollapseService } from '@ribajs/bs4/src/services/collapse.service';
 
@@ -141,7 +142,7 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
                     url = target.pathname + target.search;
                 }
 
-                // this.hide();
+                this.hide();
                 this.pjax.goTo(url);
             }
         }
@@ -158,10 +159,16 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
     protected async afterBind(): Promise<void> {
         super.afterBind();
         this.pjax = Pjax.getInstance('main');
+        const dispatcher = new EventDispatcher('main');
+
+        dispatcher.on('linkClicked', (viewId: string, currentStatus: State, prevStatus: State, container: HTMLElement, newPageRawHTML: string, dataset: any, isFirstPageLoad: boolean) => {
+            this.hide();
+        });
     }
 
     protected requiredAttributes(): string[] {
         return ['id'];
+
     }
 
     protected parsedAttributeChangedCallback(

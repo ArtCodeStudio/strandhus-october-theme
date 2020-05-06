@@ -74,6 +74,16 @@ function onContactFormSubmit()
             <div id="layout-bottom">
                 {% partial 'layout-bottom' %}
             </div>
+            <hsh-cookies>
+                <div class="hsh-cookies">
+                    <span>Diese Webseite verwendet Cookies, diese helfen uns dabei Ihr Nutzererlebnis zu verbessern. <br> <a aria-label="learn more about cookies" role="button" tabindex="0" href="/datenschutz" rel="noopener noreferrer nofollow" target="_blank">Mehr dazu in der Datenschutzerklärung.</a></span>
+                    <div class="cc-compliance cc-highlight">
+                        <a rv-on-click="denyCookies" aria-label="deny cookies" role="button" tabindex="0">Nein Danke</a>
+                        <a rv-on-click="acceptCookies" aria-label="dismiss cookie message" role="button" tabindex="0">Okay</a>
+                    </div>
+                </div>
+
+            </hsh-cookies>
         </div>
         
         {% partial 'outdated-browser' %}

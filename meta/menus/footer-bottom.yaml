@@ -1,7 +1,20 @@
 name: footer-bottom
 items:
     -
-        title: ANFRAGEN
+        title: BUCHUNG
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: buchung
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: KONTAKT
         nesting: '0'
         type: static-page
         code: ''
@@ -11,17 +24,6 @@ items:
             isHidden: '0'
             cssClass: 'd-none d-md-block'
             isExternal: '1'
-    -
-        title: BUCHUNG
-        nesting: '0'
-        type: static-page
-        code: ''
-        reference: buchung
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
     -
         title: 'Tel. +49 4721 399 930'
         nesting: ''

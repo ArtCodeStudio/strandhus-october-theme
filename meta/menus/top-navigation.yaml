@@ -16,10 +16,8 @@ items:
         title: WOHNEN
         nesting: '0'
         type: static-page
-        url: ''
-        code: ''
+        code: hide-toggle-mobile
         reference: wohnen
-        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'

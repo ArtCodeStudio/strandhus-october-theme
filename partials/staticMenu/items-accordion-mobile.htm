@@ -1,16 +1,19 @@
-<bs4-accordion collapse-icon-src="{{ 'assets/iconset/arrow_carrot.svg' | theme }}"collapse-icon-size="38">
+<bs4-accordion collapse-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" collapse-icon-size="38">
   <template  title="Mehr" >
+
     {% for item in items %}
-      {{ item.title }} <br>
+      <a class="nav-link h3 mb-1" href="{{ item.url }}">
+        {{ item.title }}
+      </a>
     {% endfor %}
   </template>
   <div class="accordion">
-    <div class="card bg-danger" rv-each-item="items">
-      <button type="button" class="btn btn-link card-header d-flex" rv-on-click="toggle | args item %item%" rv-aria-expanded="item.show">
-        <span class="card-header-text mr-auto " rv-html="item.title"></span> <bs4-icon class="ml-auto" rv-show="collapseIconSrc" rv-src="collapseIconSrc" rv-size="collapseIconSize" rv-direction="item.iconDirection"></bs4-icon>
+    <div rv-each-item="items">
+      <button type="button" class="btn btn-link m-auto d-flex" rv-on-click="toggle | args item %item%" rv-aria-expanded="item.show">
+        <bs4-icon rv-show="collapseIconSrc" rv-src="collapseIconSrc" rv-size="collapseIconSize" rv-direction="item.iconDirection | replace 'up' 'down-left'"></bs4-icon>
       </button>
       <div class="collapse" rv-data-index="%item%">
-        <div class="card-body" rv-template="item.content"></div>
+        <div class="nav-item nav-item-level-1 flex-column relax" rv-template="item.content"></div>
       </div>
     </div>
   </div>  

@@ -4,17 +4,17 @@
     {% if not item.viewBag.isHidden %}
         {# <p>{{ item | json_encode() }}</p> #}
         {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
-        <div rv-parent-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-1 flex-column {{titleClass}} {{ item.viewBag.cssClass }} {{ str_studly(item.title) | lower  }} {% if item.items %}nav-item-level-1-with-childs dropdown{% endif %}">
+        <div rv-parent-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-1 flex-column {{titleClass}} {{ item.viewBag.cssClass }} {{ str_studly(item.title) | lower  }} {% if item.items and item.code != 'hide-toggle-mobile' %}nav-item-level-1-with-childs dropdown{% endif %}">
             {% if item.code == 'no-link' %}
-                <span {% if item.items %}rv-on-click="toggleItem | args '{{ titleClass }}'"{% endif %} class="nav-link {% if item.items %}dropdown-toggle{% endif %}">
+                <span {% if item.items and item.code != 'hide-toggle-mobile' %}rv-on-click="toggleItem | args '{{ titleClass }}'"{% endif %} class="nav-link h3 mb-1 {% if item.items and item.code != 'hide-toggle-mobile' %}dropdown-toggle{% endif %}">
                     {{ item.title }}
                 </span>
             {% else %}
-                <a {% if item.items %}rv-on-click="toggleItem | args '{{ titleClass }}'"{% else %}rv-on-click="onItemClick"{% endif %} class="nav-link {% if item.items %}dropdown-toggle{% endif %}" href="{{ item.url }}">
+                <a {% if item.items and item.code != 'hide-toggle-mobile' %}rv-on-click="toggleItem | args '{{ titleClass }}'"{% else %}rv-on-click="onItemClick"{% endif %} class="nav-link h3 mb-1 {% if item.items and item.code != 'hide-toggle-mobile' %}dropdown-toggle{% endif %}" href="{{ item.url }}">
                     {{ item.title }}
                 </a>
             {% endif %}
-            {% if item.items %}
+            {% if item.items and item.code != 'hide-toggle-mobile' %}
                 {% if item.items | length > 10 %}
                     {% set A = [] %}
                     {% set B = [] %}
