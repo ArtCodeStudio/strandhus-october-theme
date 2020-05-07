@@ -1,5 +1,5 @@
 import { Pjax } from '@ribajs/router';
-import { isAbsoluteUrl, isInternalUrl } from "@ribajs/utils/src/url";
+import { isAbsoluteUrl, isInternalUrl } from '@ribajs/utils/src/url';
 
 import { Bs4NavbarComponent } from '@ribajs/bs4/src/components/bs4-navbar/bs4-navbar.component';
 

@@ -1,4 +1,4 @@
-import { isAbsoluteUrl, isInternalUrl } from "@ribajs/utils/src/url";
+import { isAbsoluteUrl, isInternalUrl } from '@ribajs/utils/src/url';
 
 import { Pjax } from '@ribajs/router';
 
@@ -161,14 +161,22 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
         this.pjax = Pjax.getInstance('main');
         const dispatcher = new EventDispatcher('main');
 
-        dispatcher.on('linkClicked', (viewId: string, currentStatus: State, prevStatus: State, container: HTMLElement, newPageRawHTML: string, dataset: any, isFirstPageLoad: boolean) => {
-            this.hide();
-        });
+        dispatcher.on('linkClicked', () =>
+            // viewId: string,
+            // currentStatus: State,
+            // prevStatus: State,
+            // container: HTMLElement,
+            // newPageRawHTML: string,
+            // dataset: any,
+            // isFirstPageLoad: boolean,
+            {
+                this.hide();
+            },
+        );
     }
 
     protected requiredAttributes(): string[] {
         return ['id'];
-
     }
 
     protected parsedAttributeChangedCallback(

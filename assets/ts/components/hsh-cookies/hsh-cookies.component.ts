@@ -1,8 +1,8 @@
 import { Component, View } from '@ribajs/core';
 
 interface Scope {
-    denyCookies: HshCookiesComponent['denyCookies'],
-    acceptCookies: HshCookiesComponent['acceptCookies'],
+    denyCookies: HshCookiesComponent['denyCookies'];
+    acceptCookies: HshCookiesComponent['acceptCookies'];
 }
 
 export class HshCookiesComponent extends Component {
@@ -16,7 +16,7 @@ export class HshCookiesComponent extends Component {
 
     protected scope: Scope = {
         denyCookies: this.denyCookies,
-        acceptCookies: this.acceptCookies
+        acceptCookies: this.acceptCookies,
     };
 
     constructor(element?: HTMLElement) {
@@ -54,14 +54,17 @@ export class HshCookiesComponent extends Component {
         } else {
             return '';
         }
-
     }
 
     protected denyCookies() {
-        console.log("denied cookies");
+        console.log('denied cookies');
         this.el.parentNode?.removeChild(this.el);
-        (document as any).__defineGetter__("cookie", function() { return '';} );
-        (document as any).__defineSetter__("cookie", function() {} );
+        (document as any).__defineGetter__('cookie', function () {
+            return '';
+        });
+        (document as any).__defineSetter__('cookie', function () {
+            /**/
+        });
         this.deleteCookies();
     }
 
@@ -70,20 +73,18 @@ export class HshCookiesComponent extends Component {
         this.el.parentNode?.removeChild(this.el);
     }
 
-//stackoverflow
+    //stackoverflow
     protected getCookie(name: string): string | null {
-        var dc = document.cookie;
-        var prefix = name + "=";
-        var begin = dc.indexOf("; " + prefix);
-        var end = 0;
+        const dc = document.cookie;
+        const prefix = name + '=';
+        let begin = dc.indexOf('; ' + prefix);
+        let end = 0;
         if (begin == -1) {
             begin = dc.indexOf(prefix);
             if (begin != 0) return null;
-        }
-        else
-        {
+        } else {
             begin += 2;
-            end = document.cookie.indexOf(";", begin);
+            end = document.cookie.indexOf(';', begin);
             if (end == -1) {
                 end = dc.length;
             }
@@ -91,17 +92,16 @@ export class HshCookiesComponent extends Component {
         // because unescape has been deprecated, replaced with decodeURI
         //return unescape(dc.substring(begin + prefix.length, end));
         return decodeURI(dc.substring(begin + prefix.length, end));
-    } 
+    }
 
     protected deleteCookies() {
-        var cookies = document.cookie.split(";");
+        const cookies = document.cookie.split(';');
 
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i];
-            var eqPos = cookie.indexOf("=");
-            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i];
+            const eqPos = cookie.indexOf('=');
+            const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
         }
-    
     }
 }

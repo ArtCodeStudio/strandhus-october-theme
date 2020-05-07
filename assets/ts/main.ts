@@ -1,5 +1,5 @@
 import { Riba, coreModule } from '@ribajs/core';
-import { ready } from '@ribajs/utils/src/dom'
+import { ready } from '@ribajs/utils/src/dom';
 import { routerModule } from '@ribajs/router';
 
 // BS4 Components
