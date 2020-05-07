@@ -12,6 +12,9 @@
                 <a rv-route="'{{ item.url }}'" class="nav-link" href="{{ item.url }}">
                     {{ item.title }}
                 </a>
+                {% if prefetch %}
+                    <link rel="router-preload" href="{{ item.url }}">
+                {% endif %}
             {% endif %}
             {% if item.items %}
                 <div class="nav-item-level-2-wrapper py-3 collapsed">

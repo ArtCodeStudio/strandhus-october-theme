@@ -242,6 +242,12 @@ form:
                 mode: image
                 label: Logo
                 tab: General
+            general_precache_navigation:
+                type: checkbox
+                label: Precache navigation
+                comment: 'Preloads the HTML of the navigation pages to increase the loading speed when the user clicks on the link'
+                default: true
+                tab: General
             personal_reports:
                 tab: 'Personal reports'
                 titleFrom: report

@@ -14,6 +14,9 @@
                         <div rv-route-class-active="'{{ item.url }}'" class="nav-item {{ titleClass }}">
                             {% if not item.viewBag.isHidden %}
                                 <a rv-route="'{{ item.url }}'" class="{% if item.viewBag.cssClass %}{{ item.viewBag.cssClass }}{% else %}nav-link{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+                                {% if prefetch %}
+                                    <link rel="router-preload" href="{{ item.url }}">
+                                {% endif %}
                             {% endif %}
                         </div>
                     {% else %}

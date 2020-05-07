@@ -14,7 +14,7 @@ code = "top-navigation-accordion-mobile"
     </a>
 
     <ul class="col nav align-items-center justify-content-center navbar-center">
-      {% partial 'staticMenu/items' items=topNavigation.menuItems %}
+      {% partial 'staticMenu/items' items=topNavigation.menuItems prefetch=this.theme.general_precache_navigation %}
     </ul>
 
     <ul class="col-auto nav align-items-center justify-content-end navbar-end">
@@ -23,7 +23,7 @@ code = "top-navigation-accordion-mobile"
       </li>
     </ul>
 
-    {% partial 'staticMenu/items-childs' items=topNavigation.menuItems %}
+    {% partial 'staticMenu/items-childs' items=topNavigation.menuItems prefetch=this.theme.general_precache_navigation %}
 
   </nav>
 </hsh-navbar>
@@ -45,9 +45,9 @@ code = "top-navigation-accordion-mobile"
 
 <hsh-sidebar id="main-sidebar" position="right" auto-show-on-wider-than="-1" auto-hide-on-slimmer-than="992" width="100vw" watch-new-page-ready-event="false">
   <div class="d-flex flex-column top-accordion-container text-center">
-    {% partial 'staticMenu/sidebar' items=topNavigation.menuItems %}
+    {% partial 'staticMenu/sidebar' items=topNavigation.menuItems prefetch=this.theme.general_precache_navigation %}
 
-    {% partial 'staticMenu/items-accordion-mobile' items=topNavigationAccordionMobile.menuItems %}
+    {% partial 'staticMenu/items-accordion-mobile' items=topNavigationAccordionMobile.menuItems prefetch=this.theme.general_precache_navigation %}
 
   </div>
 </hsh-sidebar>

@@ -15,6 +15,9 @@
                     <a rv-on-click="onItemClick" class="nav-link" href="{{ item.url }}">
                         {{ item.title }}
                     </a>
+                    {% if prefetch %}
+                        <link rel="router-preload" href="{{ item.url }}">
+                    {% endif %}
                 {% endif %}
             </li>
         {% endif %}

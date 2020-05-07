@@ -13,6 +13,9 @@
                 <a rv-on-click="onItemClick" rv-on-mouseover="onItemHover" class="nav-link" href="{{ item.url }}">
                     {{ item.title }}
                 </a>
+                {% if prefetch == true %}
+                    <link rel="router-preload" href="{{ item.url }}">
+                {% endif %}
             {% endif %}
             {% if item.items %}
                 {% if item.items | length > 10 %}

@@ -7,7 +7,7 @@ code = "footer-bottom"
   <div class="row navbar navbar-light navbar-expand">
     <nav class="col-12">
       <ul class="navbar-nav d-flex flex-column flex-md-row justify-content-center align-items-center">
-        {% partial 'staticMenu/items-footer' items=footerBottom.menuItems %}
+        {% partial 'staticMenu/items-footer' items=footerBottom.menuItems prefetch=this.theme.general_precache_navigation %}
       </ul>
     </nav>
   </div>

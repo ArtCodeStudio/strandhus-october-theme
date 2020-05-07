@@ -12,7 +12,7 @@ code = "footer"
   </div>
 
   <div class="row order-2 order-md-1 navbar-light navbar-nav flex-row justify-content-around nav-cols">
-    {% partial 'staticMenu/items-footer-cols' items=footer.menuItems %}
+    {% partial 'staticMenu/items-footer-cols' items=footer.menuItems prefetch=this.theme.general_precache_navigation %}
   </div>
 
   <div class="row order-0 order-md-2 text-center footer-icons">
