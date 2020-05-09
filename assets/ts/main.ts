@@ -15,6 +15,7 @@ import { Bs4DropdownComponent } from '@ribajs/bs4/src/components/bs4-dropdown/bs
 
 import { jqueryModule } from '@ribajs/jquery';
 import { photoswipeModule } from '@ribajs/photoswipe';
+import { leafletModule } from '@ribajs/leaflet-map';
 
 // import * as CustomBinders from './binders';
 import * as CustomComponents from './components';
@@ -27,6 +28,7 @@ export class Main {
         this.riba.module.regist(jqueryModule);
         this.riba.module.regist(routerModule);
         this.riba.module.regist(photoswipeModule);
+        this.riba.module.regist(leafletModule);
 
         // selected elements from modules
         this.riba.module.regist({

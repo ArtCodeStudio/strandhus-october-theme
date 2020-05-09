@@ -7,6 +7,7 @@
 // Bootstrap style extensions from @ribajs/bs4
 @import './vendors/@ribajs/bs4/index';
 @import './vendors/@ribajs/photoswipe/index';
+@import './vendors/@ribajs/leaflet-map/index';
 
 // bootstrap overwrites and custom classes
 @import 'animations';
@@ -34,6 +35,4 @@
  
 // components
 @import '../ts/components/index';
-
-
 
