@@ -2,8 +2,9 @@ hsh-sidebar {
   @extend bs4-sidebar;
   width: 100vw;
   padding-top: 200px;
-  padding-left: 48px;
+  //padding-left: 48px;
   padding-bottom: 100px;
+
   &#main-sidebar {
     background-color: rgba($body-bg, $hsh-navbar-bg-opacity);
     backdrop-filter: blur($hsh-navbar-bg-blur);
@@ -12,9 +13,8 @@ hsh-sidebar {
     @include scrollbars(.6em, theme-color(primary), transparent);
     overflow-x: auto;
   }
-  .nav-item-letter {
 
-  }
+  .nav-item-letter {}
 }
 
 .navbar-main-sidebar {

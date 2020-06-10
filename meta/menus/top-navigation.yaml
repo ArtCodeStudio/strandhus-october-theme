@@ -16,8 +16,10 @@ items:
         title: WOHNEN
         nesting: '0'
         type: static-page
+        url: ''
         code: hide-toggle-mobile
         reference: wohnen
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -38,13 +40,11 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Premium Seeseite'
+                title: 'Premium Seitenblick'
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
                 reference: premium-seeseite
-                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'

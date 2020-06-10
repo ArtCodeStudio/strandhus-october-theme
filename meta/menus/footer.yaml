@@ -122,8 +122,10 @@ items:
                 title: 'Live Webcam'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: webcam
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -222,12 +224,12 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Impressum
+                title: FAQ
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: impressum
+                reference: faq
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -248,13 +250,11 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: FAQ
+                title: Impressum
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
-                reference: faq
-                cmsPage: ''
+                reference: impressum
                 replace: '0'
                 viewBag:
                     isHidden: '0'
