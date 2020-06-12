@@ -17,7 +17,7 @@ function onContactFormSubmit()
     
     $buildOwnerMessage = function ($message) use ($values) {
         // TODO use email and name from backend or theme settings
-        $message->to('info@thp-garber.de', 'Viola Garber');
+        $message->to('pascal@artandcode.studio', 'Pascal Garber');
         // $message->from($vars['email'], $vars['name']);
         // $message->subject("Neue Anfrage von ".$vars['name'].": ".$vars['regard']);
     };
@@ -46,59 +46,64 @@ function onContactFormSubmit()
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ this.page.title }}</title>
-    
+
     {% component 'seoTags' %}
     {% partial 'favicons' %}
 
     {% styles %}
     <link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">
 
-    <body>
-        <div id="main-container">
-            <div id="layout-top">
-                {% partial 'layout-top' %}
-            </div>
-            <div id="main" rv-view="{'listenAllLinks': true, 'datasetToModel': true}">
-                <div {% partial 'router-dataset' %}>
-                    {% if placeholder('headerTeaser') %}
-                    <div class="page-header-teaser">
-                        {% placeholder headerTeaser title="Header" %}
-                    </div>
-                    {% endif %}
-                    {% page %}
-                    {#% component 'staticPage' %#}
-                </div>
-            </div>
-            <div id="layout-bottom">
-                {% partial 'layout-bottom' %}
-            </div>
-            <hsh-cookies>
-                <div class="hsh-cookies">
-                    <span>Diese Webseite verwendet Cookies, diese helfen uns dabei Ihr Nutzererlebnis zu verbessern. <a aria-label="learn more about cookies" role="button" tabindex="0" href="/datenschutz" rel="noopener noreferrer nofollow" target="_blank">Mehr dazu in der Datenschutzerklärung.</a></span>
-                    <div class="cc-compliance cc-highlight d-flex justify-content-between mt-3">
-                        <button class="btn btn-link p-0" rv-on-click="denyCookies" aria-label="deny cookies" role="button" tabindex="0">Nein Danke</button>
-                        <button class="btn btn-link p-0" rv-on-click="acceptCookies" aria-label="dismiss cookie message" role="button" tabindex="0">Okay</button>
-                    </div>
-                </div>
-
-            </hsh-cookies>
+<body>
+    <div id="main-container">
+        <div id="layout-top">
+            {% partial 'layout-top' %}
         </div>
-        
-        {% partial 'outdated-browser' %}
+        <div id="main" rv-view="{'listenAllLinks': true, 'datasetToModel': true}">
+            <div {% partial 'router-dataset' %}>
+                {% if placeholder('headerTeaser') %}
+                <div class="page-header-teaser">
+                    {% placeholder headerTeaser title="Header" %}
+                </div>
+                {% endif %}
+                {% page %}
+                {#% component 'staticPage' %#}
+            </div>
+        </div>
+        <div id="layout-bottom">
+            {% partial 'layout-bottom' %}
+        </div>
+        <hsh-cookies>
+            <div class="hsh-cookies">
+                <span>Diese Webseite verwendet Cookies, diese helfen uns dabei Ihr Nutzererlebnis zu verbessern. <a
+                        aria-label="learn more about cookies" role="button" tabindex="0" href="/datenschutz"
+                        rel="noopener noreferrer nofollow" target="_blank">Mehr dazu in der
+                        Datenschutzerklärung.</a></span>
+                <div class="cc-compliance cc-highlight d-flex justify-content-between mt-3">
+                    <button class="btn btn-link p-0" rv-on-click="denyCookies" aria-label="deny cookies" role="button"
+                        tabindex="0">Nein Danke</button>
+                    <button class="btn btn-link p-0" rv-on-click="acceptCookies" aria-label="dismiss cookie message"
+                        role="button" tabindex="0">Okay</button>
+                </div>
+            </div>
 
-        <script type="text/javascript" src="{{ 'assets/js/vendors.bundle.js' | theme }}"></script>
-        <script type="text/javascript" src="{{ 'assets/js/main.bundle.js' | theme }}"></script>
-        {#
+        </hsh-cookies>
+    </div>
+
+    {% partial 'outdated-browser' %}
+
+    <script type="text/javascript" src="{{ 'assets/js/vendors.bundle.js' | theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/main.bundle.js' | theme }}"></script>
+    {#
             Old webpack 4 builds
             <script type="text/javascript" src="{{ 'assets/js/vendors.wp4.bundle.js?v=3' | theme }}"></script>
             <script type="text/javascript" src="{{ 'assets/js/wp4.bundle.js?v=3' | theme }}"></script>
         #}
-        {% framework %}
-        {% scripts %}
-        
-    </body>
+    {% framework %}
+    {% scripts %}
+
+</body>
 </head>
 
 </html>

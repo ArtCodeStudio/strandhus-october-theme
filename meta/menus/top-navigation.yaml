@@ -43,8 +43,10 @@ items:
                 title: 'Premium Seitenblick'
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: premium-seeseite
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'
@@ -123,6 +125,17 @@ items:
         code: ''
         reference: entdecken
         cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: BUCHUNG
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: buchung
         replace: '0'
         viewBag:
             isHidden: '0'

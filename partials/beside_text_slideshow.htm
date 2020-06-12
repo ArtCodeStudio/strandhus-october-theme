@@ -21,106 +21,90 @@ snippetProperties[name][options][] = ""
 
 {% if slideshow is defined and slideshow.images is defined %}
 
-    {% set button_url = slideshow.button_url | staticPage %}
-    {% if button_url is not defined %}
-        {% set button_url = slideshow.button_url %}
-    {% endif %}
-    
-    <div class="container-fluid container-limited-1 beside_text_slideshow my-5 py-5">
-    
-        <div class="row">
-    
-            <div class="col-12 col-lg-6  py-5 p-lg-5">
-    
-                <div class="d-block d-lg-none text-center">
-                    <div class="text-primary">
-                        {{ slideshow.content_short | raw }}
-                    </div>
-                    <h3>
-                        {{ slideshow.title }}
-                        <span class="font-special">{{ slideshow.title_special }}</span>
-                    </h3>
+{% set button_url = slideshow.button_url | staticPage %}
+{% if button_url is not defined %}
+    {% set button_url = slideshow.button_url %}
+{% endif %}
+
+<div class="container-fluid container-limited-1 beside_text_slideshow my-5 py-5">
+
+    <div class="row">
+
+        <div class="col-12 col-lg-6  py-5 p-lg-5">
+
+            <div class="d-block d-lg-none text-center">
+                <div class="text-primary">
+                    {{ slideshow.content_short | raw }}
                 </div>
-    
-                <bs4-slideshow 
-                    controls="false"
-                    lg-indicators="true"
-                    indicators="false"
-                    lg-controls="true"
-                    sticky="false"
-                    autoplay="false"
-                    draggable="true"
-                    lg-draggable="false"
-                    control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
-                    control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
-                    indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
-                    indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}"
-                >
-                    <div class="slideshow-inner">
-                        {% for slide in slideshow.images %}
+                <h3>
+                    <span class="font-special">{{ slideshow.title_special }}</span>
+                    {{ slideshow.title }}
+                </h3>
+            </div>
+
+            <bs4-slideshow controls="false" indicators="true" lg-controls="true" sticky="false"
+                autoplay="false" draggable="true" lg-draggable="false"
+                control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
+                control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
+                indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
+                indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}">
+                <div class="slideshow-inner">
+                    {% for slide in slideshow.images %}
+                        {% set isExtern = false %}
+                        {% if slide.extern_image is defined and slide.extern_image is not empty %}
+                            {% set isExtern = true %}
+                            {% set image = slide.extern_image %}
+                        {% endif %}
+                        {% if slide.image is defined and slide.image is not empty %}
                             {% set isExtern = false %}
-                            {% if slide.extern_image is defined and slide.extern_image is not empty %}
-                                {% set isExtern = true %}
-                                {% set image = slide.extern_image %}
-                            {% endif %}
-                            {% if slide.image is defined and slide.image is not empty %}
-                                {% set isExtern = false %}
-                                {% set image = slide.image | media %}
-                            {% endif %}
-                            <div class="slide col-12 embed-responsive embed-responsive-2by3 lazy">
-                                <img
-                                    lazyload="lazy"
-                                    class="embed-responsive-item"
-                                    {% if isExtern == false %}
-                                    srcset="
-                                        {{ image | resize(200, null, { mode: 'cover' }) }} 200w,
-                                        {{ image | resize(400, null, { mode: 'cover' }) }} 400w,
-                                        {{ image | resize(600, null, { mode: 'cover' }) }} 600w,
-                                        {{ image | resize(800, null, { mode: 'cover' }) }} 800w,
-                                        {{ image | resize(1000, null, { mode: 'cover' }) }} 1000w,
-                                        {{ image | resize(1200, null, { mode: 'cover' }) }} 1200w,
-                                        {{ image | resize(1400, null, { mode: 'cover' }) }} 1400w,
-                                        {{ image | resize(1600, null, { mode: 'cover' }) }} 1600w,
-                                        {{ image | resize(1800, null, { mode: 'cover' }) }} 1800w,
-                                        {{ image | resize(2000, null, { mode: 'cover' }) }} 2000w,
-                                    "
-                                    sizes="
-                                    (min-width: 1510px) 684px,
-                                    (min-width: 992px) 50vw,
-                                    100vw
-                                    "
-                                    {% endif %}
-                                    src="{{ image }}"
-                                    alt="{{ slide.alt }}"
-                                >
-                            </div>
-                        {% endfor %}
-                    </div>
-                </bs4-slideshow>
-            </div>
-    
-            <div class="col-12 col-lg-6  p-lg-5 my-lg-5">
-                <div class="d-none d-lg-block">
-                    <div class="text-primary">
-                        {{ slideshow.content_short | raw }}
-                    </div>
-                    <h3>
-                        {{ slideshow.title }}
-                        <span class="font-special">{{ slideshow.title_special }}</span>
-                    </h3>
+                            {% set image = slide.image | media %}
+                        {% endif %}
+                        <div class="slide col-12 embed-responsive embed-responsive-2by3 lazy">
+                            <img lazyload="lazy" class="embed-responsive-item" {% if isExtern == false %} srcset="
+                                {{ image | resize(200, null, { mode: 'cover' }) }} 200w,
+                                {{ image | resize(400, null, { mode: 'cover' }) }} 400w,
+                                {{ image | resize(600, null, { mode: 'cover' }) }} 600w,
+                                {{ image | resize(800, null, { mode: 'cover' }) }} 800w,
+                                {{ image | resize(1000, null, { mode: 'cover' }) }} 1000w,
+                                {{ image | resize(1200, null, { mode: 'cover' }) }} 1200w,
+                                {{ image | resize(1400, null, { mode: 'cover' }) }} 1400w,
+                                {{ image | resize(1600, null, { mode: 'cover' }) }} 1600w,
+                                {{ image | resize(1800, null, { mode: 'cover' }) }} 1800w,
+                                {{ image | resize(2000, null, { mode: 'cover' }) }} 2000w,
+                            " sizes="
+                            (min-width: 1510px) 684px,
+                            (min-width: 992px) 50vw,
+                            100vw
+                            " {% endif %} src="{{ image }}" alt="{{ slide.alt }}">
+                        </div>
+                    {% endfor %}
                 </div>
-                {{ slideshow.content | raw }}
-                <bs4-button class="btn btn-animated-underline-primary" rv-route="'{{ button_url }}'">{{ slideshow.button_label }}</bs4-button>
-            </div>
-    
+            </bs4-slideshow>
         </div>
+
+        <div class="col-12 col-lg-6  p-lg-5 my-lg-5">
+            <div class="d-none d-lg-block">
+                <div class="text-primary">
+                    {{ slideshow.content_short | raw }}
+                </div>
+                <h3>
+                    <span class="font-special">{{ slideshow.title_special }}</span>
+                    {{ slideshow.title }}
+                </h3>
+            </div>
+            {{ slideshow.content | raw }}
+            <bs4-button class="btn btn-animated-underline-primary" rv-route="'{{ button_url }}'">{{ slideshow.button_label }}</bs4-button>
+        </div>
+
     </div>
+</div>
 {% else %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12 alert alert-danger" role="alert">
-                Slideshow not found, make sure you have created a slideshow with the name "{{ name }}" in your theme settings.
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 alert alert-danger" role="alert">
+            Slideshow not found, make sure you have created a slideshow with the name "{{ name }}" in your theme
+            settings.
         </div>
     </div>
+</div>
 {% endif %}

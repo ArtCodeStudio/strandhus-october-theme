@@ -4,19 +4,10 @@ items:
         title: Anreise
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: anreise
-        replace: '0'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Inklusivleistungen
-        nesting: '0'
-        type: static-page
-        code: ''
-        reference: inklusivleistungen
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -26,8 +17,10 @@ items:
         title: Preise
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: preise
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -37,8 +30,10 @@ items:
         title: Kontakt
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: kontakt
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'

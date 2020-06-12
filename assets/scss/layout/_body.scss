@@ -3,7 +3,7 @@ body {
   word-break: break-word;
   @include scrollbars(.6em, $primary, transparent);
   -ms-overflow-style: scrollbar;
-  @include media-breakpoint-up('xl') {
+  @include media-breakpoint-up(xl) {
     margin-top: 72px;
   }
 }

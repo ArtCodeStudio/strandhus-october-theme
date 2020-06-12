@@ -8,9 +8,12 @@
                 {{ item.title }}
             </strong>
             {% if item.items %}
+                {% set socialIcons = false %}
                 {% for item in item.items %}
                     {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
-                    {% if item.url %}
+                    {% if item.code starts with 'icon-' %}
+                        {% set socialIcons = true %}
+                    {% elseif item.url %}
                         <div rv-route-class-active="'{{ item.url }}'" class="nav-item {{ titleClass }}">
                             {% if not item.viewBag.isHidden %}
                                 <a rv-route="'{{ item.url }}'" class="{% if item.viewBag.cssClass %}{{ item.viewBag.cssClass }}{% else %}nav-link{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
@@ -19,7 +22,7 @@
                                 {% endif %}
                             {% endif %}
                         </div>
-                    {% else %}
+                    {% elseif not (item.code starts with 'icon-') %}
                         <div rv-route-class-active="'{{ item.url }}'" class="nav-item {{ titleClass }}">
                             <div class="{% if item.viewBag.cssClass %}{{ item.viewBag.cssClass }}{% else %}navbar-text{% endif %}">
                                 {{ item.title }}
@@ -27,6 +30,21 @@
                         </div>
                     {% endif %}
                 {% endfor %}
+                {% if socialIcons == true %}
+                    <div class="social-icon-spacer pt-5 pt-lg-0"></div>
+                    <div class="social-icon">
+                        {% for item in item.items %}
+                            {% if item.code starts with 'icon-' and item.url %}
+                                <a href="{{ item.url }}" target="_blank" class="nav-item {{ titleClass }}">
+                                    <bs4-icon class="mx-auto " color="danger"
+                                        src="{{ ('assets/images/hotel-strandhus-cuxhaven-footer-social-' ~ item.code ~ '.svg') | theme }}"
+                                        size="40">
+                                    </bs4-icon>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
             {% endif %}
             </div>
     {% endif %}

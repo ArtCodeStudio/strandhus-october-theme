@@ -1,6 +1,10 @@
 .btn {
     text-transform: uppercase;
     font-weight: $font-weight-bold;
+    &:focus, &.focus {
+        outline: 0;
+        box-shadow: none;
+    }
 }
 
 .btn-animated-underline-primary {

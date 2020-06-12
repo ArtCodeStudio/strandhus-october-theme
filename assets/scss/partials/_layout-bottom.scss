@@ -1,13 +1,16 @@
 #layout-bottom {
   margin-top: 100px;
+
   .footer-icons {
     margin-top: 100px;
     padding-bottom: 100px;
+
     bs4-icon {
       max-width: 80px;
       max-height: 80px;
     }
   }
+
   strong {
     text-transform: uppercase;
   }
@@ -19,4 +22,16 @@
     }
   }
 
+}
+
+.social-icon-spacer {
+  height: 40px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  position: absolute;
+  bottom: 0px;
+  height: 40px;
+  color: unset;
 }

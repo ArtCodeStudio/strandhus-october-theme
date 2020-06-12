@@ -65,6 +65,24 @@ items:
                     isHidden: '0'
                     cssClass: 'btn btn-lg btn-animated-underline-primary'
                     isExternal: '0'
+            -
+                title: facebook
+                type: url
+                url: 'https://www.facebook.com/HotelStrandhus/'
+                code: icon-facebook
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: instagram
+                type: url
+                url: 'https://www.instagram.com/hotel_strandhus/'
+                code: icon-instagram
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: 'Traumurlaub an der Nordsee'
         nesting: ''
@@ -253,8 +271,10 @@ items:
                 title: Impressum
                 nesting: '0'
                 type: static-page
+                url: ''
                 code: ''
                 reference: impressum
+                cmsPage: ''
                 replace: '0'
                 viewBag:
                     isHidden: '0'

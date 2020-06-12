@@ -19,7 +19,9 @@ code = "footer"
     <div class="col-12 col-md pt-5">
       <div class="row">
         <div class="col-12">
-          <bs4-icon class="mx-auto" color="primary" src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-beliebt-bei-paaren.svg' | theme }}" size="40"></bs4-icon>
+          <bs4-icon class="mx-auto" color="primary"
+            src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-beliebt-bei-paaren.svg' | theme }}" size="40">
+          </bs4-icon>
         </div>
         <span class="col-12 py-3 text-primary">Beliebt bei Paaren</span>
       </div>
@@ -27,7 +29,8 @@ code = "footer"
     <div class="col-12 col-md pt-5">
       <div class="row">
         <div class="col-12">
-          <bs4-icon class="mx-auto" color="primary" src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-pool-im-hotel.svg' | theme }}" size="40"></bs4-icon>
+          <bs4-icon class="mx-auto" color="primary"
+            src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-pool-im-hotel.svg' | theme }}" size="40"></bs4-icon>
         </div>
         <span class="col-12 py-3 text-primary">Pool im Hotel</span>
       </div>
@@ -35,7 +38,9 @@ code = "footer"
     <div class="col-12 col-md pt-5">
       <div class="row">
         <div class="col-12">
-          <bs4-icon class="mx-auto" color="primary" src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-direkt-am-strand.svg' | theme }}" size="40"></bs4-icon>
+          <bs4-icon class="mx-auto" color="primary"
+            src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-direkt-am-strand.svg' | theme }}" size="40">
+          </bs4-icon>
         </div>
         <span class="col-12 py-3 text-primary">Direkt am Strand</span>
       </div>
@@ -43,7 +48,9 @@ code = "footer"
     <div class="col-12 col-md pt-5">
       <div class="row">
         <div class="col-12">
-          <bs4-icon class="mx-auto" color="primary" src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-fruehstuecksbuffet.svg' | theme }}" size="40"></bs4-icon>
+          <bs4-icon class="mx-auto" color="primary"
+            src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-fruehstuecksbuffet.svg' | theme }}" size="40">
+          </bs4-icon>
         </div>
         <span class="col-12 py-3 text-primary">Frühstücksbuffet</span>
       </div>
@@ -51,7 +58,9 @@ code = "footer"
     <div class="col-12 col-md pt-5">
       <div class="row">
         <div class="col-12">
-          <bs4-icon class="mx-auto" color="primary" src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-weiterempfehlungen.svg' | theme }}" size="40"></bs4-icon>
+          <bs4-icon class="mx-auto" color="primary"
+            src="{{ '/assets/images/hotel-strandhus-cuxhaven-footer-weiterempfehlungen.svg' | theme }}" size="40">
+          </bs4-icon>
         </div>
         <span class="col-12 py-3 text-primary">92% Empfehlungen</span>
       </div>
@@ -61,15 +70,7 @@ code = "footer"
 
   <div class="row order-4 mb-5">
     <div class="col-12 px-0">
-      <bs4-dropdown class="dropup art-code-popup w-100 d-flex justify-content-center align-items-center">
-        <button rv-on-click="toggle" class="btn btn-link dropdown-toggle" id="dropdownArtCodeStudio" aria-haspopup="true" aria-expanded="false">
-          <bs4-icon class="mx-auto heartbeat" color="#FF0040" src="{{ '/assets/images/loading.svg' | theme }}" size="100" alt="Handcrafted by Art+Code Studio"></bs4-icon>
-        </button>
-        <div class="dropdown-menu p-3 text-left" aria-labelledby="dropdownArtCodeStudio">
-          <p><strong>Webdesign by Art+Code Studio</strong></p>
-          <p>Das <a href="https://artandcode.studio/" target="_blank" rel="noopener">Art+Code Studio</a> versteht, dass jeder Kunde einzigartig ist, jedes Projekt einen anderen Ansatz erfordert und dass jedes Projekte unvoreingenommen und mit freien Gedanken begonnen werden muss. So entdecken wir in enger Zusammenarbeit mit unseren Kunden das Potenzial und schaffen kreative und schöne Lösungen. Schreib uns: <a href="mailto:hi@artandcode.studio">hi@artandcode.studio</a></p>
-        </div>
-      </bs4-dropdown>
+      {% partial 'art-and-code' %}
     </div>
   </div>
 </div>
@@ -83,9 +84,9 @@ code = "footer"
       <p class="h3 mb-3">
         Am Meer ist auch schön
       </p>
-      <bs4-button rv-route="'https://www.camping-finck.de/'" class="btn btn-animated-underline-primary ">
-          Zum Campingplatz Finck
-      </bs4-button>
+      <a href="https://www.camping-finck.de/" target="_blank" class="btn btn-animated-underline-primary ">
+        Zum Campingplatz Finck
+      </a>
     </div>
   </div>
 </div>
