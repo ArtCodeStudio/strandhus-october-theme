@@ -1,5 +1,7 @@
 import { Component, View } from '@ribajs/core';
 
+import template from './hsh-cookies.component.html';
+
 interface Scope {
     denyCookies: HshCookiesComponent['denyCookies'];
     acceptCookies: HshCookiesComponent['acceptCookies'];
@@ -50,9 +52,9 @@ export class HshCookiesComponent extends Component {
 
     protected template(): string | null {
         if (this.getCookie('hsh-cookies') == null) {
-            return null;
+            return template;
         } else {
-            return '';
+            return null;
         }
     }
 

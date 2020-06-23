@@ -67,18 +67,26 @@ items:
                     isExternal: '0'
             -
                 title: facebook
+                nesting: ''
                 type: url
                 url: 'https://www.facebook.com/HotelStrandhus/'
                 code: icon-facebook
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: instagram
+                nesting: ''
                 type: url
                 url: 'https://www.instagram.com/hotel_strandhus/'
                 code: icon-instagram
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -124,12 +132,12 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Bildergallerie
+                title: Inklusivleistungen
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: impressionen
+                reference: inklusivleistungen
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -137,12 +145,12 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: 'Live Webcam'
+                title: Preise
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: webcam
+                reference: preise
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -163,25 +171,23 @@ items:
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Inklusivleistungen
+                title: Bildergalerie
                 nesting: '0'
                 type: static-page
-                url: ''
                 code: ''
-                reference: inklusivleistungen
-                cmsPage: ''
+                reference: impressionen
                 replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: Preise
+                title: 'Live Webcam'
                 nesting: '0'
                 type: static-page
                 url: ''
                 code: ''
-                reference: preise
+                reference: webcam
                 cmsPage: ''
                 replace: '0'
                 viewBag:
@@ -222,19 +228,6 @@ items:
                 url: ''
                 code: ''
                 reference: anreise
-                cmsPage: ''
-                replace: '0'
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-            -
-                title: Instagram
-                nesting: '0'
-                type: static-page
-                url: ''
-                code: ''
-                reference: impressionen
                 cmsPage: ''
                 replace: '0'
                 viewBag:

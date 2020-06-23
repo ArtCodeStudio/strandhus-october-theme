@@ -23,4 +23,7 @@ snippetProperties[link][title] = "Link"
 snippetProperties[link][type] = "text"
 ==
 {% set icon_url = "assets/iconset/#{icon}.svg" %}
-<bs4-icon rv-route="'{{link}}'" class="small-icon small-icon-{{position}}" src="{{ icon_url | theme }}" size="64" direction="right"></bs4-icon>
+<a rv-route="'{{link}}'" >
+    <bs4-icon class="small-icon small-icon-{{position}}" src="{{ icon_url | theme }}" size="64" direction="right"></bs4-icon>
+
+</a>

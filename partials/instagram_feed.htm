@@ -73,15 +73,17 @@ function onStart() {
             <div class="p-2">
                 <div class="embed-responsive embed-responsive-1by1 lazy">
                     {% if image.media_type == "IMAGE" %}
-                    <a href="{{ image.permalink }}" target="_blank">
-                        <img lazyload="lazy" class="embed-responsive-item" src="{{ image.media_url }}"
-                            alt="{{ image.caption }}">
-                    </a>
+                        <a href="{{ image.permalink }}" target="_blank">
+                            <img lazyload="lazy" class="embed-responsive-item" src="{{ image.media_url }}"
+                                alt="{{ image.caption }}">
+                        </a>
                     {% elseif image.media_type == "CAROUSEL_ALBUM" %}
                     {# <script>console.log({{ image | json_encode() | raw}});</script> #}
                     <bs4-slideshow controls="false" indicators="true" lg-controls="true" class="embed-responsive-item" indicators="false" sticky="false"
                         autoplay="false" draggable="true" lg-draggable="false"
                         control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
+                        indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
+                        indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}"     
                         control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
                     >
                         <div class="slideshow-inner m-0">

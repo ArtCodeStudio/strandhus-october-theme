@@ -42,7 +42,7 @@ snippetProperties[name][options][] = ""
                 </h3>
             </div>
 
-            <bs4-slideshow controls="false" indicators="true" lg-controls="true" sticky="false"
+            <bs4-slideshow controls="false" {% if slideshow.images|length <= 1 %} indicators="false" lg-controls="false" {% else %} lg-controls="true" {% endif %} sticky="false"
                 autoplay="false" draggable="true" lg-draggable="false"
                 control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
                 control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
