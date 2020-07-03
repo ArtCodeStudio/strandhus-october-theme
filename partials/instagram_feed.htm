@@ -5,22 +5,32 @@ snippetCode = "instagram"
 snippetName = "instagram"
 ==
 <?php
-function onStart() {
+ 
 
-    if(!file_exists("instagram/token.txt")) {
+function onStart() {
+    $extensions = array("image/jpeg" => ".jpg", "video/mp4", ".mp4");   
+
+    $cache_dir = "storage/temp/instagram/";
+    $media_dir = "storage/temp/instagram/";
+    
+    if (!file_exists($cache_dir)) {
+        mkdir($cache_dir, 0777, true);
+    }
+    
+    if(!file_exists("../instagram/token.txt")) {
         $this['error'] = "no token provided";
         return;
     }
 
-    $current_token = trim(preg_replace('/\s\s+/', ' ', file_get_contents("instagram/token.txt")));
+    $current_token = trim(preg_replace('/\s\s+/', ' ', file_get_contents("../instagram/token.txt")));
 
     $ch = curl_init();
+    curl_setopt($ch, CURLOPT_TIMEOUT, 20);
 
-    if((time() - filemtime("instagram/token.txt")) > 3*24*60*60) {
+    if((time() - filemtime("../instagram/token.txt")) > 3*24*60*60) {
         //refreshing token...
 
         //TODO prevent race condition
-        
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_URL => "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=" . $current_token
@@ -28,27 +38,27 @@ function onStart() {
         $response = json_decode(curl_exec($ch));
 
         $current_token = $response->{"access_token"};
-        file_put_contents("instagram/token.txt", $current_token);
+        file_put_contents("../instagram/token.txt", $current_token);
         curl_close($ch);
     }
 
-    if(!file_exists("instagram/images.txt") || (time() - filemtime("instagram/images.txt")) > 1*60*60) {
+    if(!file_exists($cache_dir . "images.txt") || (time() - filemtime($cache_dir . "images.txt")) > 1*60*60) {
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_URL => "https://graph.instagram.com/17841406076219844/media?limit=999&fields=media&access_token=" . $current_token
         ]);
         $response = json_decode(curl_exec($ch));
-        file_put_contents("instagram/images.txt", json_encode($response));
+        file_put_contents($cache_dir . "images.txt", json_encode($response));
     } else {
-        $response = json_decode(file_get_contents("instagram/images.txt"));
+        $response = json_decode(file_get_contents($cache_dir . "images.txt"));
     }
 
     $medias = array();
 
     foreach($response->{"data"} as $item) {
         $media_id = $item->{"id"}; 
-        if(file_exists("instagram/cache/" . $media_id . ".json")) {
-            $medias[] = json_decode(file_get_contents("instagram/cache/" . $media_id . ".json"));
+        if(file_exists($cache_dir . $media_id . ".json")) {
+            $medias[] = json_decode(file_get_contents($cache_dir . $media_id . ".json"));
         } else {
             curl_setopt_array($ch, [
                 CURLOPT_RETURNTRANSFER => 1,
@@ -56,7 +66,39 @@ function onStart() {
             ]);
             
             $media = json_decode(curl_exec($ch));
-            file_put_contents("instagram/cache/" . $media_id . ".json", json_encode($media));
+
+            //download image to cache
+            $fp = fopen($media_dir . $media_id, "w+");
+
+            curl_setopt($ch, CURLOPT_URL, $media->{"media_url"});
+            curl_setopt($ch, CURLOPT_FILE, $fp);
+            
+            //biggest bs every seen
+            $extension = ".data";
+            $header_callback = function($curl, $header) use (&$extension, $extensions) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) > 1 && strcasecmp(trim($header[0]), "content-type") && isset($header[1]) && isset($extensions[trim($header[1])])) {
+                    $extension = $extensions[trim($header[1])];
+                    echo "<script>alert('" . trim($header[0]) . ": " . trim($header[1]) . "');</script>";
+                }
+                return $len;
+            };
+            curl_setopt($ch, CURLOPT_HEADERFUNCTION, $header_callback);
+            curl_exec($ch);
+            
+            curl_setopt($ch, CURLOPT_FILE, NULL);
+            
+            fclose($fp);
+
+            if(curl_errno($ch)){
+                throw new Exception(curl_error($ch));
+            }
+
+            $media->extension = $extension;
+            rename($media_dir . $media_id, $media_dir . $media_id . $extension);
+            file_put_contents($cache_dir . $media_id . ".json", json_encode($media));
+
             $medias[] = $media;
         }
     }
@@ -74,7 +116,7 @@ function onStart() {
                 <div class="embed-responsive embed-responsive-1by1 lazy">
                     {% if image.media_type == "IMAGE" %}
                         <a href="{{ image.permalink }}" target="_blank">
-                            <img lazyload="lazy" class="embed-responsive-item" src="{{ image.media_url }}"
+                            <img lazyload="lazy" class="embed-responsive-item" src="{{ ('instagram/' ~ image.id ~ image.extension) | media }}"
                                 alt="{{ image.caption }}">
                         </a>
                     {% elseif image.media_type == "CAROUSEL_ALBUM" %}
