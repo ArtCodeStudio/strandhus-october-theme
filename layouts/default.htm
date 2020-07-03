@@ -28,7 +28,6 @@ function onContactFormSubmit()
         $message->to($values['contactMail'], $values['contactFirstname']. ' ' . $values['contactLastname']);
     };
 
-    echo $values['contactMail'];
     // mail to site owner
     Mail::send('owner', $values, $buildOwnerMessage);
     
@@ -39,7 +38,7 @@ function onContactFormSubmit()
     
 
     // TODO catch errors
-    $this->page['result'] = "Nachricht abgeschickt";
+    return "Nachricht abgeschickt";
     
 }
 ?>
@@ -78,6 +77,8 @@ function onContactFormSubmit()
         <div id="layout-bottom">
             {% partial 'layout-bottom' %}
         </div>
+        <bs4-toast-container position-class="absolute-bottom absolute-center">
+        </bs4-toast-container>
         <hsh-cookies>
         </hsh-cookies>
     </div>

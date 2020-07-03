@@ -5,9 +5,10 @@ snippetName = "Contact form"
 <div class="container contact-form my-5">
   <div class="row">
     <div class="col-12">
-      <bs4-form>
-        <form rv-on-submit="onSubmit" data-request="onContactFormSubmit"
-          data-request-update="contact-submit-result: '#contactSubmitResult'">
+      <oc-form
+        rv-show-toast-on-submit-success="{'message': '{ toast.$event.detail.message }', 'delay': 20000, 'contextualClass': 'dark'}"
+        disable-submit-until-change="true" october-handler="onContactFormSubmit">
+        <form>
 
           {# Ich nehme Kontakt auf, weil #}
           <div class="form-group input-group contact_reasons">
@@ -77,9 +78,10 @@ snippetName = "Contact form"
 
 
           {# Button #}
-          <button type="submit" class="btn btn-secondary btn-lg">Absenden</button>
+          <button rv-on-click="onSubmit" rv-disabled="submitDisabled" type="submit"
+            class="btn btn-secondary btn-lg">Absenden</button>
         </form>
-      </bs4-form>
+      </oc-form>
     </div>
   </div>
 </div>

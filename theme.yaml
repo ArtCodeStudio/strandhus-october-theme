@@ -537,6 +537,14 @@ form:
                 tab: Contact
                 label: 'Reasons content text'
                 type: richeditor
+            contact_admin_mail:
+                tab: Contact
+                label: 'Admin mail'
+                type: text
+            contact_admin_name:
+                tab: Contact
+                label: 'Admin name'
+                type: text
             contact_reasons:
                 tab: Contact
                 prompt: 'Add new contact reason'

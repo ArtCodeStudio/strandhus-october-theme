@@ -1,0 +1,18 @@
+.toast {
+  min-width: 250px;
+}
+
+bs4-toast-item {
+  .toast-primary {
+    @extend .alert-primary;
+  }
+  .toast-success {
+    @extend .alert-success;
+  }
+  .toast-danger {
+    @extend .alert-danger;
+  }
+  .toast-dark {
+    @extend .alert-dark;
+  }
+}
