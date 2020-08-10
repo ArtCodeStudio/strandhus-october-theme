@@ -5,14 +5,62 @@ snippetCode = "instagram"
 snippetName = "instagram"
 ==
 <?php
- 
+
+
+
 
 function onStart() {
-    $extensions = array("image/jpeg" => ".jpg", "video/mp4", ".mp4");   
+    $cache_image = function(&$image) {
+        $extensions = array(
+            "image/jpeg" => ".jpg",
+            "video/mp4" => ".mp4"
+        );   
+        
+        $cache_dir = "storage/temp/instagram/";
+        $media_dir = "storage/app/media/instagram/";
+        
+    
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+    
+        $media_id = $image->{"id"};
+        //download image to cache
+        $fp = fopen($media_dir . $media_id, "w+");
+    
+        curl_setopt($ch, CURLOPT_URL, $image->{"media_url"});
+        curl_setopt($ch, CURLOPT_FILE, $fp);
+        
+        //biggest bs every seen
+        $extension = ".data";
+        $header_callback = function($curl, $header) use (&$extension, $extensions) {
+            $len = strlen($header);
+            $header = explode(':', $header, 2);
+            if (count($header) > 1 && strcasecmp(trim($header[0]), "content-type") == 0 && isset($header[1]) && isset($extensions[trim($header[1])])) {
+                $extension = $extensions[trim($header[1])];
+            }
+            return $len;
+        };
+        curl_setopt($ch, CURLOPT_HEADERFUNCTION, $header_callback);
+        curl_exec($ch);
+        
+        curl_setopt($ch, CURLOPT_FILE, NULL);
+        
+        fclose($fp);
+        
+        $image->extension = $extension;
+        rename($media_dir . $media_id, $media_dir . $media_id . $extension);
+        curl_close($ch);
+    };
+
+    
+    $extensions = array(
+        "image/jpeg" => ".jpg",
+        "video/mp4" => ".mp4"
+    );   
 
     $cache_dir = "storage/temp/instagram/";
-    $media_dir = "storage/temp/instagram/";
-    
+    $media_dir = "storage/app/media/instagram/";
+
     if (!file_exists($cache_dir)) {
         mkdir($cache_dir, 0777, true);
     }
@@ -67,37 +115,17 @@ function onStart() {
             
             $media = json_decode(curl_exec($ch));
 
-            //download image to cache
-            $fp = fopen($media_dir . $media_id, "w+");
-
-            curl_setopt($ch, CURLOPT_URL, $media->{"media_url"});
-            curl_setopt($ch, CURLOPT_FILE, $fp);
-            
-            //biggest bs every seen
-            $extension = ".data";
-            $header_callback = function($curl, $header) use (&$extension, $extensions) {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) > 1 && strcasecmp(trim($header[0]), "content-type") && isset($header[1]) && isset($extensions[trim($header[1])])) {
-                    $extension = $extensions[trim($header[1])];
-                    echo "<script>alert('" . trim($header[0]) . ": " . trim($header[1]) . "');</script>";
+            if($media-> {"media_type"} == "CAROUSEL_ALBUM") {
+                foreach($media->{"children"}->{"data"} as $child) {
+                    $cache_image($child);
                 }
-                return $len;
-            };
-            curl_setopt($ch, CURLOPT_HEADERFUNCTION, $header_callback);
-            curl_exec($ch);
-            
-            curl_setopt($ch, CURLOPT_FILE, NULL);
-            
-            fclose($fp);
-
-            if(curl_errno($ch)){
-                throw new Exception(curl_error($ch));
+            } else {
+                $cache_image($media);
             }
 
-            $media->extension = $extension;
-            rename($media_dir . $media_id, $media_dir . $media_id . $extension);
             file_put_contents($cache_dir . $media_id . ".json", json_encode($media));
+
+
 
             $medias[] = $media;
         }
@@ -106,6 +134,8 @@ function onStart() {
     $this["images"] = $medias;
 
 }
+
+
 ?>
 ==
 <div class="container-fluid partial-instagram-feed">
@@ -120,7 +150,6 @@ function onStart() {
                                 alt="{{ image.caption }}">
                         </a>
                     {% elseif image.media_type == "CAROUSEL_ALBUM" %}
-                    {# <script>console.log({{ image | json_encode() | raw}});</script> #}
                     <bs4-slideshow controls="false" indicators="true" lg-controls="true" class="embed-responsive-item" indicators="false" sticky="false"
                         autoplay="false" draggable="true" lg-draggable="false"
                         control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
@@ -131,7 +160,7 @@ function onStart() {
                         <div class="slideshow-inner m-0">
                             {% for slide in image.children.data %}
                                 <div class="slide col-12 embed-responsive embed-responsive-1by1 lazy">
-                                    <img lazyload="lazy" class="embed-responsive-item" src="{{ slide.media_url }}" alt="{{ slide.caption }}">
+                                    <img lazyload="lazy" class="embed-responsive-item" src="{{ ('instagram/' ~ slide.id ~ slide.extension) | media }}" alt="{{ slide.caption }}">
                                 </div>
                             {% endfor %}
                         </div>
@@ -139,7 +168,7 @@ function onStart() {
                     {% elseif image.media_type == "VIDEO" %}
                     <a href="{{ image.permalink }}" target="_blank">
                         <video class="embed-responsive-item" autoplay muted loop preload>
-                            <source src="{{ image.media_url }}" type="video/mp4">
+                            <source src="{{ ('instagram/' ~ image.id ~ image.extension) | media }}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </a>

@@ -19,7 +19,7 @@ function onContactFormSubmit()
     
     $buildOwnerMessage = function ($message) use ($values) {
         // TODO use email and name from backend or theme settings
-        $message->to('daniel@artandcode.studio', 'Daniel Omran');
+        $message->to('info@hotel-strandhus.de', 'Hotel Strandhus');
         // $message->from($values['contactMail'], $values['contactFirstname']. ' ' . $values['contactLastname']);
         $message->subject("Neue Anfrage von ".$values['contactFirstname']. ' ' . $values['contactLastname']);
     };
