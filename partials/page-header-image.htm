@@ -10,16 +10,18 @@ snippetName = "Page Header OG Image"
             class="embed-responsive-item"
             loading="lazy"
             src="{{ (seoTag.og_image | media) | app }}"
-            srcset="
-                {{ seoTag.og_image | media | app | resize(100, 100, { mode: 'cover' }) }} 100w,
-                {{ seoTag.og_image | media | app | resize(200, 200, { mode: 'cover' }) }} 200w,
-                {{ seoTag.og_image | media | app | resize(400, 400, { mode: 'cover' }) }} 400w,
-                {{ seoTag.og_image | media | app | resize(800, 800, { mode: 'cover' }) }} 800w,
-                {{ seoTag.og_image | media | app | resize(1200, 1200, { mode: 'cover' }) }} 1200w,
-                {{ seoTag.og_image | media | app | resize(1600, 1600, { mode: 'cover' }) }} 1600w,
-                {{ seoTag.og_image | media | app | resize(2000, 2000, { mode: 'cover' }) }} 2000w,
-                {{ seoTag.og_image | media | app | resize(2400, 2400, { mode: 'cover' }) }} 2400w"
-            sizes="100vw"
+            {% if this.theme.third_party_image_resizer == true %}
+                srcset="
+                    {{ seoTag.og_image | media | app | resize(100, 100, { mode: 'cover' }) }} 100w,
+                    {{ seoTag.og_image | media | app | resize(200, 200, { mode: 'cover' }) }} 200w,
+                    {{ seoTag.og_image | media | app | resize(400, 400, { mode: 'cover' }) }} 400w,
+                    {{ seoTag.og_image | media | app | resize(800, 800, { mode: 'cover' }) }} 800w,
+                    {{ seoTag.og_image | media | app | resize(1200, 1200, { mode: 'cover' }) }} 1200w,
+                    {{ seoTag.og_image | media | app | resize(1600, 1600, { mode: 'cover' }) }} 1600w,
+                    {{ seoTag.og_image | media | app | resize(2000, 2000, { mode: 'cover' }) }} 2000w,
+                    {{ seoTag.og_image | media | app | resize(2400, 2400, { mode: 'cover' }) }} 2400w"
+                sizes="100vw"
+            {% endif %}
             alt="{{ meta_title }}"
         >
     </div>

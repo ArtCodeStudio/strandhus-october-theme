@@ -1,10 +1,10 @@
 body {
   min-height: 100vh;
-  word-break: break-word;
+  word-break: normal;
   @include scrollbars(.6em, $primary, transparent);
   -ms-overflow-style: scrollbar;
+
   @include media-breakpoint-up(xl) {
     margin-top: 72px;
   }
 }
-

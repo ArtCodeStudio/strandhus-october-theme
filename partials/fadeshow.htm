@@ -50,21 +50,21 @@ snippetProperties[name][options][] = ""
                                     <img
                                         loading="eager"
                                         class="embed-responsive-item"
-                                        {% if isExtern == false %}
-                                        srcset="
-                                            {{ image | resize(200, null, { mode: 'cover' }) }} 200w,
-                                            {{ image | resize(400, null, { mode: 'cover' }) }} 400w,
-                                            {{ image | resize(800, null, { mode: 'cover' }) }} 800w,
-                                            {{ image | resize(1000, null, { mode: 'cover' }) }} 1000w,
-                                            {{ image | resize(1200, null, { mode: 'cover' }) }} 1200w,
-                                            {{ image | resize(1400, null, { mode: 'cover' }) }} 1400w,
-                                            {{ image | resize(1600, null, { mode: 'cover' }) }} 1600w,
-                                            {{ image | resize(1800, null, { mode: 'cover' }) }} 1800w,
-                                            {{ image | resize(2000, null, { mode: 'cover' }) }} 2000w,
-                                            {{ image | resize(2500, null, { mode: 'cover' }) }} 2500w,
-                                            {{ image | resize(3000, null, { mode: 'cover' }) }} 3000w
-                                        "
-                                        sizes="100vw"
+                                        {% if isExtern == false and this.theme.third_party_image_resizer == true %}
+                                            srcset="
+                                                {{ image | resize(200, null, { mode: 'cover' }) }} 200w,
+                                                {{ image | resize(400, null, { mode: 'cover' }) }} 400w,
+                                                {{ image | resize(800, null, { mode: 'cover' }) }} 800w,
+                                                {{ image | resize(1000, null, { mode: 'cover' }) }} 1000w,
+                                                {{ image | resize(1200, null, { mode: 'cover' }) }} 1200w,
+                                                {{ image | resize(1400, null, { mode: 'cover' }) }} 1400w,
+                                                {{ image | resize(1600, null, { mode: 'cover' }) }} 1600w,
+                                                {{ image | resize(1800, null, { mode: 'cover' }) }} 1800w,
+                                                {{ image | resize(2000, null, { mode: 'cover' }) }} 2000w,
+                                                {{ image | resize(2500, null, { mode: 'cover' }) }} 2500w,
+                                                {{ image | resize(3000, null, { mode: 'cover' }) }} 3000w
+                                            "
+                                            sizes="100vw"
                                         {% endif %}
                                         src="{{ image }}"
                                         alt="{{ slide.alt }}"

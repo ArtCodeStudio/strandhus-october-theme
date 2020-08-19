@@ -237,6 +237,11 @@ form:
                 commentHtml: true
                 default: '#ffffff'
                 tab: Favicons
+            third_party_image_resizer:
+                type: checkbox
+                label: Enable image resizer
+                default: false
+                tab: Third Party
             general_logo:
                 type: mediafinder
                 mode: image

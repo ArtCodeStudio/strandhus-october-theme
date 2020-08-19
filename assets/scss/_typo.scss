@@ -24,7 +24,7 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3b00e1");
 
-  
+
 @font-face {
     font-family: 'HorizontesScript';
     font-style: normal;
@@ -38,21 +38,48 @@
 }
 
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    overflow-wrap: normal !important;
     text-transform: uppercase;
-    .font-special, &.font-special {
+
+    .font-special,
+    &.font-special {
         margin-top: $spacer;
         text-transform: none;
     }
+
     .font-special {
         font-size: 140%;
     }
 }
 
 @include media-breakpoint-down(md) {
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
         font-size: calc(1rem + 3vw);
+
         .font-special {
             font-size: calc(1.4rem + 3vw);
         }
@@ -74,9 +101,11 @@ h1, h2, h3, h4, h5, h6,
     .font-size#{$infix}-sm {
         font-size: $font-size-sm;
     }
+
     .font-size#{$infix}-base {
         font-size: $font-size-base;
     }
+
     .font-size#{$infix}-lg {
         font-size: $font-size-lg;
     }

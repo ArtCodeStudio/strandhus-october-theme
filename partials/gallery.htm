@@ -215,20 +215,23 @@ function onStart() {
                         <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy cursor-pointer" id="{{ image.handle }}">
                             <img class="img-fluid embed-responsive-item" 
                                 rv-on-click="openByIndex | args {{ loop.index0 }}"
-                                srcset="
-                                {{ image.src | media | resize(200, null, { mode: 'cover' }) }} 200w,
-                                {{ image.src | media | resize(300, null, { mode: 'cover' }) }} 300w,
-                                {{ image.src | media | resize(400, null, { mode: 'cover' }) }} 400w,
-                                {{ image.src | media | resize(500, null, { mode: 'cover' }) }} 500w,
-                                {{ image.src | media | resize(600, null, { mode: 'cover' }) }} 600w,
-                                {{ image.src | media | resize(700, null, { mode: 'cover' }) }} 700w,
-                                {{ image.src | media | resize(800, null, { mode: 'cover' }) }} 800w
-                                "
+                                {% if this.theme.third_party_image_resizer == true %}
+                                    srcset="
+                                    {{ image.src | media | resize(200, null, { mode: 'cover' }) }} 200w,
+                                    {{ image.src | media | resize(300, null, { mode: 'cover' }) }} 300w,
+                                    {{ image.src | media | resize(400, null, { mode: 'cover' }) }} 400w,
+                                    {{ image.src | media | resize(500, null, { mode: 'cover' }) }} 500w,
+                                    {{ image.src | media | resize(600, null, { mode: 'cover' }) }} 600w,
+                                    {{ image.src | media | resize(700, null, { mode: 'cover' }) }} 700w,
+                                    {{ image.src | media | resize(800, null, { mode: 'cover' }) }} 800w
+                                    "
+                                    sizes="
+                                    (min-width: 576px) 30vw,
+                                    100vw
+                                    "
+                                {% endif %}
+                                src="{{ image.src | media }}"
                                 loading="lazy"
-                                sizes="
-                                (min-width: 576px) 30vw,
-                                100vw
-                                "
                                 height="{{ image.height }}"
                                 width="{{ image.width }}"
                                 data-fs-height="{{ image.height }}"
