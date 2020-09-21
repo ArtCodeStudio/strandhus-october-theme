@@ -67,18 +67,26 @@ items:
                     isExternal: '0'
             -
                 title: facebook
+                nesting: null
                 type: url
                 url: 'https://www.facebook.com/HotelStrandhus/'
                 code: icon-facebook
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '1'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: instagram
+                nesting: null
                 type: url
                 url: 'https://www.instagram.com/hotel_strandhus/'
                 code: icon-instagram
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '1'
                     cssClass: ''
@@ -164,15 +172,13 @@ items:
                     isExternal: '0'
             -
                 title: Bildergalerie
-                nesting: '0'
+                nesting: 0
                 type: static-page
-                url: ''
                 code: ''
                 reference: impressionen
-                cmsPage: ''
-                replace: '0'
+                replace: 0
                 viewBag:
-                    isHidden: '0'
+                    isHidden: '1'
                     cssClass: ''
                     isExternal: '0'
             -

@@ -45,7 +45,8 @@ snippetProperties[name][options][] = ""
         {% endif %}
 
         <a class="col-12 col-lg mt-lg-{{ item.space_top }}" href="{{ url }}">
-            <div class="embed-responsive embed-responsive-1by1 lazy">
+{#         <div class="embed-responsive embed-responsive-1by1 lazy">
+               
                 <img class="img-fluid embed-responsive-item" loading="lazy" src="{{ image }}" alt="{{ item.title }}"
                     {% if imageIsResizeable and this.theme.third_party_image_resizer %}
                         srcset="
@@ -56,6 +57,17 @@ snippetProperties[name][options][] = ""
                         {{ image | resize(1200, 1200, { mode: 'cover' }) }} 1200w,
                         {{ image | resize(1600, 1600, { mode: 'cover' }) }} 1600w
                         "
+                        sizes="(min-width: 768px) 30vw, 90vw"
+                    {% endif %}
+                    src="{{ image }}"
+                >
+            </div>
+#}
+            <div class="embed-responsive embed-responsive-1by1 lazy">
+               
+                <img class="img-fluid embed-responsive-item" loading="lazy" src="{{ image }}" alt="{{ item.title }}"
+                    {% if imageIsResizeable and this.theme.third_party_image_resizer %}
+                        srcset="{{ image | resize(100, 100) }} 100w",
                         sizes="(min-width: 768px) 30vw, 90vw"
                     {% endif %}
                     src="{{ image }}"

@@ -1,4 +1,4 @@
-import { Component, View } from '@ribajs/core';
+import { Component } from '@ribajs/core';
 
 import template from './hsh-cookies.component.html';
 
@@ -23,13 +23,11 @@ export class HshCookiesComponent extends Component {
 
     constructor(element?: HTMLElement) {
         super(element);
-        this.init(HshCookiesComponent.observedAttributes);
     }
 
-    protected async init(observedAttributes: string[]): Promise<View | null | undefined> {
-        return super.init(observedAttributes).then((view) => {
-            return view;
-        });
+    protected connectedCallback() {
+        super.connectedCallback();
+        this.init(HshCookiesComponent.observedAttributes);
     }
 
     protected requiredAttributes(): string[] {
@@ -43,11 +41,6 @@ export class HshCookiesComponent extends Component {
         namespace: string | null,
     ): void {
         super.parsedAttributeChangedCallback(attributeName, oldValue, newValue, namespace);
-    }
-
-    // deconstructor
-    protected disconnectedCallback(): void {
-        super.disconnectedCallback();
     }
 
     protected template(): string | null {
