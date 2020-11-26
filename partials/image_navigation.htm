@@ -39,13 +39,10 @@ snippetProperties[name][options][] = ""
         {% set imageIsResizeable = true %}
         {% endif %}
 
-        {% set url = item.url | staticPage %}
-        {% if url is empty or url is empty %}
         {% set url = item.url %}
-        {% endif %}
 
         <a class="col-12 col-lg mt-lg-{{ item.space_top }}" href="{{ url }}">
-{#         <div class="embed-responsive embed-responsive-1by1 lazy">
+         <div class="embed-responsive embed-responsive-1by1 lazy">
                
                 <img class="img-fluid embed-responsive-item" loading="lazy" src="{{ image }}" alt="{{ item.title }}"
                     {% if imageIsResizeable and this.theme.third_party_image_resizer %}
@@ -62,7 +59,7 @@ snippetProperties[name][options][] = ""
                     src="{{ image }}"
                 >
             </div>
-#}
+{#
             <div class="embed-responsive embed-responsive-1by1 lazy">
                
                 <img class="img-fluid embed-responsive-item" loading="lazy" src="{{ image }}" alt="{{ item.title }}"
@@ -73,6 +70,7 @@ snippetProperties[name][options][] = ""
                     src="{{ image }}"
                 >
             </div>
+#}
             <p class="mt-2 mb-4 d-flex justify-content-between align-items-center">
                 <span class="font-size-lg font-weight-bold">{{ item.title }}</span>
                 <span class="d-flex align-items-center">
@@ -87,7 +85,7 @@ snippetProperties[name][options][] = ""
     </div>
 </div>
 {% else %}
-<div class="container partial-image-navigation">
+<div class="container container-xl partial-image-navigation">
     <div class="row">
         <div class="col-12 alert alert-danger" role="alert">
             Image navigation not found, make sure you have created a image navigation with the name "{{ name }}" in your

@@ -56,7 +56,7 @@ snippetProperties[ratioMd][options][embed-responsive-md-4by3] = "4by3"
   {% set source = src %}
 {% endif %}
 <div class="partial-image w-100">
-  <div class="{% if container %}container{% else %}container-fluid{% endif %}">
+  <div class="{% if container %}container container-xl{% else %}container-fluid{% endif %}">
     <div class="row" {% if maxWidth != '100%' %}style="max-width: {{ maxWidth }};"{% endif %}>
       <div class="col-12 {% if not container %}px-0{% endif %}">
         <div {% if ratio %}class="embed-responsive {{ ratioXs }} {{ ratioMd }} lazy"{% endif %}>

@@ -21,10 +21,8 @@ snippetProperties[name][options][] = ""
 
 {% if slideshow is defined and slideshow.images is defined %}
 
-{% set button_url = slideshow.button_url | staticPage %}
-{% if button_url is not defined %}
-    {% set button_url = slideshow.button_url %}
-{% endif %}
+{% set button_url = slideshow.button_url %}
+
 
 <div class="container-fluid container-limited-1 beside_text_slideshow my-5 py-5">
 
@@ -108,7 +106,7 @@ snippetProperties[name][options][] = ""
     </div>
 </div>
 {% else %}
-<div class="container">
+<div class="container container-xl">
     <div class="row">
         <div class="col-12 alert alert-danger" role="alert">
             Slideshow not found, make sure you have created a slideshow with the name "{{ name }}" in your theme

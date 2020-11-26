@@ -17,7 +17,7 @@ snippetProperties[tileUrl][title] = "tile_url"
 snippetProperties[tileUrl][type] = "string"
 snippetProperties[tileUrl][default] = "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
 ==
-<div class="container mt-5 pt-3">
+<div class="container container-xl mt-5 pt-3">
   <div class="row" style="height: 70vh">
     <div class="col">
         <leaflet-map attribution="{{ attribution }}" initial-lat="{{ latitude | replace({",":"."}) }}" initial-lng="{{ longitude | replace({",":"."}) }}" initial-zoom="{{ initialZoom | replace({",":"."}) }}" tile-url="{{ tileUrl }}">

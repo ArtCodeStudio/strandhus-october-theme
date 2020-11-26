@@ -209,7 +209,7 @@ function onStart() {
         {% endif %}
 
         <div class="col-12">
-            <rv-photoswipe open-image-on-click="false" control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}" control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}" control-close-icon-src="{{ 'assets/iconset/icon_close.svg' | theme }}" control-zoom-in-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" control-zoom-out-icon-src="{{ 'assets/iconset/icon_minus.svg' | theme }}" control-fullscreen-on-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-on.svg' | theme }}" control-fullscreen-off-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-off.svg' | theme }}" control-share-icon-src="{{ 'assets/iconset/social_share.svg' | theme }}">
+            <rv-photoswipe open-image-on-click="false" control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}" control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}" control-close-icon-src="{{ 'assets/iconset/icon_close.svg' | theme }}" control-zoom-in-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" control-zoom-out-icon-src="{{ 'assets/iconset/icon_minus.svg' | theme }}" control-fullscreen-on-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-on.svg' | theme }}" control-fullscreen-off-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-off.svg' | theme }}" control-share-icon-src="{{ 'assets/iconset/social_share.svg' | theme }}" control-share-icon-show="true">
                 <div class="card-columns">
                     {% for image in images %}
                         <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy cursor-pointer" id="{{ image.handle }}">
