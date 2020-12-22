@@ -13,9 +13,9 @@ snippetName = "Fee"
           <table class="table table-borderless">
             <thead>
               <tr>
-                <th scope="col">{{ this.theme.fee_item_title_name }}</th>
-                <th scope="col">{{ this.theme.fee_item_title_sessions }}</th>
-                <th scope="col">{{ this.theme.fee_item_title_price }}</th>
+                <th scope="col">{{ group.fee_item_title_name }}</th>
+                <th scope="col">{{ group.fee_item_title_sessions }}</th>
+                <th scope="col">{{ group.fee_item_title_price }}</th>
               </tr>
             </thead>
             <tbody>
@@ -32,13 +32,13 @@ snippetName = "Fee"
         <div class="d-block d-sm-none">
           {% for item in group.items  %}
           <dl class="row">
-            <dt class="col-12 col-sm-3">{{ this.theme.fee_item_title_name }}</dt>
+            <dt class="col-12 col-sm-3">{{ group.fee_item_title_name }}</dt>
             <dd class="col-12 col-sm-9">{{ item.name }}</dd>
 
-            <dt class="col-12 col-sm-3">{{ this.theme.fee_item_title_sessions }}</dt>
+            <dt class="col-12 col-sm-3">{{ group.fee_item_title_sessions }}</dt>
             <dd class="col-12 col-sm-9">{{ item.sessions }}</dd>
 
-            <dt class="col-12 col-sm-3">{{ this.theme.fee_item_title_price }}</dt>
+            <dt class="col-12 col-sm-3">{{ group.fee_item_title_price }}</dt>
             <dd class="col-12 col-sm-9">{{ item.price }}</dd>
           </dl>
           {% endfor %}

@@ -21,6 +21,7 @@ function onContactFormSubmit()
         // TODO use email and name from backend or theme settings
         $message->to('info@hotel-strandhus.de', 'Hotel Strandhus');
         // $message->from($values['contactMail'], $values['contactFirstname']. ' ' . $values['contactLastname']);
+        $message->replyTo($values['contactMail']);
         $message->subject("Neue Anfrage von ".$values['contactFirstname']. ' ' . $values['contactLastname']);
     };
     

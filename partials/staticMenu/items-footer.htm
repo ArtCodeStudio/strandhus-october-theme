@@ -10,9 +10,16 @@
                     {{ item.title }}
                 </span>
             {% else %}
-                <a rv-route="'{{ item.url }}'" class="nav-link" href="{{ item.url }}">
-                    {{ item.title }}
-                </a>
+                {% if item.viewBag.isExternal %}
+                    <a class="nav-link" target="_blank" href="{{ item.url }}" rel="noopener">
+                        {{ item.title }}
+                    </a>
+                {% else %}
+                    <a rv-route="'{{ item.url }}'" class="nav-link" href="{{ item.url }}">
+                        {{ item.title }}
+                    </a>
+                {% endif %}
+                
                 {% if prefetch %}
                     <link rel="router-preload" href="{{ item.url }}">
                 {% endif %}

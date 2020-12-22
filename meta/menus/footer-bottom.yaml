@@ -17,8 +17,10 @@ items:
         title: KONTAKT
         nesting: '0'
         type: static-page
+        url: null
         code: ''
         reference: kontakt
+        cmsPage: null
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -37,3 +39,12 @@ items:
             isHidden: '0'
             cssClass: 'd-none d-md-block'
             isExternal: '0'
+    -
+        title: AGB
+        type: url
+        url: /themes/strandhus/assets/agb_hotelaufnahmevertrag.pdf
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
