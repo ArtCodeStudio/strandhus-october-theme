@@ -7,6 +7,8 @@ snippetName = "Contact form"
     <div class="col-12">
       <oc-form
         rv-show-toast-on-submit-success="{'message': '{ toast.$event.detail.message }', 'delay': 20000, 'contextualClass': 'dark'}"
+        rv-show-toast-on-submit-error="{'message': '{ toast.$event.detail.message }', 'delay': 20000, 'contextualClass': 'danger'}"
+        rv-show-toast-on-validation-error="{'message': 'Ihre Nachricht konnte nicht abgeschickt werden. Bitte überprüfen Sie Ihre Eingaben und vervollständigen Sie diese ggf. vor dem Absenden.', 'delay': 20000, 'contextualClass': 'danger'}"
         disable-submit-until-change="true" october-handler="onContactFormSubmit">
         <form>
 

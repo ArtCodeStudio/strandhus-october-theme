@@ -2,9 +2,7 @@ import { Riba, coreModule } from '@ribajs/core';
 import { ready } from '@ribajs/utils/src/dom';
 import { routerModule } from '@ribajs/router';
 import { bs4Module } from '@ribajs/bs4';
-
-// BS4 Components
-import { OcFormComponent } from '@ribajs/octobercms/src/components/oc-form/oc-form.component';
+import { octobercmsModule } from '@ribajs/octobercms';
 
 // import { dataScrollPositionYBinder } from '@ribajs/extras/src/binders/data-scroll-position-y.binder';
 
@@ -25,13 +23,7 @@ export class Main {
         this.riba.module.regist(photoswipeModule);
         this.riba.module.regist(leafletModule);
         this.riba.module.regist(bs4Module);
-
-        // selected elements from modules
-        this.riba.module.regist({
-            components: {
-                OcFormComponent,
-            },
-        });
+        this.riba.module.regist(octobercmsModule);
 
         // Regist custom components
         this.riba.module.regist({
