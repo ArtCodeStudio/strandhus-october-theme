@@ -5,7 +5,7 @@ snippetName = "Contact form"
 <div class="container container-xl contact-form my-5">
   <div class="row">
     <div class="col-12">
-      <oc-form
+      <hcaptcha-oc-form hcaptcha-hl="de" hcaptcha-sitekey="94940564-c876-4550-971a-87eccace5967" hcaptcha-size="normal"
         rv-show-toast-on-submit-success="{'message': '{ toast.$event.detail.message }', 'delay': 20000, 'contextualClass': 'dark'}"
         rv-show-toast-on-submit-error="{'message': '{ toast.$event.detail.message }', 'delay': 20000, 'contextualClass': 'danger'}"
         rv-show-toast-on-validation-error="{'message': 'Ihre Nachricht konnte nicht abgeschickt werden. Bitte überprüfen Sie Ihre Eingaben und vervollständigen Sie diese ggf. vor dem Absenden.', 'delay': 20000, 'contextualClass': 'danger'}"
@@ -78,12 +78,20 @@ snippetName = "Contact form"
           {# Submit result container #}
           <div id="contactSubmitResult"></div>
 
+          <div class="h-captcha-container">
+            <p>
+              <small>Diese Seite ist durch hCaptcha geschützt. hCaptcha's
+                <a href="https://hcaptcha.com/privacy">Datenschutzerklärung</a> und
+                <a href="https://hcaptcha.com/terms">allgemeinen Geschäftsbedingungen</a> sind anzuwenden.
+              </small>
+            </p>
+          </div>
 
           {# Button #}
           <button rv-on-click="onSubmit" rv-disabled="submitDisabled" type="submit"
             class="btn btn-secondary btn-lg">Absenden</button>
         </form>
-      </oc-form>
+      </hcaptcha-oc-form>
     </div>
   </div>
 </div>
