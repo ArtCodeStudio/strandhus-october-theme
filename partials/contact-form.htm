@@ -6,7 +6,7 @@ snippetName = "Contact form"
   <div class="row">
     <div class="col-12">
       <hcaptcha-oc-form hcaptcha-hl="de" hcaptcha-sitekey="94940564-c876-4550-971a-87eccace5967" hcaptcha-size="normal"
-        rv-show-toast-on-submit-success="{'message': '{ toast.$event.detail.message }', 'delay': 20000, 'contextualClass': 'dark'}"
+        rv-show-toast-on-submit-success="{'message': '<h5>Ihre Nachricht wurde erfolgreich versendet!</h5>', 'delay': 20000, 'contextualClass': 'dark'}"
         rv-show-toast-on-submit-error="{'message': '{ toast.$event.detail.message }', 'delay': 20000, 'contextualClass': 'danger'}"
         rv-show-toast-on-validation-error="{'message': 'Ihre Nachricht konnte nicht abgeschickt werden. Bitte überprüfen Sie Ihre Eingaben und vervollständigen Sie diese ggf. vor dem Absenden.', 'delay': 20000, 'contextualClass': 'danger'}"
         disable-submit-until-change="true" october-handler="onContactFormSubmit">
@@ -60,6 +60,23 @@ snippetName = "Contact form"
               placeholder="Telefon*" required></input>
           </div>
 
+          <div class="form-group">
+            <label class="sr-only" for="contactAddress">Adresse*</label>
+            <input class="form-control form-control-lg" name="contactAddress" id="contactAddress" rows="6"
+              placeholder="Adresse*" required></input>
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="contactZIP">PLZ*</label>
+            <input class="form-control form-control-lg" name="contactZIP" id="contactZIP" rows="6"
+              placeholder="PLZ*" required></input>
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="contactCity">Wohnort*</label>
+            <input class="form-control form-control-lg" name="contactCity" id="contactCity" rows="6"
+              placeholder="Wohnort*" required></input>
+          </div>
 
           <div class="form-group contact_legal_data_protection">
             {{ this.theme.contact_legal_data_protection_content | raw }}

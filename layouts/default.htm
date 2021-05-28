@@ -9,7 +9,7 @@ default = 0
 <?php
 function onContactFormSubmit()
 {
-    $inputs = array('contactMessage', 'contactLastname', 'contactFirstname', 'contactMail', 'contactPhone', 'contactAgreement');
+    $inputs = array('contactMessage', 'contactLastname', 'contactFirstname', 'contactMail', 'contactPhone', 'contactAgreement', 'contactAddress', 'contactZIP', 'contactCity');
     foreach ($inputs as &$inputName) {
         $this->page[$inputName] = '';
         $this->page[$inputName] = input($inputName);
@@ -34,12 +34,12 @@ function onContactFormSubmit()
     
     // mail to contact sender
     Mail::send('sender', $values, $buildSenderMessage);
-    
+
     Log::info('Used contact from user: '.$values['contactFirstname'].' '.$values['contactLastname'].' ('.$values['contactMail'].')');
-    
+
 
     // TODO catch errors
-    return "Nachricht abgeschickt";
+    return 'Ihre Nachricht wurde erfolgreich versendet!';
     
 }
 ?>

@@ -7,3 +7,13 @@
   background-size: 32px;
 }
 
+.toast-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h6, .h6, h5, .h5 {
+    margin: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
