@@ -11,8 +11,8 @@
                     {% set titleClass = str_studly(item.title) | lower | replace({'/':'_'}) %}
                     <li rv-route-class-active="'{{ item.url }}'" class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}} {% if item.items %}nav-item-level-2-with-childs{% endif %}">
                         {% if not item.viewBag.isHidden %}
-                            <a rv-on-click="onItemClick" class="nav-link " href="{{ item.url }}">{{ item.title }}</a>
-                            {% if prefetch == true %}
+                            <a rv-on-click="onItemClick" class="nav-link {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+                            {% if prefetch == true and not '.pdf' in item.url %}
                                 <link rel="router-preload" href="{{ item.url }}">
                             {% endif %}
                         {% endif %}

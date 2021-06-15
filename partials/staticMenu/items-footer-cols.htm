@@ -17,7 +17,7 @@
                         <div rv-route-class-active="'{{ item.url }}'" class="nav-item {{ titleClass }}">
                             {% if not item.viewBag.isHidden %}
                                 <a rv-route="'{{ item.url }}'" class="{% if item.viewBag.cssClass %}{{ item.viewBag.cssClass }}{% else %}nav-link{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
-                                {% if prefetch %}
+                                {% if prefetch and not '.pdf' in item.url %}
                                     <link rel="router-preload" href="{{ item.url }}">
                                 {% endif %}
                             {% endif %}
@@ -35,7 +35,7 @@
                     <div class="social-icon">
                         {% for item in item.items %}
                             {% if item.code starts with 'icon-' and item.url %}
-                                <a href="{{ item.url }}" target="_blank" class="nav-item {{ titleClass }}">
+                                <a href="{{ item.url }}" target="_blank" class="nav-item {{ titleClass }} {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}">
                                     <bs4-icon class="mx-auto " color="danger"
                                         src="{{ ('assets/images/hotel-strandhus-cuxhaven-footer-social-' ~ item.code ~ '.svg') | theme }}"
                                         size="40">

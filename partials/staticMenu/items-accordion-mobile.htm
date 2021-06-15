@@ -1,10 +1,10 @@
 <bs4-accordion collapse-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" collapse-icon-size="38">
   <template  title="Mehr" >
     {% for item in items %}
-      <a class="nav-link h3 mb-1" href="{{ item.url }}">
+      <a class="nav-link h3 mb-1 {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}" href="{{ item.url }}">
         {{ item.title }}
       </a>
-      {% if prefetch %}
+      {% if prefetch and not '.pdf' in item.url %}
         <link rel="router-preload" href="{{ item.url }}">
       {% endif %}
     {% endfor %}

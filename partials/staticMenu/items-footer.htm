@@ -11,16 +11,16 @@
                 </span>
             {% else %}
                 {% if item.viewBag.isExternal %}
-                    <a class="nav-link" target="_blank" href="{{ item.url }}" rel="noopener">
+                    <a class="nav-link {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}" target="_blank" href="{{ item.url }}" rel="noopener">
                         {{ item.title }}
                     </a>
                 {% else %}
-                    <a rv-route="'{{ item.url }}'" class="nav-link" href="{{ item.url }}">
+                    <a rv-route="'{{ item.url }}'" class="nav-link {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}" href="{{ item.url }}">
                         {{ item.title }}
                     </a>
                 {% endif %}
                 
-                {% if prefetch %}
+                {% if prefetch and not '.pdf' in item.url %}
                     <link rel="router-preload" href="{{ item.url }}">
                 {% endif %}
             {% endif %}
@@ -31,7 +31,7 @@
                         <div rv-route-class-active="'{{ item.url }}'"
                             class="nav-item nav-item-level-2 {{ item.viewBag.cssClass }} {{titleClass}} {% if item.items %}nav-item-level-2-with-childs{% endif %}">
                             {% if not item.viewBag.isHidden %}
-                                <a rv-route="'{{ item.url }}'" class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
+                                <a rv-route="'{{ item.url }}'" class="nav-link {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
                             {% endif %}
                         </div>
                     {% endfor %}

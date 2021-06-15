@@ -12,10 +12,10 @@
                         {{ item.title }}
                     </span>
                 {% else %}
-                    <a rv-on-click="onItemClick" class="nav-link" href="{{ item.url }}">
+                    <a rv-on-click="onItemClick" class="nav-link {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}" href="{{ item.url }}">
                         {{ item.title }}
                     </a>
-                    {% if prefetch %}
+                    {% if prefetch and not '.pdf' in item.url %}
                         <link rel="router-preload" href="{{ item.url }}">
                     {% endif %}
                 {% endif %}
