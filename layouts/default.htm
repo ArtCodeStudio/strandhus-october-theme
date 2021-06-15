@@ -28,9 +28,15 @@ function onContactFormSubmit()
     $buildSenderMessage = function ($message) use ($values) {
         $message->to($values['contactMail'], $values['contactFirstname']. ' ' . $values['contactLastname']);
     };
-
+    $buildTesterMessage = function ($message) use ($values) {
+        $message->to('hi@artandcode.studio', 'Art+Code Studio');
+    };
     // mail to site owner
-    Mail::send('owner', $values, $buildOwnerMessage);
+    if ($this->page['contactFirstname'] == 'Tester') {
+      Mail::send('owner', $values, $buildTesterMessage);
+    } else {
+      Mail::send('owner', $values, $buildOwnerMessage);
+    }
     
     // mail to contact sender
     Mail::send('sender', $values, $buildSenderMessage);

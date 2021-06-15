@@ -47,10 +47,8 @@ export class ArtCodeCreditsComponent extends Component {
 
     protected async afterBind() {
         await super.afterBind();
-        console.log('Art+Code Credits after bind called');
         document.addEventListener('click', (e: MouseEvent) => {
             if (e.target && !this.contains(e.target as Node)) {
-                // console.log(this);
                 this.scope.popupVisible = false;
             }
         });

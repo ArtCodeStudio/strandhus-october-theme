@@ -52,7 +52,6 @@ export class HshCookiesComponent extends Component {
     }
 
     protected denyCookies() {
-        console.log('denied cookies');
         this.parentNode?.removeChild(this);
         (document as any).__defineGetter__('cookie', function () {
             return '';
