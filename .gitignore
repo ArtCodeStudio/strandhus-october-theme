@@ -61,7 +61,6 @@ typings/
 .next
 
 # Yarn
-yarn.lock
 .pnp.js
 .yarn/cache/
 .yarn/unplugged/

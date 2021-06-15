@@ -1,5 +1,5 @@
 import type { Pjax } from '@ribajs/router';
-import { isAbsoluteUrl, isInternalUrl } from '@ribajs/utils/src/url';
+import { isAbsoluteUrl, isInternalUrl } from '@ribajs/utils';
 
 import { Bs4NavbarComponent } from '@ribajs/bs4/src/components/bs4-navbar/bs4-navbar.component';
 
@@ -21,12 +21,11 @@ export class HshNavbarComponent extends Bs4NavbarComponent {
         isCollapsed: true,
         collapseSelector: '.navbar-collapse',
         animated: true,
-        onItemClick: this.onItemClick,
+        onItemClick: this.onItemClick.bind(this),
     };
 
     constructor() {
         super();
-        // console.debug('constructor', this);
     }
 
     public onItemClick(event?: Event): void {
