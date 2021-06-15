@@ -10,7 +10,7 @@ import { jqueryModule } from '@ribajs/jquery';
 import { photoswipeModule } from '@ribajs/photoswipe';
 import { leafletModule } from '@ribajs/leaflet-map';
 
-// import * as CustomBinders from './binders';
+import * as CustomBinders from './binders';
 import * as CustomComponents from './components';
 
 export class Main {
@@ -26,10 +26,8 @@ export class Main {
         this.riba.module.regist(octobercmsModule);
 
         // Regist custom components
-        this.riba.module.component.regists({
-            components: CustomComponents,
-            // binders: CustomBinders,
-        });
+        this.riba.module.component.regists(CustomComponents);
+        this.riba.module.binder.regists(CustomBinders);
 
         this.riba.bind(document.body, window.model || {});
     }
