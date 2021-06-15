@@ -3,7 +3,7 @@ import { isAbsoluteUrl, isInternalUrl } from '@ribajs/utils/src/url';
 import { Pjax } from '@ribajs/router';
 
 import { Bs4SidebarComponent } from '@ribajs/bs4/src/components/bs4-sidebar/bs4-sidebar.component';
-import { EventDispatcher } from '@ribajs/core';
+import { EventDispatcher } from '@ribajs/events';
 
 // import { CollapseService } from '@ribajs/bs4/src/services/collapse.service';
 
@@ -23,6 +23,10 @@ interface Scope {
      * The current state of the sidebar, can be `'hidden'`, `'side-left'`, `'side-right'`, `'overlay-left'` or `'overlay-right'`
      */
     state: State;
+    /**
+     * The old state of the sidebar, can be `'hidden'`, `'side-left'`, `'side-right'`, `'overlay-left'` or `'overlay-right'`
+     */
+    oldState: State;
     /**
      * The 'id' is required to react to events of the `bs4-toggle-button`, the `target-id` attribute of the `bs4-toggle-button` must be identical to this `id`
      */
@@ -100,10 +104,11 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
         ];
     }
 
-    protected scope: Scope = {
+    public scope: Scope = {
         // template properties
         containerSelector: undefined,
         state: 'hidden',
+        oldState: 'hidden',
         id: undefined,
         width: '100vw',
 
@@ -124,8 +129,8 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
         onItemClick: this.onItemClick,
     };
 
-    constructor(element?: HTMLElement) {
-        super(element);
+    constructor() {
+        super();
     }
 
     public onItemClick(event?: Event): void {
@@ -152,7 +157,7 @@ export class HshSidebarComponent extends Bs4SidebarComponent {
         super.connectedCallback();
     }
 
-    protected async beforeBind(): Promise<void> {
+    protected async beforeBind() {
         return super.beforeBind();
     }
 

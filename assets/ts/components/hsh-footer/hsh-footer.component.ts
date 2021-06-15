@@ -9,10 +9,10 @@ export class HshFooterComponent extends Component {
         return [];
     }
 
-    protected scope = {};
+    public scope = {};
 
-    constructor(element?: HTMLElement) {
-        super(element);
+    constructor() {
+        super();
     }
 
     protected connectedCallback() {

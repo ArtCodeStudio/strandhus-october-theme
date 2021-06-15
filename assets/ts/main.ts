@@ -26,7 +26,7 @@ export class Main {
         this.riba.module.regist(octobercmsModule);
 
         // Regist custom components
-        this.riba.module.regist({
+        this.riba.module.component.regists({
             components: CustomComponents,
             // binders: CustomBinders,
         });

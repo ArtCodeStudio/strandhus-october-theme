@@ -3,6 +3,6 @@
   display: none !important;
 }
 
-[rv-show] {
-  display: none;
+[csr-rv-show], [rv-show], [csr-rv-hide], [rv-hide], [csr-rv-if], [rv-if], [csr-rv-each], [rv-each] {
+  display: none !important;
 }
