@@ -32,50 +32,50 @@ snippetName = "Contact form"
           <div class="form-group">
             <label class="sr-only" for="contactMessage">Nachricht*</label>
             <textarea class="form-control form-control-lg" name="contactMessage" id="contactMessage" rows="6"
-              placeholder="Nachricht*" required></textarea>
+              placeholder="Nachricht*" required minlength="10"></textarea>
           </div>
 
           {# Kontaktdaten #}
           <div class="form-group">
             <label class="sr-only" for="contactLastname" required>Nachname*</label>
             <input class="form-control form-control-lg" name="contactLastname" id="contactLastname" rows="6"
-              placeholder="Nachname*"></input>
+              placeholder="Nachname*" required minlength="2" pattern="[\u00C0-\u017Fa-zA-Z-'\p{L}\p{M}]+(?:[\s-][\u00C0-\u017Fa-zA-Z-'\p{L}\p{M} ]+)*"></input>
           </div>
 
           <div class="form-group">
             <label class="sr-only" for="contactFirstname" required>Vorname*</label>
             <input class="form-control form-control-lg" name="contactFirstname" id="contactFirstname" rows="6"
-              placeholder="Vorname*"></input>
+              placeholder="Vorname*" required minlength="2" pattern="[\u00C0-\u017Fa-zA-Z-'\p{L}\p{M}]+(?:[\s-][\u00C0-\u017Fa-zA-Z-'\p{L}\p{M} ]+)*"></input>
           </div>
 
           <div class="form-group">
             <label class="sr-only" for="contactMail">E-Mail*</label>
-            <input class="form-control form-control-lg" name="contactMail" id="contactMail" rows="6"
+            <input class="form-control form-control-lg" name="contactMail" id="contactMail" type="email" rows="6"
               placeholder="E-Mail*" required></input>
           </div>
 
           <div class="form-group">
             <label class="sr-only" for="contactPhone">Telefon*</label>
             <input class="form-control form-control-lg" name="contactPhone" id="contactPhone" rows="6"
-              placeholder="Telefon*" required></input>
+              placeholder="Telefon*" required pattern="((\+|00)[1-9]{2,3}|0)?[0-9 ]*" minlength="6"></input>
           </div>
 
           <div class="form-group">
             <label class="sr-only" for="contactAddress">Adresse*</label>
             <input class="form-control form-control-lg" name="contactAddress" id="contactAddress" rows="6"
-              placeholder="Adresse*" required></input>
+              placeholder="Adresse*" pattern="[\u00C0-\u017Fa-zA-Z-'\p{L}\p{M}]+(?:[\s-][\u00C0-\u017Fa-zA-Z-'\p{L}\p{M} 0-9]+)*" required></input>
           </div>
 
           <div class="form-group">
             <label class="sr-only" for="contactZIP">PLZ*</label>
             <input class="form-control form-control-lg" name="contactZIP" id="contactZIP" rows="6"
-              placeholder="PLZ*" required></input>
+              placeholder="PLZ*" pattern="[0-9]{5}" required></input>
           </div>
 
           <div class="form-group">
             <label class="sr-only" for="contactCity">Wohnort*</label>
             <input class="form-control form-control-lg" name="contactCity" id="contactCity" rows="6"
-              placeholder="Wohnort*" required></input>
+              placeholder="Wohnort*" pattern="[\u00C0-\u017Fa-zA-Z-'\p{L}\p{M}]+(?:[\s-][\u00C0-\u017Fa-zA-Z-'\p{L}\p{M}] ]+)*" required></input>
           </div>
 
           <div class="form-group contact_legal_data_protection">
