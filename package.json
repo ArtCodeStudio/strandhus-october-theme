@@ -11,11 +11,12 @@
         "test": "npm run lint",
         "build": "concurrently \"npm:build:prod:*\"",
         "build:prod:ts": "npm run lint && npm run webpack",
+        "build:prod:scss": "sass --style=compressed --no-source-map assets/scss/theme.scss assets/css/theme.css",
         "build:dev": "concurrently \"npm:build:dev:*\"",
         "build:dev:ts": "npm run lint && npm run webpack:dev",
+        "build:dev:scss": "sass assets/scss/theme.scss assets/css/theme.css",
         "watch": "concurrently \"npm:watch:*\"",
         "watch:ts": "npm run webpack:dev -- --watch",
-        "packages:npm:link": "npm link @ribajs/core @ribajs/bs4 @ribajs/router @ribajs/iconset @ribajs/extras @ribajs/jquery @ribajs/pdf",
         "packages:upgrade": "yarn upgrade-interactive"
     },
     "repository": {
@@ -80,6 +81,7 @@
         "inspectpack": "^4.7.1",
         "prettier": "^2.4.1",
         "pug-loader": "^2.4.0",
+        "sass": "^1.43.4",
         "ts-loader": "^9.2.6",
         "typescript": "^4.4.4",
         "webpack": "^5.63.0",
@@ -101,6 +103,8 @@
         "bootstrap": "^4.6.1"
     },
     "workspaces": [
+        "tools/*",
+        "packages/node-mjpeg-proxy",
         "packages/riba/packages/*",
         "packages/riba/backend/*",
         "packages/riba/infra/*",
@@ -163,7 +167,7 @@
         "@ribajs/demo-vue": "workspace:*",
         "@ribajs/webpack-serve": "workspace:*",
         "@types/jquery": "^3.5.8",
-        "bootstrap": "4.5.3"
+        "bootstrap": "^4.6.1"
     },
     "packageManager": "yarn@3.1.0"
 }

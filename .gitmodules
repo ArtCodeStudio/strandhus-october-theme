@@ -1,3 +1,6 @@
 [submodule "packages/riba"]
 	path = packages/riba
 	url = https://github.com/ribajs/riba.git
+[submodule "packages/node-mjpeg-proxy"]
+	path = packages/node-mjpeg-proxy
+	url = https://github.com/ArtCodeStudio/node-mjpeg-proxy.git
