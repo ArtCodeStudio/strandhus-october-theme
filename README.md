@@ -1,4 +1,4 @@
-# hypnose-october-theme
+# Strandhus OctoberCMS Theme
 
 This is a OctoberCMS v1.x Theme build for [Hotel Strandhus](https://hotel-strandhus.de/).
 
