@@ -2,6 +2,8 @@
 
 This is a OctoberCMS v1.x Theme build for [Hotel Strandhus](https://hotel-strandhus.de/).
 
+![Screenshot](https://user-images.githubusercontent.com/1073989/141113748-f2c4b07d-373f-4133-bf9b-8fac2c1ad8b2.png)
+
 ## Build
 
 Install Node.js with [NVM](https://github.com/nvm-sh/nvm).
