@@ -17,13 +17,13 @@ export class Main {
     private riba = new Riba();
 
     constructor() {
-        this.riba.module.regist(coreModule);
-        this.riba.module.regist(jqueryModule);
-        this.riba.module.regist(routerModule);
-        this.riba.module.regist(photoswipeModule);
-        this.riba.module.regist(leafletModule);
-        this.riba.module.regist(bs4Module);
-        this.riba.module.regist(octobercmsModule);
+        this.riba.module.regist(coreModule.init());
+        this.riba.module.regist(jqueryModule.init());
+        this.riba.module.regist(routerModule.init());
+        this.riba.module.regist(photoswipeModule.init());
+        this.riba.module.regist(leafletModule.init());
+        this.riba.module.regist(bs4Module.init());
+        this.riba.module.regist(octobercmsModule.init());
 
         // Regist custom components
         this.riba.module.component.regists(CustomComponents);
