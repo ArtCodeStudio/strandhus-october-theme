@@ -15,6 +15,12 @@ git clone --recurse-submodules -j8 https://github.com/ArtCodeStudio/strandhus-oc
 cd strandhus-october-theme
 ```
 
+If you have already cloned out this repository without the submodules, you can also clone the submodules later:
+
+```bash
+git submodule update --init
+```
+
 After this you need to install the dependencies:
 
 ```bash
