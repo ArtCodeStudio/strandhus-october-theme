@@ -4,8 +4,6 @@ import { routerModule } from '@ribajs/router';
 import { bs4Module } from '@ribajs/bs4';
 import { octobercmsModule } from '@ribajs/octobercms';
 
-// import { dataScrollPositionYBinder } from '@ribajs/extras/src/binders/data-scroll-position-y.binder';
-
 import { jqueryModule } from '@ribajs/jquery';
 import { photoswipeModule } from '@ribajs/photoswipe';
 import { leafletModule } from '@ribajs/leaflet-map';
