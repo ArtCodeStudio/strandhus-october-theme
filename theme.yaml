@@ -6,202 +6,6 @@ code: strandhus
 form:
     tabs:
         fields:
-            bs4_grayscale_colors:
-                label: 'Grayscale Colors'
-                type: section
-                tab: Colors
-            bs4_white:
-                type: colorpicker
-                label: white
-                default: '#fff'
-                tab: Colors
-                assetVar: white
-            bs4_gray_100:
-                type: colorpicker
-                label: gray-100
-                default: '#f8f9fa'
-                tab: Colors
-                assetVar: gray-100
-            bs4_gray_200:
-                type: colorpicker
-                label: gray-200
-                default: '#e9ecef'
-                tab: Colors
-                assetVar: gray-200
-            bs4_gray_300:
-                type: colorpicker
-                label: gray-300
-                default: '#dee2e6'
-                tab: Colors
-                assetVar: gray-300
-            bs4_gray_400:
-                type: colorpicker
-                label: gray-400
-                default: '#ced4da'
-                tab: Colors
-                assetVar: gray-400
-            bs4_gray_500:
-                type: colorpicker
-                label: gray-500
-                default: '#adb5bd'
-                tab: Colors
-                assetVar: gray-500
-            bs4_gray_600:
-                type: colorpicker
-                label: gray-600
-                default: '#6c757d'
-                tab: Colors
-                assetVar: gray-600
-            bs4_gray_700:
-                type: colorpicker
-                label: gray-700
-                default: '#495057'
-                tab: Colors
-                assetVar: gray-700
-            bs4_gray_800:
-                type: colorpicker
-                label: gray-800
-                default: '#343a40'
-                tab: Colors
-                assetVar: gray-800
-            bs4_gray_900:
-                type: colorpicker
-                label: gray-900
-                default: '#212529'
-                tab: Colors
-                assetVar: gray-900
-            bs4_black:
-                type: colorpicker
-                label: black
-                default: '#000'
-                tab: Colors
-                assetVar: black
-            bs4_general_colors:
-                label: 'General Colors'
-                type: section
-                tab: Colors
-            bs4_red:
-                type: colorpicker
-                label: red
-                default: '#d9534f'
-                tab: Colors
-                assetVar: red
-            bs4_orange:
-                type: colorpicker
-                label: orange
-                default: '#f0ad4e'
-                tab: Colors
-                assetVar: orange
-            bs4_yellow:
-                type: colorpicker
-                label: yellow
-                default: '#ffd500'
-                tab: Colors
-                assetVar: yellow
-            bs4_green:
-                type: colorpicker
-                label: green
-                default: '#5cb85c'
-                tab: Colors
-                assetVar: green
-            bs4_blue:
-                type: colorpicker
-                label: blue
-                default: '#0275d8'
-                tab: Colors
-                assetVar: blue
-            bs4_teal:
-                type: colorpicker
-                label: teal
-                default: '#5bc0de'
-                tab: Colors
-                assetVar: teal
-            bs4_pink:
-                type: colorpicker
-                label: pink
-                default: '#ff5b77'
-                tab: Colors
-                assetVar: pink
-            bs4_purple:
-                type: colorpicker
-                label: purple
-                default: '#613d7c'
-                tab: Colors
-                assetVar: purple
-            bs4_brand_colors:
-                label: 'Brand Colors'
-                type: section
-                tab: Colors
-            bs4_primary:
-                type: colorpicker
-                label: primary
-                default: '#D81F59'
-                tab: Colors
-                assetVar: primary
-            bs4_secondary:
-                type: colorpicker
-                label: secondary
-                default: '#C49499'
-                tab: Colors
-                assetVar: secondary
-            tertiary:
-                type: colorpicker
-                label: tertiary
-                default: '#D5C1C3'
-                tab: Colors
-                assetVar: tertiary
-            bs4_success:
-                type: text
-                label: success
-                default: $green
-                tab: Colors
-                assetVar: success
-            bs4_info:
-                type: text
-                label: info
-                default: $cyan
-                tab: Colors
-                assetVar: info
-            bs4_warning:
-                type: text
-                label: warning
-                default: $yellow
-                tab: Colors
-                assetVar: warning
-            bs4_danger:
-                type: text
-                label: danger
-                default: $red
-                tab: Colors
-                assetVar: danger
-            bs4_light:
-                type: text
-                label: light
-                default: $gray-100
-                tab: Colors
-                assetVar: light
-            bs4_dark:
-                type: text
-                label: dark
-                default: $gray-800
-                tab: Colors
-                assetVar: dark
-            bs4_body_colors:
-                label: 'Body Colors'
-                type: section
-                tab: Colors
-            bs4_body_color:
-                type: colorpicker
-                label: body-color
-                default: '#9B666B'
-                tab: Colors
-                assetVar: body-color
-            bs4_body_bg:
-                type: colorpicker
-                label: body-bg
-                default: '#FCF6F5'
-                tab: Colors
-                assetVar: body-bg
             site_name:
                 label: Name
                 type: text
@@ -623,3 +427,14 @@ form:
                             label: 'Pdf file'
                             type: mediafinder
                             mode: file
+require:
+    - October.Drivers
+    - Renatio.SeoManager
+    - Samuell.ContentEditor
+    - RainLab.Sitemap
+    - RainLab.Pages
+    - RainLab.Translate
+    - Xeor.ContentType
+    - Romanov.ClearCacheWidget
+    - filipac.ThemePreview
+    - ABWebDevelopers.ImageResize
