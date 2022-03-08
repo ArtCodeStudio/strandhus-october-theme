@@ -2,15 +2,15 @@ bs4-slideshow {
     .slideshow-controls {
         width: 50% !important;
         justify-content: flex-end !important;
-        padding-bottom: 25px;
+        bottom: 30px !important;
 
         &.slideshow-control-next {
-            cursor: e-resize;
+            cursor: e-resize !important;
             align-items: flex-end;
         }
 
         &.slideshow-control-prev {
-            cursor: w-resize;
+            cursor: w-resize !important;
             align-items: flex-start;
         }
     }
