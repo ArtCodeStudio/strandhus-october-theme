@@ -1,5 +1,5 @@
-import { zip } from "./zip";
+import { zip } from './zip';
 
 export const plugins = (zipToFile: string) => {
-  return zip("../../plugins", zipToFile);
+    return zip('../../plugins', zipToFile);
 };
