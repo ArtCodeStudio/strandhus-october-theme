@@ -65,3 +65,6 @@ typings/
 .yarn/cache/
 .yarn/unplugged/
 .yarn/build-state.yml
+
+# Backups
+/backups
