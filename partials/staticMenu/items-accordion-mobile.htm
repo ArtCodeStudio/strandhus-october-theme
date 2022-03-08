@@ -1,22 +1,24 @@
-<bs4-accordion collapse-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" collapse-icon-size="38">
-  <template  title="Mehr" >
+<bs4-accordion collapse-icon-src="{{ 'assets/iconset/svg/icon_plus.svg' | theme }}" collapse-icon-size="38">
+  <template title="Mehr">
     {% for item in items %}
-      <a class="nav-link h3 mb-1 {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}" href="{{ item.url }}">
-        {{ item.title }}
-      </a>
-      {% if prefetch and not '.pdf' in item.url %}
-        <link rel="router-preload" href="{{ item.url }}">
-      {% endif %}
+    <a class="nav-link h3 mb-1 {% if '.pdf' in item.url %}no-barba no-barba-prefetch{% endif %}" href="{{ item.url }}">
+      {{ item.title }}
+    </a>
+    {% if prefetch and not '.pdf' in item.url %}
+    <link rel="router-preload" href="{{ item.url }}">
+    {% endif %}
     {% endfor %}
   </template>
   <div class="accordion">
     <div rv-each-item="items">
-      <button type="button" class="btn btn-link m-auto d-flex" rv-on-click="toggle | args item %item%" rv-aria-expanded="item.show">
-        <bs4-icon rv-show="collapseIconSrc" rv-src="collapseIconSrc" rv-size="collapseIconSize" rv-direction="item.iconDirection | replace 'up' 'down-left'"></bs4-icon>
+      <button type="button" class="btn btn-link m-auto d-flex" rv-on-click="toggle | args item %item%"
+        rv-aria-expanded="item.show">
+        <bs4-icon rv-show="collapseIconSrc" rv-src="collapseIconSrc" rv-size="collapseIconSize"
+          rv-direction="item.iconDirection | replace 'up' 'down-left'"></bs4-icon>
       </button>
       <div class="collapse" rv-data-index="%item%">
         <div class="nav-item nav-item-level-1 flex-column relax" rv-template="item.content"></div>
       </div>
     </div>
-  </div>  
+  </div>
 </bs4-accordion>

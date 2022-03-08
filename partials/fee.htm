@@ -4,9 +4,9 @@ snippetName = "Fee"
 ==
 <div class="partial-fee">
   <div class="container container-xl">
-    <bs4-accordion collapse-icon-src="{{ 'assets/iconset/arrow_carrot.svg' | theme }}" show-only-one="false"
+    <bs4-accordion collapse-icon-src="{{ 'assets/iconset/svg/arrow_carrot.svg' | theme }}" show-only-one="false"
       collapse-icon-size="38">
-      {% for group in this.theme.fee_groups  %}
+      {% for group in this.theme.fee_groups %}
       <template title="{{ group.title }}">
         {% if group.items | length > 0 %}
         <div class="table-responsive d-none d-sm-block">
@@ -19,7 +19,7 @@ snippetName = "Fee"
               </tr>
             </thead>
             <tbody>
-              {% for item in group.items  %}
+              {% for item in group.items %}
               <tr>
                 <td scope="row">{{ item.name }}</td>
                 <td>{{ item.sessions }}</td>
@@ -30,7 +30,7 @@ snippetName = "Fee"
           </table>
         </div>
         <div class="d-block d-sm-none">
-          {% for item in group.items  %}
+          {% for item in group.items %}
           <dl class="row">
             <dt class="col-12 col-sm-3">{{ group.fee_item_title_name }}</dt>
             <dd class="col-12 col-sm-9">{{ item.name }}</dd>

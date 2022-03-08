@@ -1,61 +1,64 @@
 [viewBag]
 ==
 {#
-    STYLES "Outdated Browser"
-    Version:    1.1.2 - 2015
-    author:     Burocratik
-    website:    http://www.burocratik.com
-    github:     https://github.com/outdatedbrowser/outdated-browser
-    
-    Customized version by Art+Code Studio
-    website:    https://artandcode.studio/
+STYLES "Outdated Browser"
+Version: 1.1.2 - 2015
+author: Burocratik
+website: http://www.burocratik.com
+github: https://github.com/outdatedbrowser/outdated-browser
+
+Customized version by Art+Code Studio
+website: https://artandcode.studio/
 #}
 <style>
     .outdated-modal {
         background-color: #fff;
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0, 0, 0, 0.8);
     }
+
     .outdated-modal .modal-content {
         display: block;
         max-width: 510px;
         margin: auto;
         margin-top: 30vh;
     }
+
     html.browser-ie .d-browser-ie-block {
         display: block !important;
     }
+
     html.browser-ie .d-browser-ie-none {
         display: none !important;
     }
 </style>
 
-<script>
+<script rv-block>
     var outdatedBrowserLoaded = false;
-    var outdatedBrowser = function(options) {
-        
+    var outdatedBrowser = function (options) {
+
         if (outdatedBrowserLoaded) {
             return;
         }
-        
+
         outdatedBrowserLoaded = true;
-    
+
         // Default options
         if (!options || !options.lowerThan) {
             options.lowerThan = 'transform';
         }
         cssProps = options.lowerThan;
-    
+
         // Variable definition (before ajax)
         var outdated = document.getElementById("outdated");
-    
+
         // Define opacity and fadeIn / fadeOut functions
         var done = true;
-    
+
         function function_opacity(opacity_value) {
             outdated.style.opacity = opacity_value / 100;
             outdated.style.filter = 'alpha(opacity=' + opacity_value + ')';
         }
-    
+
         function function_fade_in(opacity_value) {
             function_opacity(opacity_value);
             if (opacity_value == 1) {
@@ -65,19 +68,19 @@
                 done = true;
             }
         }
-    
-        var supports = ( function() {
+
+        var supports = (function () {
             var div = document.createElement('div');
             var vendors = 'Khtml Ms O Moz Webkit'.split(' ');
             var len = vendors.length;
-    
-            return function(prop) {
+
+            return function (prop) {
                 if (prop in div.style) return true;
-    
-                prop = prop.replace(/^[a-z]/, function(val) {
+
+                prop = prop.replace(/^[a-z]/, function (val) {
                     return val.toUpperCase();
                 });
-    
+
                 while (len--) {
                     if (vendors[len] + prop in div.style) {
                         return true;
@@ -85,16 +88,16 @@
                 }
                 return false;
             };
-        } )();
-    
+        })();
+
         var validBrowser = true;
-    
+
         // check by css3 property (transform=default)
         for (var index = 0; index < cssProps.length && validBrowser; index++) {
             var cssProp = cssProps[index];
             validBrowser = supports('' + cssProp + '');
         }
-    
+
         if (!validBrowser) {
             if (done && outdated.style.opacity !== '1') {
                 done = false;
@@ -110,7 +113,7 @@
             return;
         }
     };
-    
+
     // Plain Javascript
     // event listener: DOM ready
     function addLoadEvent(func) {
@@ -118,7 +121,7 @@
         if (typeof window.onload != 'function') {
             window.onload = func;
         } else {
-            window.onload = function() {
+            window.onload = function () {
                 if (oldonload) {
                     oldonload();
                 }
@@ -130,7 +133,7 @@
         if (typeof window.onerror != 'function') {
             window.onerror = func;
         } else {
-            window.onerror = function() {
+            window.onerror = function () {
                 if (oldonerror) {
                     oldonerror();
                 }
@@ -138,23 +141,23 @@
             }
         }
     }
-    
+
     /**
      * Test if the current borwser is IE
      */
     function isIE() {
-        return (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1));
+        return (window.navigator.appName == 'Microsoft Internet Explorer' || !!window.navigator.userAgent.match(/Trident/) || !!window.navigator.userAgent.match(/rv:11/) || ($ && $.browser && $.browser.msie == 1));
     }
-    
+
     function addBrowserClassToHtml() {
-        if(isIE()) {
-            var htmlElement = document.getElementsByTagName( 'html' )[0];
-            htmlElement.setAttribute( 'class', 'browser-ie' );
+        if (isIE()) {
+            var htmlElement = document.getElementsByTagName('html')[0];
+            htmlElement.setAttribute('class', 'browser-ie');
         }
     }
-    
+
     //call plugin function after DOM ready
-    addLoadEvent(function(){
+    addLoadEvent(function () {
         addBrowserClassToHtml();
         outdatedBrowser({
             lowerThan: ['objectFit', 'flexDirection']
@@ -183,14 +186,18 @@
                         Bitte aktualisieren Sie Ihren Browser, um diese Webanwendung korrekt darzustellen.
                     </p>
                     <p class="d-none d-browser-ie-block m-0">
-                        Sie verwenden den Microsoft Internet Explorer, dieser wird von Microsoft nicht mehr weiterentwickelt.
-                        Bitte aktualisieren Sie auf Microsoft Edge oder einen anderen zeitgemäßen Browser, um diese Webanwendung korrekt darzustellen.
+                        Sie verwenden den Microsoft Internet Explorer, dieser wird von Microsoft nicht mehr
+                        weiterentwickelt.
+                        Bitte aktualisieren Sie auf Microsoft Edge oder einen anderen zeitgemäßen Browser, um diese
+                        Webanwendung korrekt darzustellen.
                     </p>
                 </div>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-animated-underline-primary d-none d-en-block" href="https://outdatedbrowser.com/en">Update my browser now </a>
-                <a class="btn btn-animated-underline-primary d-none d-de-block" href="https://outdatedbrowser.com/de">Jetzt aktualisieren </a>
+                <a class="btn btn-animated-underline-primary d-none d-en-block"
+                    href="https://outdatedbrowser.com/en">Update my browser now </a>
+                <a class="btn btn-animated-underline-primary d-none d-de-block"
+                    href="https://outdatedbrowser.com/de">Jetzt aktualisieren </a>
             </div>
         </div>
     </div>

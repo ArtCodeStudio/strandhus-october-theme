@@ -12,10 +12,10 @@ snippetProperties[name][options][] = ""
 {% set slideshow = undefined %}
 
 {% for curSlideshow in this.theme.beside_text_slideshows %}
-    {% set curName = curSlideshow.name | lower | replace({' ': ''}) %}
-    {% if curName == findName %}
-        {% set slideshow = curSlideshow %}
-    {% endif %}
+{% set curName = curSlideshow.name | lower | replace({' ': ''}) %}
+{% if curName == findName %}
+{% set slideshow = curSlideshow %}
+{% endif %}
 {% endfor %}
 
 
@@ -40,29 +40,26 @@ snippetProperties[name][options][] = ""
                 </h3>
             </div>
 
-            <bs4-slideshow controls="false" {% if slideshow.images|length <= 1 %} indicators="false" lg-controls="false" {% else %} lg-controls="true" {% endif %} sticky="false"
-                autoplay="false" draggable="true" lg-draggable="false"
-                control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
-                control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
-                indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
-                indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}">
+            <bs4-slideshow controls="false" {% if slideshow.images|length <=1 %} indicators="false" lg-controls="false"
+                {% else %} lg-controls="true" {% endif %} sticky="false" autoplay="false" draggable="true"
+                lg-draggable="false" control-prev-icon-src="{{ 'assets/iconset/svg/arrow_carrot_thin.svg' | theme }}"
+                control-next-icon-src="{{ 'assets/iconset/svg/arrow_carrot_thin.svg' | theme }}"
+                indicator-inactive-icon-src="{{ 'assets/iconset/svg/icon_circle-empty.svg' | theme }}"
+                indicator-active-icon-src="{{ 'assets/iconset/svg/icon_circle-selected.svg' | theme }}">
                 <div class="slideshow-inner">
                     {% for slide in slideshow.images %}
-                        {% set isExtern = false %}
-                        {% if slide.extern_image is defined and slide.extern_image is not empty %}
-                            {% set isExtern = true %}
-                            {% set image = slide.extern_image %}
-                        {% endif %}
-                        {% if slide.image is defined and slide.image is not empty %}
-                            {% set isExtern = false %}
-                            {% set image = slide.image | media %}
-                        {% endif %}
-                        <div class="slide col-12 embed-responsive embed-responsive-2by3 lazy">
-                            <img
-                                lazyload="lazy"
-                                class="embed-responsive-item"
-                                {% if isExtern == false and this.theme.third_party_image_resizer == true %}
-                                    srcset="
+                    {% set isExtern = false %}
+                    {% if slide.extern_image is defined and slide.extern_image is not empty %}
+                    {% set isExtern = true %}
+                    {% set image = slide.extern_image %}
+                    {% endif %}
+                    {% if slide.image is defined and slide.image is not empty %}
+                    {% set isExtern = false %}
+                    {% set image = slide.image | media %}
+                    {% endif %}
+                    <div class="slide col-12 embed-responsive embed-responsive-2by3 lazy">
+                        <img lazyload="lazy" class="embed-responsive-item" {% if isExtern==false and
+                            this.theme.third_party_image_resizer==true %} srcset="
                                     {{ image | resize(200, null, { mode: 'cover' }) }} 200w,
                                     {{ image | resize(400, null, { mode: 'cover' }) }} 400w,
                                     {{ image | resize(600, null, { mode: 'cover' }) }} 600w,
@@ -73,17 +70,12 @@ snippetProperties[name][options][] = ""
                                     {{ image | resize(1600, null, { mode: 'cover' }) }} 1600w,
                                     {{ image | resize(1800, null, { mode: 'cover' }) }} 1800w,
                                     {{ image | resize(2000, null, { mode: 'cover' }) }} 2000w
-                                    "
-                                    sizes="
+                                    " sizes="
                                     (min-width: 1510px) 684px,
                                     (min-width: 992px) 50vw,
                                     100vw
-                                    "
-                                {% endif %}
-                                src="{{ image }}"
-                                alt="{{ slide.alt }}"
-                            >
-                        </div>
+                                    " {% endif %} src="{{ image }}" alt="{{ slide.alt }}">
+                    </div>
                     {% endfor %}
                 </div>
             </bs4-slideshow>
@@ -100,7 +92,8 @@ snippetProperties[name][options][] = ""
                 </h3>
             </div>
             {{ slideshow.content | raw }}
-            <bs4-button class="btn btn-animated-underline-primary" rv-route="'{{ button_url }}'">{{ slideshow.button_label }}</bs4-button>
+            <bs4-button class="btn btn-animated-underline-primary" rv-route="'{{ button_url }}'">{{
+                slideshow.button_label }}</bs4-button>
         </div>
 
     </div>

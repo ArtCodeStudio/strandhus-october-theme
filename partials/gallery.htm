@@ -130,8 +130,9 @@ function gcd($pNumber1, $pNumber2) {
 }
 
 function onStart() {
-    
-    $mediaPath = base_path() . Config::get('cms.storage.media.path');
+
+    // https://octobercms.com/forum/post/howto-get-the-url-of-the-media-manager-path
+    $mediaPath = base_path() . Config::get('cms.storage.media.path', Config::get('system.storage.media.path'));
     $folderName = trim($this['folderName']);
     $fullPath = $mediaPath;
 
@@ -190,7 +191,7 @@ function onStart() {
 ?>
 ==
 
-<style>
+<style rv-block>
     {%- for ratioName, ratio in ratios -%}
         .embed-responsive-{{ ratioName }}:before {
             padding-top: {{ ratio }}%;
@@ -201,22 +202,30 @@ function onStart() {
 <div class="container-fluid mt-{{ marginTop }} mb-{{ marginBottom }} pt-{{ paddingTop }} pb-{{ paddingBottom }}">
     <div class="row mx-{{ marginLeftRight }}">
         {% if error %}
-            <div class="col-12 pt-5">
-                <div class="alert alert-danger" role="alert">
-                    {{ error }}
-                </div>
+        <div class="col-12 pt-5">
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
             </div>
+        </div>
         {% endif %}
 
         <div class="col-12">
-            <rv-photoswipe open-image-on-click="false" control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}" control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}" control-close-icon-src="{{ 'assets/iconset/icon_close.svg' | theme }}" control-zoom-in-icon-src="{{ 'assets/iconset/icon_plus.svg' | theme }}" control-zoom-out-icon-src="{{ 'assets/iconset/icon_minus.svg' | theme }}" control-fullscreen-on-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-on.svg' | theme }}" control-fullscreen-off-icon-src="{{ 'assets/iconset/icon_toggle-fullscreen-off.svg' | theme }}" control-share-icon-src="{{ 'assets/iconset/social_share.svg' | theme }}" control-share-icon-show="true">
+            <rv-photoswipe open-image-on-click="false"
+                control-next-icon-src="{{ 'assets/iconset/svg/arrow_carrot_thin.svg' | theme }}"
+                control-prev-icon-src="{{ 'assets/iconset/svg/arrow_carrot_thin.svg' | theme }}"
+                control-close-icon-src="{{ 'assets/iconset/svg/icon_close.svg' | theme }}"
+                control-zoom-in-icon-src="{{ 'assets/iconset/svg/icon_plus.svg' | theme }}"
+                control-zoom-out-icon-src="{{ 'assets/iconset/svg/icon_minus.svg' | theme }}"
+                control-fullscreen-on-icon-src="{{ 'assets/iconset/svg/icon_toggle-fullscreen-on.svg' | theme }}"
+                control-fullscreen-off-icon-src="{{ 'assets/iconset/svg/icon_toggle-fullscreen-off.svg' | theme }}"
+                control-share-icon-src="{{ 'assets/iconset/svg/social_share.svg' | theme }}"
+                control-share-icon-show="true">
                 <div class="card-columns">
                     {% for image in images %}
-                        <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy cursor-pointer" id="{{ image.handle }}">
-                            <img class="img-fluid embed-responsive-item" 
-                                rv-on-click="openByIndex | args {{ loop.index0 }}"
-                                {% if this.theme.third_party_image_resizer == true %}
-                                    srcset="
+                    <div class="card embed-responsive embed-responsive-{{ image.ratioName }} lazy cursor-pointer"
+                        id="{{ image.handle }}">
+                        <img class="img-fluid embed-responsive-item" rv-on-click="openByIndex | args {{ loop.index0 }}"
+                            {% if this.theme.third_party_image_resizer==true %} srcset="
                                     {{ image.src | media | resize(200, null, { mode: 'cover' }) }} 200w,
                                     {{ image.src | media | resize(300, null, { mode: 'cover' }) }} 300w,
                                     {{ image.src | media | resize(400, null, { mode: 'cover' }) }} 400w,
@@ -224,22 +233,14 @@ function onStart() {
                                     {{ image.src | media | resize(600, null, { mode: 'cover' }) }} 600w,
                                     {{ image.src | media | resize(700, null, { mode: 'cover' }) }} 700w,
                                     {{ image.src | media | resize(800, null, { mode: 'cover' }) }} 800w
-                                    "
-                                    sizes="
+                                    " sizes="
                                     (min-width: 576px) 30vw,
                                     100vw
-                                    "
-                                {% endif %}
-                                src="{{ image.src | media }}"
-                                loading="lazy"
-                                height="{{ image.height }}"
-                                width="{{ image.width }}"
-                                data-fs-height="{{ image.height }}"
-                                data-fs-width="{{ image.width }}"
-                                data-fs-src="{{ image.src | media }}"
-                                alt="{{ image.name }}"
-                            ></img>
-                        </div>
+                                    " {% endif %} src="{{ image.src | media }}" loading="lazy"
+                            height="{{ image.height }}" width="{{ image.width }}" data-fs-height="{{ image.height }}"
+                            data-fs-width="{{ image.width }}" data-fs-src="{{ image.src | media }}"
+                            alt="{{ image.name }}"></img>
+                    </div>
                     {% endfor %}
                 </div>
             </rv-photoswipe>

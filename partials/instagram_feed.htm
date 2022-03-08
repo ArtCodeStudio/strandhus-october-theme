@@ -141,27 +141,29 @@ function onStart() {
 <div class="container-fluid partial-instagram-feed">
     <div class="row mx-1" rv-assign-max-images="24">
         {% for image in images %}
-        <div class="col-12 col-md-4 p-0 cursor-pointer {{ image.media_type }}" rv-if="{{ loop.index0  }} | lt maxImages">
+        <div class="col-12 col-md-4 p-0 cursor-pointer {{ image.media_type }}"
+            rv-if="{{ loop.index0  }} | lt maxImages">
             <div class="p-2">
                 <div class="embed-responsive embed-responsive-1by1 lazy">
                     {% if image.media_type == "IMAGE" %}
-                        <a href="{{ image.permalink }}" target="_blank">
-                            <img lazyload="lazy" class="embed-responsive-item" src="{{ ('instagram/' ~ image.id ~ image.extension) | media }}"
-                                alt="{{ image.caption }}">
-                        </a>
+                    <a href="{{ image.permalink }}" target="_blank">
+                        <img lazyload="lazy" class="embed-responsive-item"
+                            src="{{ ('instagram/' ~ image.id ~ image.extension) | media }}" alt="{{ image.caption }}">
+                    </a>
                     {% elseif image.media_type == "CAROUSEL_ALBUM" %}
-                    <bs4-slideshow controls="false" indicators="true" lg-controls="true" class="embed-responsive-item" indicators="false" sticky="false"
-                        autoplay="false" draggable="true" lg-draggable="false"
-                        control-prev-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
-                        indicator-inactive-icon-src="{{ 'assets/iconset/icon_circle-empty.svg' | theme }}"
-                        indicator-active-icon-src="{{ 'assets/iconset/icon_circle-selected.svg' | theme }}"     
-                        control-next-icon-src="{{ 'assets/iconset/arrow_carrot_thin.svg' | theme }}"
-                    >
+                    <bs4-slideshow controls="false" indicators="true" lg-controls="true" class="embed-responsive-item"
+                        indicators="false" sticky="false" autoplay="false" draggable="true" lg-draggable="false"
+                        control-prev-icon-src="{{ 'assets/iconset/svg/arrow_carrot_thin.svg' | theme }}"
+                        indicator-inactive-icon-src="{{ 'assets/iconset/svg/icon_circle-empty.svg' | theme }}"
+                        indicator-active-icon-src="{{ 'assets/iconset/svg/icon_circle-selected.svg' | theme }}"
+                        control-next-icon-src="{{ 'assets/iconset/svg/arrow_carrot_thin.svg' | theme }}">
                         <div class="slideshow-inner m-0">
                             {% for slide in image.children.data %}
-                                <div class="slide col-12 embed-responsive embed-responsive-1by1 lazy">
-                                    <img lazyload="lazy" class="embed-responsive-item" src="{{ ('instagram/' ~ slide.id ~ slide.extension) | media }}" alt="{{ slide.caption }}">
-                                </div>
+                            <div class="slide col-12 embed-responsive embed-responsive-1by1 lazy">
+                                <img lazyload="lazy" class="embed-responsive-item"
+                                    src="{{ ('instagram/' ~ slide.id ~ slide.extension) | media }}"
+                                    alt="{{ slide.caption }}">
+                            </div>
                             {% endfor %}
                         </div>
                     </bs4-slideshow>
@@ -175,7 +177,8 @@ function onStart() {
                     {% endif %}
 
                     {# hover info #}
-                    {# <div class="embed-responsive-item caption d-none d-md-flex align-items-center">{{ image.caption }}</div>#}
+                    {# <div class="embed-responsive-item caption d-none d-md-flex align-items-center">{{ image.caption
+                        }}</div>#}
                 </div>
             </div>
         </div>
