@@ -172,5 +172,5 @@
         "@types/jquery": "^3.5.8",
         "bootstrap": "^4.6.1"
     },
-    "packageManager": "yarn@3.2.0"
+    "packageManager": "yarn@3.2.4"
 }
