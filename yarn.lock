@@ -3321,7 +3321,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/babel-config@workspace:*, @ribajs/babel-config@workspace:packages/riba/infra/babel-config":
+"@ribajs/babel-config@workspace:^, @ribajs/babel-config@workspace:packages/riba/infra/babel-config":
   version: 0.0.0-use.local
   resolution: "@ribajs/babel-config@workspace:packages/riba/infra/babel-config"
   dependencies:
@@ -3352,7 +3352,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/bs4@workspace:*, @ribajs/bs4@workspace:packages/riba/packages/bs4":
+"@ribajs/bs4@workspace:^, @ribajs/bs4@workspace:packages/riba/packages/bs4":
   version: 0.0.0-use.local
   resolution: "@ribajs/bs4@workspace:packages/riba/packages/bs4"
   dependencies:
@@ -3444,7 +3444,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/bs5@workspace:*, @ribajs/bs5@workspace:packages/riba/packages/bs5":
+"@ribajs/bs5@workspace:^, @ribajs/bs5@workspace:packages/riba/packages/bs5":
   version: 0.0.0-use.local
   resolution: "@ribajs/bs5@workspace:packages/riba/packages/bs5"
   dependencies:
@@ -3495,7 +3495,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/cache@workspace:*, @ribajs/cache@workspace:packages/riba/packages/cache":
+"@ribajs/cache@workspace:^, @ribajs/cache@workspace:packages/riba/packages/cache":
   version: 0.0.0-use.local
   resolution: "@ribajs/cache@workspace:packages/riba/packages/cache"
   dependencies:
@@ -3516,7 +3516,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/content-slider@workspace:*, @ribajs/content-slider@workspace:packages/riba/packages/content-slider":
+"@ribajs/content-slider@workspace:^, @ribajs/content-slider@workspace:packages/riba/packages/content-slider":
   version: 0.0.0-use.local
   resolution: "@ribajs/content-slider@workspace:packages/riba/packages/content-slider"
   dependencies:
@@ -3560,7 +3560,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/core@workspace:*, @ribajs/core@workspace:packages/riba/packages/core":
+"@ribajs/core@workspace:^, @ribajs/core@workspace:packages/riba/packages/core":
   version: 0.0.0-use.local
   resolution: "@ribajs/core@workspace:packages/riba/packages/core"
   dependencies:
@@ -3640,7 +3640,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/eslint-config@workspace:*, @ribajs/eslint-config@workspace:packages/riba/infra/eslint-config":
+"@ribajs/eslint-config@workspace:^, @ribajs/eslint-config@workspace:packages/riba/infra/eslint-config":
   version: 0.0.0-use.local
   resolution: "@ribajs/eslint-config@workspace:packages/riba/infra/eslint-config"
   dependencies:
@@ -3655,7 +3655,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/events@workspace:*, @ribajs/events@workspace:packages/riba/packages/events":
+"@ribajs/events@workspace:^, @ribajs/events@workspace:packages/riba/packages/events":
   version: 0.0.0-use.local
   resolution: "@ribajs/events@workspace:packages/riba/packages/events"
   dependencies:
@@ -3674,7 +3674,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/extras@workspace:*, @ribajs/extras@workspace:packages/riba/packages/extras":
+"@ribajs/extras@workspace:^, @ribajs/extras@workspace:packages/riba/packages/extras":
   version: 0.0.0-use.local
   resolution: "@ribajs/extras@workspace:packages/riba/packages/extras"
   dependencies:
@@ -3715,7 +3715,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/history@workspace:*, @ribajs/history@workspace:packages/riba/packages/history":
+"@ribajs/history@workspace:^, @ribajs/history@workspace:packages/riba/packages/history":
   version: 0.0.0-use.local
   resolution: "@ribajs/history@workspace:packages/riba/packages/history"
   dependencies:
@@ -3729,7 +3729,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/i18n@workspace:*, @ribajs/i18n@workspace:packages/riba/packages/i18n":
+"@ribajs/i18n@workspace:^, @ribajs/i18n@workspace:packages/riba/packages/i18n":
   version: 0.0.0-use.local
   resolution: "@ribajs/i18n@workspace:packages/riba/packages/i18n"
   dependencies:
@@ -3765,7 +3765,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/iconset@workspace:*, @ribajs/iconset@workspace:packages/riba/packages/iconset":
+"@ribajs/iconset@workspace:^, @ribajs/iconset@workspace:packages/riba/packages/iconset":
   version: 0.0.0-use.local
   resolution: "@ribajs/iconset@workspace:packages/riba/packages/iconset"
   dependencies:
@@ -3780,7 +3780,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/jquery@workspace:*, @ribajs/jquery@workspace:packages/riba/packages/jquery":
+"@ribajs/jquery@workspace:^, @ribajs/jquery@workspace:packages/riba/packages/jquery":
   version: 0.0.0-use.local
   resolution: "@ribajs/jquery@workspace:packages/riba/packages/jquery"
   dependencies:
@@ -3834,7 +3834,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/leaflet-map@workspace:*, @ribajs/leaflet-map@workspace:packages/riba/packages/leaflet-map":
+"@ribajs/leaflet-map@workspace:^, @ribajs/leaflet-map@workspace:packages/riba/packages/leaflet-map":
   version: 0.0.0-use.local
   resolution: "@ribajs/leaflet-map@workspace:packages/riba/packages/leaflet-map"
   dependencies:
@@ -3962,7 +3962,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/moment@workspace:*, @ribajs/moment@workspace:packages/riba/packages/moment":
+"@ribajs/moment@workspace:^, @ribajs/moment@workspace:packages/riba/packages/moment":
   version: 0.0.0-use.local
   resolution: "@ribajs/moment@workspace:packages/riba/packages/moment"
   dependencies:
@@ -4216,7 +4216,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/npm-package@workspace:*, @ribajs/npm-package@workspace:packages/riba/infra/npm-package":
+"@ribajs/npm-package@workspace:^, @ribajs/npm-package@workspace:packages/riba/infra/npm-package":
   version: 0.0.0-use.local
   resolution: "@ribajs/npm-package@workspace:packages/riba/infra/npm-package"
   dependencies:
@@ -4272,7 +4272,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/octobercms@workspace:*, @ribajs/octobercms@workspace:packages/riba/packages/octobercms":
+"@ribajs/octobercms@workspace:^, @ribajs/octobercms@workspace:packages/riba/packages/octobercms":
   version: 0.0.0-use.local
   resolution: "@ribajs/octobercms@workspace:packages/riba/packages/octobercms"
   dependencies:
@@ -4324,7 +4324,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/photoswipe@workspace:*, @ribajs/photoswipe@workspace:packages/riba/packages/photoswipe":
+"@ribajs/photoswipe@workspace:^, @ribajs/photoswipe@workspace:packages/riba/packages/photoswipe":
   version: 0.0.0-use.local
   resolution: "@ribajs/photoswipe@workspace:packages/riba/packages/photoswipe"
   dependencies:
@@ -4385,7 +4385,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/postcss-config@workspace:*, @ribajs/postcss-config@workspace:packages/riba/infra/postcss-config":
+"@ribajs/postcss-config@workspace:^, @ribajs/postcss-config@workspace:packages/riba/infra/postcss-config":
   version: 0.0.0-use.local
   resolution: "@ribajs/postcss-config@workspace:packages/riba/infra/postcss-config"
   dependencies:
@@ -4439,7 +4439,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/router@workspace:*, @ribajs/router@workspace:packages/riba/packages/router":
+"@ribajs/router@workspace:^, @ribajs/router@workspace:packages/riba/packages/router":
   version: 0.0.0-use.local
   resolution: "@ribajs/router@workspace:packages/riba/packages/router"
   dependencies:
@@ -4481,7 +4481,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/shopify-easdk@workspace:*, @ribajs/shopify-easdk@workspace:packages/riba/packages/shopify-easdk":
+"@ribajs/shopify-easdk@workspace:^, @ribajs/shopify-easdk@workspace:packages/riba/packages/shopify-easdk":
   version: 0.0.0-use.local
   resolution: "@ribajs/shopify-easdk@workspace:packages/riba/packages/shopify-easdk"
   dependencies:
@@ -4540,7 +4540,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/shopify-tda@workspace:*, @ribajs/shopify-tda@workspace:packages/riba/packages/shopify-tda":
+"@ribajs/shopify-tda@workspace:^, @ribajs/shopify-tda@workspace:packages/riba/packages/shopify-tda":
   version: 0.0.0-use.local
   resolution: "@ribajs/shopify-tda@workspace:packages/riba/packages/shopify-tda"
   dependencies:
@@ -4580,7 +4580,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/shopify@workspace:*, @ribajs/shopify@workspace:packages/riba/packages/shopify":
+"@ribajs/shopify@workspace:^, @ribajs/shopify@workspace:packages/riba/packages/shopify":
   version: 0.0.0-use.local
   resolution: "@ribajs/shopify@workspace:packages/riba/packages/shopify"
   dependencies:
@@ -4699,7 +4699,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/ssr@workspace:*, @ribajs/ssr@workspace:packages/riba/packages/ssr":
+"@ribajs/ssr@workspace:^, @ribajs/ssr@workspace:packages/riba/packages/ssr":
   version: 0.0.0-use.local
   resolution: "@ribajs/ssr@workspace:packages/riba/packages/ssr"
   dependencies:
@@ -4755,7 +4755,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/tsconfig@workspace:*, @ribajs/tsconfig@workspace:packages/riba/infra/tsconfig":
+"@ribajs/tsconfig@workspace:^, @ribajs/tsconfig@workspace:packages/riba/infra/tsconfig":
   version: 0.0.0-use.local
   resolution: "@ribajs/tsconfig@workspace:packages/riba/infra/tsconfig"
   dependencies:
@@ -4782,7 +4782,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/types@workspace:*, @ribajs/types@workspace:packages/riba/infra/types":
+"@ribajs/types@workspace:^, @ribajs/types@workspace:packages/riba/infra/types":
   version: 0.0.0-use.local
   resolution: "@ribajs/types@workspace:packages/riba/infra/types"
   dependencies:
@@ -4790,7 +4790,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/utils@workspace:*, @ribajs/utils@workspace:packages/riba/packages/utils":
+"@ribajs/utils@workspace:^, @ribajs/utils@workspace:packages/riba/packages/utils":
   version: 0.0.0-use.local
   resolution: "@ribajs/utils@workspace:packages/riba/packages/utils"
   dependencies:
@@ -4817,7 +4817,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ribajs/webpack-config@workspace:*, @ribajs/webpack-config@workspace:packages/riba/infra/webpack-config":
+"@ribajs/webpack-config@workspace:^, @ribajs/webpack-config@workspace:packages/riba/infra/webpack-config":
   version: 0.0.0-use.local
   resolution: "@ribajs/webpack-config@workspace:packages/riba/infra/webpack-config"
   dependencies:
@@ -21700,21 +21700,21 @@ fsevents@~2.1.2:
     "@babel/preset-typescript": ^7.16.7
     "@babel/runtime": ^7.17.2
     "@babel/runtime-corejs3": ^7.17.2
-    "@ribajs/babel-config": "workspace:*"
-    "@ribajs/bs4": "workspace:*"
-    "@ribajs/core": "workspace:*"
-    "@ribajs/eslint-config": "workspace:*"
-    "@ribajs/events": "workspace:*"
-    "@ribajs/extras": "workspace:*"
-    "@ribajs/iconset": "workspace:*"
-    "@ribajs/jquery": "workspace:*"
-    "@ribajs/leaflet-map": "workspace:*"
-    "@ribajs/octobercms": "workspace:*"
-    "@ribajs/photoswipe": "workspace:*"
-    "@ribajs/router": "workspace:*"
-    "@ribajs/tsconfig": "workspace:*"
-    "@ribajs/utils": "workspace:*"
-    "@ribajs/webpack-config": "workspace:*"
+    "@ribajs/babel-config": "workspace:^"
+    "@ribajs/bs4": "workspace:^"
+    "@ribajs/core": "workspace:^"
+    "@ribajs/eslint-config": "workspace:^"
+    "@ribajs/events": "workspace:^"
+    "@ribajs/extras": "workspace:^"
+    "@ribajs/iconset": "workspace:^"
+    "@ribajs/jquery": "workspace:^"
+    "@ribajs/leaflet-map": "workspace:^"
+    "@ribajs/octobercms": "workspace:^"
+    "@ribajs/photoswipe": "workspace:^"
+    "@ribajs/router": "workspace:^"
+    "@ribajs/tsconfig": "workspace:^"
+    "@ribajs/utils": "workspace:^"
+    "@ribajs/webpack-config": "workspace:^"
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
     "@yarnpkg/pnpify": ^3.1.1
